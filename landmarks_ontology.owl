@@ -622,6 +622,17 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
         <skos:prefLabel xml:lang="fr">balise</skos:prefLabel>
         <skos:prefLabel xml:lang="en">tag</skos:prefLabel>
     </owl:Class>
+
+
+
+    <!-- http://purl.org/choucas.ign.fr/oor#banc -->
+
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#banc">
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_sport_et_loisirs"/>
+        <rdfs:comment xml:lang="fr">Lieu où les gens peuvent s’asseoir ; généralement à plusieurs.</rdfs:comment>
+        <skos:prefLabel xml:lang="fr">banc</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">bench</skos:prefLabel>
+    </owl:Class>
     
 
 
