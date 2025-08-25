@@ -6788,8 +6788,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#FeuillusResineux">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière"/>
         <rdfs:comment>Composition du peuplement recensable en 3 classes (FEUILLU / RESINEUX / MIXTES)</rdfs:comment>
-        <skos:prefLabel xml:lang="fr">Composition du peuplement (3 classes)</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Stand composition (3 classes)</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Composition du peuplement en 3 classes</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Stand composition in 3 classes</skos:prefLabel>
     </owl:Class>
 
 
