@@ -3,6 +3,7 @@
      xml:base="http://purl.org/choucas.ign.fr/oor"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -12,7 +13,7 @@
      xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="http://purl.org/choucas.ign.fr/oor">
         <owl:versionIRI rdf:resource="http://purl.org/choucas.ign.fr/oor/1.0.0"/>
-        <cc:licence rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dc:creator>Ana-Maria Raimond</dc:creator>
         <dc:creator>Catherine Dominguès</dc:creator>
         <dc:creator>Cecile Duchêne</dc:creator>
