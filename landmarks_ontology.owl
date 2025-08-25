@@ -2653,7 +2653,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
         <skos:altLabel xml:lang="fr">gîte touristique</skos:altLabel>
         <skos:altLabel xml:lang="en">rest house</skos:altLabel>
         <skos:altLabel xml:lang="en">touristic lodge</skos:altLabel>
-        <skos:prefLabel xml:lang="fr">Un type d hébergement (maison ou immeuble) meublé et  équipé, mis entièrement à la disposition des visiteurs pendant une période contre une location de courte durée. Il n est pas possible de le louer à la nuitée</skos:prefLabel>
+        <rdfs:comment xml:lang="fr">Un type d hébergement (maison ou immeuble) meublé et  équipé, mis entièrement à la disposition des visiteurs pendant une période contre une location de courte durée. Il n est pas possible de le louer à la nuitée</rdfs:comment>
         <skos:prefLabel xml:lang="fr">gîte</skos:prefLabel>
         <skos:prefLabel xml:lang="en">lodge</skos:prefLabel>
     </owl:Class>
@@ -4798,9 +4798,9 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#rupture_naturelle_du_relief_concave_non_linéaire">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave"/>
         <rdfs:comment xml:lang="fr">Contient des formes de relief d origine rocheuse qui résultent d un phénomène naturel d érosion et  regroupe les formes de relief ponctuellement localisées</rdfs:comment>
-        <rdfs:comment xml:lang="en">non-linear concave natural relief breaks</rdfs:comment>
-        <skos:prefLabel xml:lang="en">Contains rock-origin landforms resulting from a natural erosion process and includes landforms that are locally concentrated</skos:prefLabel>
+        <rdfs:comment xml:lang="en">Contains rock-origin landforms resulting from a natural erosion process and includes landforms that are locally concentrated</rdfs:comment>
         <skos:prefLabel xml:lang="fr">rupture naturelle de relief concave non-linéaire</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">non-linear concave natural relief breaks</skos:prefLabel>
     </owl:Class>
     
 
@@ -4810,7 +4810,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#rupture_rocheuse">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#rupture_naturelle_de_relief_concave_linéaire"/>
         <rdfs:comment xml:lang="fr">Contient des formes de relief qui résultent d un phénomène naturel d érosion et  regroupe les formes de relief effilées et d origine rocheuse</rdfs:comment>
-        <skos:prefLabel xml:lang="en">Contains landforms resulting from a natural erosion process and includes slender landforms of rock origin</skos:prefLabel>
+        <rdfs:comment xml:lang="en">Contains landforms resulting from a natural erosion process and includes slender landforms of rock origin</rdfs:comment>
         <skos:prefLabel xml:lang="en">rock break</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">rupture rocheuse</skos:prefLabel>
     </owl:Class>
@@ -5795,7 +5795,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#vasque">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
-        <skos:prefLabel xml:lang="en">Lieu d origine naturelle circulaire ou élliptique remplit de l eau. Il se situe dans un ruisseau, torrent, etc.</skos:prefLabel>
+        <rdfs:comment xml:lang="fr">Lieu d origine naturelle circulaire ou élliptique remplit de l eau. Il se situe dans un ruisseau, torrent, etc.</rdfs:comment>
         <skos:prefLabel xml:lang="en">bowl</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">vasque</skos:prefLabel>
     </owl:Class>
