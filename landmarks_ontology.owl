@@ -3154,8 +3154,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#lapiaz">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#rupture_de_relief_convexe_issu_d_erosion"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#rupture_naturelle_du_relief_concave_non_linéaire"/>
-        <rdfs:comment xml:lang="fr">point particulier (trou) présentant un risque pour la</rdfs:comment>
-        <skos:altLabel xml:lang="fr">Surface de roche à nu, particulièrement érodée en sillons plus ou moins profonds, ou bien un point particulier donnant accès à des cavités profondes qui présentent des risques pour un randonneur</skos:altLabel>
+        <rdfs:comment xml:lang="fr">Surface de roche à nu, particulièrement érodée en sillons plus ou moins profonds, ou bien un point particulier donnant accès à des cavités profondes qui présentent des risques pour un randonneur.</skos:altLabel>
         <skos:prefLabel xml:lang="fr">lapiaz</skos:prefLabel>
         <skos:prefLabel xml:lang="en">limestone pavement; pas la bonne traduction</skos:prefLabel>
     </owl:Class>
