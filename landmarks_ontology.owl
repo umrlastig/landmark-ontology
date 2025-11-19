@@ -3648,7 +3648,10 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
         <owl:equivalentClass rdf:resource="http://www.geonames.org/ontology#Feature"/>
         <skos:prefLabel xml:lang="en">landmark</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">objet de repère</skos:prefLabel>
+        <rdfs:comment xml:lang="en">A landmark is defined as a geographic object that serves as a reference object for locating people in a mountainous context. It is a materialized place, artificial or natural.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un landmark est défini comme un objet géographique servant d’objet de référence pour localiser des personnes en contexte montagneux. Il s’agit d’un lieu matérialisé, artificiel ou naturel.</rdfs:comment>
     </owl:Class>
+
     
 
 
