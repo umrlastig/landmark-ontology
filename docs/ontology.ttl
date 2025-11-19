@@ -8,7 +8,7 @@
 
 <http://purl.org/choucas.ign.fr/oor> rdf:type owl:Ontology ;
                                       owl:versionIRI <http://purl.org/choucas.ign.fr/oor/1.0.0> ;
-                                      <http://creativecommons.org/ns#licence> <http://creativecommons.org/licenses/by/4.0/> ;
+                                      <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> ;
                                       <http://purl.org/dc/elements/1.1/creator> "Ana-Maria Raimond" ,
                                                                                 "Catherine Dominguès" ,
                                                                                 "Cecile Duchêne" ,
@@ -48,6 +48,10 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
 ###  http://creativecommons.org/ns#licence
 <http://creativecommons.org/ns#licence> rdf:type owl:AnnotationProperty .
+
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/contributor
@@ -1759,7 +1763,8 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
                                      owl:hasValue :feuillus
                                    ] ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de feuillus"@fr ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt de feuillus"@fr .
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "broadleaved forest"@fr ,
+                                                                   "forêt de feuillus"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#forêt_de_résineux
@@ -1772,7 +1777,8 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
                    <http://www.w3.org/2004/02/skos/core#altLabel> "forêt de conifères"@fr ,
                                                                   "forêt fermée de conifères"@fr ,
                                                                   "forêt fermée de résineux"@fr ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt de résineux"@fr .
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "coniferous forest"@fr ,
+                                                                   "forêt de résineux"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#forêt_domaniale
@@ -1790,8 +1796,10 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
                                 owl:hasValue :mixtes
                               ] ;
               rdfs:comment "Massif boisé dont la composition forestière est mixte: feuillus et résineux"@fr ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée mixte"@fr ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt mixtes"@fr .
+              <http://www.w3.org/2004/02/skos/core#altLabel> "composite stand"@en ,
+                                                             "forêt fermée mixte"@fr ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt mixtes"@fr ,
+                                                              "mixed forest"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#fossé
@@ -2347,8 +2355,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 :lapiaz rdf:type owl:Class ;
         rdfs:subClassOf :rupture_de_relief_convexe_issu_d_erosion ,
                         :rupture_naturelle_du_relief_concave_non_linéaire ;
-        rdfs:comment "point particulier (trou) présentant un risque pour la"@fr ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "Surface de roche à nu, particulièrement érodée en sillons plus ou moins profonds, ou bien un point particulier donnant accès à des cavités profondes qui présentent des risques pour un randonneur"@fr ;
+        rdfs:comment "Surface de roche à nu, particulièrement érodée en sillons plus ou moins profonds, ou bien un point particulier donnant accès à des cavités profondes qui présentent des risques pour un randonneur."@fr ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "lapiaz"@fr ,
                                                         "limestone pavement; pas la bonne traduction"@en .
 
@@ -2713,6 +2720,8 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 ###  http://purl.org/choucas.ign.fr/oor#objet_de_repère
 :objet_de_repère rdf:type owl:Class ;
                  owl:equivalentClass <http://www.geonames.org/ontology#Feature> ;
+                 rdfs:comment "A landmark is defined as a geographic object that serves as a reference object for locating people in a mountainous context. It is a materialized place, artificial or natural."@en ,
+                              "Un landmark est défini comme un objet géographique servant d’objet de référence pour localiser des personnes en contexte montagneux. Il s’agit d’un lieu matérialisé, artificiel ou naturel."@fr ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "landmark"@en ,
                                                                  "objet de repère"@fr .
 

@@ -1,0 +1,26 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://purl.org/choucas.ign.fr/oor/1.0.0> a prov:Entity;
+	 dc:title "Ontology Of landmaRks";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
+	 prov:wasAttributedTo :agent5;
+	 prov:wasAttributedTo :agent6;
+	 prov:wasAttributedTo :agent7;
+	 prov:wasAttributedTo :agent8;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
+:agent0 a prov:Agent; foaf:name "Ana-Maria Raimond".
+:agent1 a prov:Agent; foaf:name "Catherine Dominguès".
+:agent2 a prov:Agent; foaf:name "Cecile Duchêne".
+:agent3 a prov:Agent; foaf:name "Laurence Jolivet".
+:agent4 a prov:Agent; foaf:name "Marie-Dominique Van Damme".
+:agent5 a prov:Agent; foaf:name "Mattia Bunel".
+:agent6 a prov:Agent; foaf:name "Olivier Favre".
+:agent7 a prov:Agent; foaf:name "Sebastien Mustière".
+:agent8 a prov:Agent; foaf:name "Véronique Gendner".

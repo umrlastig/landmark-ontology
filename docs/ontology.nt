@@ -1,6 +1,6 @@
 <http://purl.org/choucas.ign.fr/oor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://purl.org/choucas.ign.fr/oor> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/choucas.ign.fr/oor/1.0.0> .
-<http://purl.org/choucas.ign.fr/oor> <http://creativecommons.org/ns#licence> <http://creativecommons.org/licenses/by/4.0/> .
+<http://purl.org/choucas.ign.fr/oor> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/creator> "Ana-Maria Raimond" .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/creator> "Catherine Dominguès" .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/creator> "Cecile Duchêne" .
@@ -32,6 +32,9 @@
 # 
 # http://creativecommons.org/ns#licence
 <http://creativecommons.org/ns#licence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/contributor
 <http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -1554,6 +1557,7 @@ _:genid1 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/choucas.ign.f
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de feuillus"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2004/02/skos/core#prefLabel> "broadleaved forest"@fr .
 <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt de feuillus"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#forêt_de_résineux
@@ -1566,6 +1570,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt de conifères"@fr .
 <http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de conifères"@fr .
 <http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de résineux"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#prefLabel> "coniferous forest"@fr .
 <http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt de résineux"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#forêt_domaniale
@@ -1582,8 +1587,10 @@ _:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/choucas.ign.f
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2000/01/rdf-schema#comment> "Massif boisé dont la composition forestière est mixte: feuillus et résineux"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2004/02/skos/core#altLabel> "composite stand"@en .
 <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée mixte"@fr .
 <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt mixtes"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2004/02/skos/core#prefLabel> "mixed forest"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#fossé
 <http://purl.org/choucas.ign.fr/oor#fossé> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -2077,8 +2084,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#lapiaz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#lapiaz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#rupture_de_relief_convexe_issu_d_erosion> .
 <http://purl.org/choucas.ign.fr/oor#lapiaz> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#rupture_naturelle_du_relief_concave_non_linéaire> .
-<http://purl.org/choucas.ign.fr/oor#lapiaz> <http://www.w3.org/2000/01/rdf-schema#comment> "point particulier (trou) présentant un risque pour la"@fr .
-<http://purl.org/choucas.ign.fr/oor#lapiaz> <http://www.w3.org/2004/02/skos/core#altLabel> "Surface de roche à nu, particulièrement érodée en sillons plus ou moins profonds, ou bien un point particulier donnant accès à des cavités profondes qui présentent des risques pour un randonneur"@fr .
+<http://purl.org/choucas.ign.fr/oor#lapiaz> <http://www.w3.org/2000/01/rdf-schema#comment> "Surface de roche à nu, particulièrement érodée en sillons plus ou moins profonds, ou bien un point particulier donnant accès à des cavités profondes qui présentent des risques pour un randonneur."@fr .
 <http://purl.org/choucas.ign.fr/oor#lapiaz> <http://www.w3.org/2004/02/skos/core#prefLabel> "lapiaz"@fr .
 <http://purl.org/choucas.ign.fr/oor#lapiaz> <http://www.w3.org/2004/02/skos/core#prefLabel> "limestone pavement; pas la bonne traduction"@en .
 # 
@@ -2402,6 +2408,8 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/choucas.ign.fr/oor#objet_de_repère
 <http://purl.org/choucas.ign.fr/oor#objet_de_repère> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#objet_de_repère> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.geonames.org/ontology#Feature> .
+<http://purl.org/choucas.ign.fr/oor#objet_de_repère> <http://www.w3.org/2000/01/rdf-schema#comment> "A landmark is defined as a geographic object that serves as a reference object for locating people in a mountainous context. It is a materialized place, artificial or natural."@en .
+<http://purl.org/choucas.ign.fr/oor#objet_de_repère> <http://www.w3.org/2000/01/rdf-schema#comment> "Un landmark est défini comme un objet géographique servant d’objet de référence pour localiser des personnes en contexte montagneux. Il s’agit d’un lieu matérialisé, artificiel ou naturel."@fr .
 <http://purl.org/choucas.ign.fr/oor#objet_de_repère> <http://www.w3.org/2004/02/skos/core#prefLabel> "landmark"@en .
 <http://purl.org/choucas.ign.fr/oor#objet_de_repère> <http://www.w3.org/2004/02/skos/core#prefLabel> "objet de repère"@fr .
 # 
