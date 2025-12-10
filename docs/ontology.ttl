@@ -4878,6 +4878,10 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
                                                                                                                              "infrastructure de gestion d eau douce"@fr .
 
 
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> rdf:type owl:Class .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> rdf:type owl:Class ;
                                                                          rdfs:subClassOf :infrastructure_eau ;
@@ -4942,6 +4946,14 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "altisurface"@fr ,
                                                                                                         "piste d aviation"@fr ,
                                                                                                         "runway"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#point_d'eau_potable
+<http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> ;
+                                                         rdfs:comment "Indique un accès à de l'eau potable"@fr ;
+                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "drinking water"@en ,
+                                                                                                         "point d'eau potable"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente
