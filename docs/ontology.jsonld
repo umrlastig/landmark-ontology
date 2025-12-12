@@ -70,11 +70,11 @@
     "@value" : "2025-12-12"
   } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
-    "@value" : "ANR CHOUCAS - LASTIG/IGN"
+    "@value" : "LASTIG/IGN"
   } ],
   "http://purl.org/dc/elements/1.1/rights" : [ {
     "@language" : "en",
-    "@value" : "Copyright © 2022 Choucas/LASTIG"
+    "@value" : "Copyright © 2025 LASTIG"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@language" : "fr",
@@ -93,7 +93,7 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.0.2"
+    "@value" : "2.0.0"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#AD",
