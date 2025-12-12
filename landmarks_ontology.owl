@@ -7379,8 +7379,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
         <oor:hasSemanticRouteAnnotation rdf:resource="http://purl.org/choucas.ign.fr/oor#access_parking"/>
     </owl:NamedIndividual>
 
+
+
 </rdf:RDF>
-
-
-
 
