@@ -5392,9 +5392,6 @@
     "@value" : "infrastructure de gestion d eau douce"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -7954,7 +7951,7 @@
     "@value" : "Indique un accès à de l'eau potable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",

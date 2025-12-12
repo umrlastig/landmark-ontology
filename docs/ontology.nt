@@ -4483,9 +4483,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> <http://www.w3.org/2004/02/skos/core#prefLabel> "fresh water catchment infrastructure"@en .
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de gestion d eau douce"@fr .
 # 
-# http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_eau> .
@@ -4547,7 +4544,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#point_d'eau_potable
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d'eau_douce> .
+<http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique un accès à de l'eau potable"@fr .
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2004/02/skos/core#prefLabel> "drinking water"@en .
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2004/02/skos/core#prefLabel> "point d'eau potable"@fr .
