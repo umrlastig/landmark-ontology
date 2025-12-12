@@ -67,7 +67,7 @@
     "@value" : "2020-01-28"
   } ],
   "http://purl.org/dc/elements/1.1/modified" : [ {
-    "@value" : "2025-08-14"
+    "@value" : "2025-12-12"
   } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
     "@value" : "ANR CHOUCAS - LASTIG/IGN"
@@ -93,7 +93,7 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.0.1"
+    "@value" : "1.0.2"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#AD",

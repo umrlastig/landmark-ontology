@@ -13,14 +13,14 @@
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/description> "Ontologie des objets géographiques pouvant servir d objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. \n\nCette ontologie a été proposée dans le cadre du projet Choucas (ANR-16-CE23-0018). Elle est inspiré de l Ontologie GeOnto (Mustière et al., 2011) et LFRO (Sinha, Gaurav et al. 2018. )\n\nMustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180\n\nSinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."@fr .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/description> "Ontology of geographical objects used as reference objects in a mountain context.\n\nThis ontology is proposed during ANR Choucas project (ANR-16-CE23-0018). It is inspired from  GeOnto Ontology  (Mustière et al., 2011) et LFRO ontology (Sinha, Gaurav et al. 2018).\n\nMustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al Analyses linguistiques et techniques d alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180\n\nSinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."@en .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/issued> "2020-01-28" .
-<http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/modified> "2025-08-14" .
+<http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/modified> "2025-12-12" .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/publisher> "ANR CHOUCAS - LASTIG/IGN" .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/rights> "Copyright © 2022 Choucas/LASTIG"@en .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/title> "Ontologie des Objets de Repères"@fr .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/title> "Ontology Of landmaRks"@en .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/vocab/vann/preferredNamespacePrefix> "OOR" .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/vocab/vann/preferredNamespaceUri> "URI DU NAMESPACE" .
-<http://purl.org/choucas.ign.fr/oor> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.1" .
+<http://purl.org/choucas.ign.fr/oor> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.2" .
 # 
 # 
 # #################################################################
