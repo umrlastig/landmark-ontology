@@ -72,6 +72,9 @@
 # http://www.w3.org/2000/01/rdf-schema#label
 <http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/2002/07/owl#equivalentClass
+<http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -87,6 +90,15 @@
 # #################################################################
 # 
 # 
+# http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble
+<http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#forêt> .
+<http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/choucas.ign.fr/oor#CompositionEnsemble> .
+<http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> <http://www.w3.org/2000/01/rdf-schema#comment> "To characterize the dominant stand composition of vegetation types (e.g., deciduous, coniferous) within a forest area."@en .
+<http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> <http://www.w3.org/2000/01/rdf-schema#comment> "Pour modéliser la composition dominante des types de formation végétale (ex. feuillus, conifères)." .
+<http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> <http://www.w3.org/2000/01/rdf-schema#label> "a comme composition dominante"@fr .
+<http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> <http://www.w3.org/2000/01/rdf-schema#label> "type of stand composition"@en .
+# 
 # http://purl.org/choucas.ign.fr/oor#aPourCouleur
 <http://purl.org/choucas.ign.fr/oor#aPourCouleur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/choucas.ign.fr/oor#aPourCouleur> <http://www.w3.org/2000/01/rdf-schema#comment> "Pour modéliser la couleur d un objet (ex. une maison jaune)"@fr .
@@ -95,6 +107,23 @@
 <http://purl.org/choucas.ign.fr/oor#aPourForme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/choucas.ign.fr/oor#aPourForme> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://purl.org/choucas.ign.fr/oor#aPourForme> <http://www.w3.org/2000/01/rdf-schema#comment> "pour modéliser la forme d un objet (ex. un lac rond)"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark
+<http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#RoutePortion> .
+<http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/choucas.ign.fr/oor#objet_de_repère> .
+# 
+# http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation
+<http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#RoutePortion> .
+<http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> .
+<http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Pour modéliser les annotations sémantiques des itinéraires." .
+<http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "hasSemanticRouteAnnotation" .
+# 
+# http://purl.org/choucas.ign.fr/oor#locationRelation
+<http://purl.org/choucas.ign.fr/oor#locationRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/choucas.ign.fr/oor#locationRelation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#locationRelation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
 # 
 # http://purl.org/choucas.ign.fr/oor#peutEtreCoLocaliséAvec
 <http://purl.org/choucas.ign.fr/oor#peutEtreCoLocaliséAvec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -108,17 +137,38 @@
 <http://purl.org/choucas.ign.fr/oor#peutEtreConfonduAvec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/choucas.ign.fr/oor#peutEtreConfonduAvec> <http://www.w3.org/2000/01/rdf-schema#comment> "pour modéliser les objets qui peuvent être confondu de par leur forme (ex : ligne électrique peutEtreConfonduAvec cable transporteur) ou par leur usage (ex. cabane/refuge)"@fr .
 # 
-# http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux
-<http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#forêt> .
-<http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/choucas.ign.fr/oor#FeuillusResineux> .
-<http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> <http://www.w3.org/2000/01/rdf-schema#comment> "Pour modéliser la composition dominante des types de formation végétale (ex. feuillus, conifères) à une zone forestière."@fr .
-<http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> <http://www.w3.org/2000/01/rdf-schema#comment> "To characterize the dominant stand composition of vegetation types (e.g., deciduous, coniferous) within a forest area."@en .
-<http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> <http://www.w3.org/2000/01/rdf-schema#label> "type de composition du peuplement"@fr .
-<http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> <http://www.w3.org/2000/01/rdf-schema#label> "type of stand composition"@en .
+# http://purl.org/choucas.ign.fr/oor#referencedLandmark
+<http://purl.org/choucas.ign.fr/oor#referencedLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/choucas.ign.fr/oor#referencedLandmark> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 # 
 # http://www.w3.org/2002/07/owl#topObjectProperty
 <http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Ces propriétés ne sont pas instanciées dans cette version d’OOR"@fr .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/choucas.ign.fr/oor#dataSource
+<http://purl.org/choucas.ign.fr/oor#dataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/choucas.ign.fr/oor#dataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#objet_de_repère> .
+# 
+# http://purl.org/choucas.ign.fr/oor#geographicalName
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#objet_de_repère> .
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribut permettant de préciser le nom (graphie) principal de l'objet de repère"@fr .
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#label> "nom géographique"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#idcc
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#PRI> .
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribut permettant de préciser l'identifiant de la composante connexe"@fr .
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#label> "Identifiant de la cc"@fr .
 # 
 # 
 # 
@@ -150,19 +200,74 @@
 <http://purl.org/choucas.ign.fr/oor#AFA> <http://www.w3.org/2004/02/skos/core#prefLabel> "compacted  gently sloping plateau"@en .
 <http://purl.org/choucas.ign.fr/oor#AFA> <http://www.w3.org/2004/02/skos/core#prefLabel> "plateau adouci de forme compacte"@fr .
 # 
-# http://purl.org/choucas.ign.fr/oor#FeuillusResineux
-<http://purl.org/choucas.ign.fr/oor#FeuillusResineux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#FeuillusResineux> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière> .
-<http://purl.org/choucas.ign.fr/oor#FeuillusResineux> <http://www.w3.org/2000/01/rdf-schema#comment> "Composition du peuplement recensable en 3 classes (FEUILLU / RESINEUX / MIXTES)" .
-<http://purl.org/choucas.ign.fr/oor#FeuillusResineux> <http://www.w3.org/2004/02/skos/core#prefLabel> "Composition du peuplement en 3 classes"@fr .
-<http://purl.org/choucas.ign.fr/oor#FeuillusResineux> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stand composition in 3 classes"@en .
+# http://purl.org/choucas.ign.fr/oor#CompositionEnsemble
+<http://purl.org/choucas.ign.fr/oor#CompositionEnsemble> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#CompositionEnsemble> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière> .
+<http://purl.org/choucas.ign.fr/oor#CompositionEnsemble> <http://www.w3.org/2000/01/rdf-schema#comment> "Regroupe l'ensemble des compositions du niveau 3 de la nomenclature de la végétation." .
+<http://purl.org/choucas.ign.fr/oor#CompositionEnsemble> <http://www.w3.org/2004/02/skos/core#prefLabel> "Compositions d'ensemble"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#LocationRelationship
+<http://purl.org/choucas.ign.fr/oor#LocationRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#LocationRelationship> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/choucas.ign.fr/oor#LocationRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the type of the relationships such as adjacency, following or crossing" .
+<http://purl.org/choucas.ign.fr/oor#LocationRelationship> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location relationship"@en .
+<http://purl.org/choucas.ign.fr/oor#LocationRelationship> <http://www.w3.org/2004/02/skos/core#prefLabel> "Relations de localisation"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière
 <http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière> <http://www.w3.org/2000/01/rdf-schema#comment> "Nomenclature de la composition de la couche forestière par essences plantées" .
+<http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière> <http://www.w3.org/2000/01/rdf-schema#comment> "Nomenclature de la couche forestière thématique nationale et hiérarchique à quatre niveaux : couverture du sol, densité du couvert, composition d’ensemble et essences" .
 <http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nomenclature de la couche forestière"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#PRI
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#RoutePortion> .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#altLabel> "Portion d'itinéraire avec une annotation sémantique"@fr .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#altLabel> "Route portion with semantic route annotation"@en .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "PRI"@en .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "PRI"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#RouteCharacteristic
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> .
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Regroupe l'ensemble des caractéristiques des routes."@fr .
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2004/02/skos/core#altLabel> "Caractéristiques de la portion de l'itinéraire"@fr .
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques de l'itinéraire"@fr .
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2004/02/skos/core#prefLabel> "characteristics of the portion of route"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#RouteContext
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> .
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Contextual Route Section" .
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2004/02/skos/core#altLabel> "Contexte de la portion de l'itinéraire"@fr .
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2004/02/skos/core#prefLabel> "Context of the portion of route"@en .
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contexte de l'itinéraire"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#RoutePortion
+<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2000/01/rdf-schema#comment> "A portion of a route representing channels along which people move, potentially heterogeneous in its surface or structure. It may or may not be paved or vehicle-accessible."@fr .
+<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2004/02/skos/core#prefLabel> "Portion de route"@fr .
+<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2004/02/skos/core#prefLabel> "Portion of route"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage. Les propriétés sémantiques des itinéraires ont une validité dans leur ensemble, c’est à dire que si on enlève des portions composant cette propriété on peut en perdre sa caractéristique. Si on cumule des portions qui ont cette caractéristique, on la conserve. Afin de les définir et de les construire on peut proposer une combinaison de critères sémantiques qualifiant chaque propriété ainsi qu’une méthode permettant de l’instancier automatiquement sur les objets concernés. Très peu de travaux dans la littérature présentent cela." .
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2004/02/skos/core#altLabel> "Annotation sémantique d'une portion d'un itinéraire"@fr .
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotation sémantique"@fr .
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Semantic annotation of a portion of route"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#abattoir
 <http://purl.org/choucas.ign.fr/oor#abattoir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -190,7 +295,7 @@
 # http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave
 <http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#dépression_ouverte> .
-<http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave> <http://www.w3.org/2000/01/rdf-schema#comment> "Contient des formes de relief qui résultent d un phénomène naturel d érosion ( eau, vent, etc.) et  regroupe les formes de relief selon si elles sont ponctuellement localisées ou effilées"@fr .
+<http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave> <http://www.w3.org/2000/01/rdf-schema#comment> "Contient des formes de relief qui résultent d un phénomène naturel d érosion (eau, vent, etc.) et  regroupe les formes de relief selon si elles sont ponctuellement localisées ou effilées"@fr .
 <http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave> <http://www.w3.org/2004/02/skos/core#prefLabel> "concave natural relief break"@en .
 <http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave> <http://www.w3.org/2004/02/skos/core#prefLabel> "rupture naturelle de relief concave"@fr .
 # 
@@ -336,7 +441,7 @@
 # 
 # http://purl.org/choucas.ign.fr/oor#autoroute
 <http://purl.org/choucas.ign.fr/oor#autoroute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#autoroute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier> .
+<http://purl.org/choucas.ign.fr/oor#autoroute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> .
 <http://purl.org/choucas.ign.fr/oor#autoroute> <http://www.w3.org/2004/02/skos/core#altLabel> "bretelle"@fr .
 <http://purl.org/choucas.ign.fr/oor#autoroute> <http://www.w3.org/2004/02/skos/core#altLabel> "voie rapide"@fr .
 <http://purl.org/choucas.ign.fr/oor#autoroute> <http://www.w3.org/2004/02/skos/core#prefLabel> "autoroute"@fr .
@@ -480,6 +585,13 @@
 <http://purl.org/choucas.ign.fr/oor#blockhaus> <http://www.w3.org/2004/02/skos/core#altLabel> "pillbox"@en .
 <http://purl.org/choucas.ign.fr/oor#blockhaus> <http://www.w3.org/2004/02/skos/core#prefLabel> "blockhaus"@fr .
 <http://purl.org/choucas.ign.fr/oor#blockhaus> <http://www.w3.org/2004/02/skos/core#prefLabel> "blockhouse"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#bois
+<http://purl.org/choucas.ign.fr/oor#bois> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#bois> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#végétation_arborée> .
+<http://purl.org/choucas.ign.fr/oor#bois> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#végétation_basse> .
+<http://purl.org/choucas.ign.fr/oor#bois> <http://www.w3.org/2004/02/skos/core#prefLabel> "bois"@fr .
+<http://purl.org/choucas.ign.fr/oor#bois> <http://www.w3.org/2004/02/skos/core#prefLabel> "wood"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#borne
 <http://purl.org/choucas.ign.fr/oor#borne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -869,8 +981,8 @@
 # 
 # http://purl.org/choucas.ign.fr/oor#chemin
 <http://purl.org/choucas.ign.fr/oor#chemin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#chemin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier> .
-<http://purl.org/choucas.ign.fr/oor#chemin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable> .
+<http://purl.org/choucas.ign.fr/oor#chemin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> .
+<http://purl.org/choucas.ign.fr/oor#chemin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> .
 <http://purl.org/choucas.ign.fr/oor#chemin> <http://www.w3.org/2000/01/rdf-schema#comment> "Element du réseau routier prévu pour la circulation de véhicules ou d’engins d’exploitation. Un chemin peut être carrossables ou non carrosables."@fr .
 <http://purl.org/choucas.ign.fr/oor#chemin> <http://www.w3.org/2004/02/skos/core#altLabel> "allée forestière"@fr .
 <http://purl.org/choucas.ign.fr/oor#chemin> <http://www.w3.org/2004/02/skos/core#altLabel> "chemin d exploitation"@fr .
@@ -1427,7 +1539,7 @@
 # 
 # http://purl.org/choucas.ign.fr/oor#escalier
 <http://purl.org/choucas.ign.fr/oor#escalier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#escalier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable> .
+<http://purl.org/choucas.ign.fr/oor#escalier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> .
 <http://purl.org/choucas.ign.fr/oor#escalier> <http://www.w3.org/2000/01/rdf-schema#comment> "Construction à l utilisation des piétons, constituée d une suite régulière de marches reliant deux lieux d altitudes différentes."@fr .
 <http://purl.org/choucas.ign.fr/oor#escalier> <http://www.w3.org/2004/02/skos/core#altLabel> "steps"@en .
 <http://purl.org/choucas.ign.fr/oor#escalier> <http://www.w3.org/2004/02/skos/core#prefLabel> "escalier"@fr .
@@ -1543,35 +1655,47 @@
 # 
 # http://purl.org/choucas.ign.fr/oor#forêt
 <http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#massif_boisé> .
-<http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée mixte"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée"@fr .
 <http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt ouverte"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/2004/02/skos/core#prefLabel> "forest"@en .
 <http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt"@fr .
-<http://purl.org/choucas.ign.fr/oor#forêt> <http://www.w3.org/2004/02/skos/core#prefLabel> "wood"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#forêt_de_conifères
+<http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#forêt> .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/choucas.ign.fr/oor#Conifères> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt de résineux"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de conifères"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de résineux"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> <http://www.w3.org/2004/02/skos/core#prefLabel> "coniferous forest"@en .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_conifères> <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt de conifères"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus
 <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#forêt> .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/choucas.ign.fr/oor#feuillus> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/choucas.ign.fr/oor#Feuillus> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de feuillus"@fr .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2004/02/skos/core#prefLabel> "broadleaved forest"@fr .
+<http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2004/02/skos/core#prefLabel> "broadleaved forest"@en .
 <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt de feuillus"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#forêt_de_résineux
-<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#forêt> .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/choucas.ign.fr/oor#résineux> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt de conifères"@fr .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de conifères"@fr .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de résineux"@fr .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#prefLabel> "coniferous forest"@fr .
-<http://purl.org/choucas.ign.fr/oor#forêt_de_résineux> <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt de résineux"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#forêt_domaniale
 <http://purl.org/choucas.ign.fr/oor#forêt_domaniale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1582,10 +1706,10 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/choucas.ign.fr/oor#forêt_mixtes
 <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#forêt> .
-<http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
-_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/choucas.ign.fr/oor#mixtes> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <http://purl.org/choucas.ign.fr/oor#Mixtes> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2000/01/rdf-schema#comment> "Massif boisé dont la composition forestière est mixte: feuillus et résineux"@fr .
 <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2004/02/skos/core#altLabel> "composite stand"@en .
 <http://purl.org/choucas.ign.fr/oor#forêt_mixtes> <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée mixte"@fr .
@@ -2700,7 +2824,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#piste_cyclable
 <http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable> .
+<http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> .
 <http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/2000/01/rdf-schema#comment> "Portion de la voirie aménagée pour la circulation des cycles non motorisés"@fr .
 <http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/2004/02/skos/core#prefLabel> "bicycle path"@en .
 <http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/2004/02/skos/core#prefLabel> "piste cyclable"@fr .
@@ -2844,6 +2968,48 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#port> <http://www.w3.org/2004/02/skos/core#altLabel> "havre"@fr .
 <http://purl.org/choucas.ign.fr/oor#port> <http://www.w3.org/2004/02/skos/core#prefLabel> "harbor"@en .
 <http://purl.org/choucas.ign.fr/oor#port> <http://www.w3.org/2004/02/skos/core#prefLabel> "port"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#sentier> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#piste_cyclable> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#escalier> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#chemin> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable> .
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> <http://www.w3.org/2000/01/rdf-schema#comment> "Portion de voie de communication destinée aux piétons, aux cycles ou aux animaux, homogène pour l'ensemble des attributs et des relations qui la concerne. Le tronçon de route peut être revêtu ou non revêtu (pas de revêtement de surface ou revêtement de surface fortement dégradé). La portion de voie non carrossable n'est pas indiquée ni praticable pour les automobiles." .
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> <http://www.w3.org/2004/02/skos/core#prefLabel> "portion de voie non carrossable"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#rue> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#route> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#chemin> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/choucas.ign.fr/oor#autoroute> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier> .
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> <http://www.w3.org/2000/01/rdf-schema#comment> "Portion de voie de communication destinée aux automobiles, aux piétons, aux cycles ou aux animaux, homogène pour l'ensemble des attributs et des relations qui la concerne. Le tronçon de route peut être revêtu ou non revêtu (pas de revêtement de surface ou revêtement de surface fortement dégradé)." .
+<http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> <http://www.w3.org/2004/02/skos/core#prefLabel> "portion de voie routier"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#poste_de_gendarmerie
 <http://purl.org/choucas.ign.fr/oor#poste_de_gendarmerie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3108,14 +3274,14 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#route
 <http://purl.org/choucas.ign.fr/oor#route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#route> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier> .
+<http://purl.org/choucas.ign.fr/oor#route> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> .
 <http://purl.org/choucas.ign.fr/oor#route> <http://www.w3.org/2000/01/rdf-schema#comment> "Element du réseau de transport routier (autoroutes, routes à 1 chaussée ou 2 chaussée, bretelle) . Il s agit d une route goudronnée permettant la circulation des véhicules."@fr .
 <http://purl.org/choucas.ign.fr/oor#route> <http://www.w3.org/2004/02/skos/core#prefLabel> "road"@en .
 <http://purl.org/choucas.ign.fr/oor#route> <http://www.w3.org/2004/02/skos/core#prefLabel> "route"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#rue
 <http://purl.org/choucas.ign.fr/oor#rue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#rue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier> .
+<http://purl.org/choucas.ign.fr/oor#rue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier> .
 <http://purl.org/choucas.ign.fr/oor#rue> <http://www.w3.org/2004/02/skos/core#altLabel> "allée"@fr .
 <http://purl.org/choucas.ign.fr/oor#rue> <http://www.w3.org/2004/02/skos/core#altLabel> "ruelle"@fr .
 <http://purl.org/choucas.ign.fr/oor#rue> <http://www.w3.org/2004/02/skos/core#prefLabel> "rue"@fr .
@@ -3360,7 +3526,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#sentier
 <http://purl.org/choucas.ign.fr/oor#sentier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#sentier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable> .
+<http://purl.org/choucas.ign.fr/oor#sentier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable> .
 <http://purl.org/choucas.ign.fr/oor#sentier> <http://www.w3.org/2000/01/rdf-schema#comment> "Voie étroite ne permettant pas le passage de véhicules automobiles. Un sentier peut être revetu ou non."@fr .
 <http://purl.org/choucas.ign.fr/oor#sentier> <http://www.w3.org/2004/02/skos/core#altLabel> "allée"@fr .
 <http://purl.org/choucas.ign.fr/oor#sentier> <http://www.w3.org/2004/02/skos/core#altLabel> "allée piétonne"@fr .
@@ -4501,6 +4667,7 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.geonames.org/ontology#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # 
 # 
@@ -4511,6 +4678,73 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
+# http://purl.org/choucas.ign.fr/oor#Conifères
+<http://purl.org/choucas.ign.fr/oor#Conifères> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#Conifères> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#CompositionEnsemble> .
+<http://purl.org/choucas.ign.fr/oor#Conifères> <http://www.w3.org/2000/01/rdf-schema#comment> "A stand dominated by coniferous trees, representing over 75% of the relative canopy cover."@en .
+<http://purl.org/choucas.ign.fr/oor#Conifères> <http://www.w3.org/2000/01/rdf-schema#comment> "Espace peuplé d’arbres forestiers composée de plus de 75 % de résineux (taux de couvert relatif)."@fr .
+<http://purl.org/choucas.ign.fr/oor#Conifères> <http://www.w3.org/2000/01/rdf-schema#label> "Conifers"@en .
+<http://purl.org/choucas.ign.fr/oor#Conifères> <http://www.w3.org/2000/01/rdf-schema#label> "Résineux"@fr .
+<http://purl.org/choucas.ign.fr/oor#Conifères> <http://www.w3.org/2004/02/skos/core#altLabel> "Conifères"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086
+<http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#parking_touristique_isole> .
+<http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086> <http://purl.org/choucas.ign.fr/oor#dataSource> "BDTOPO" .
+# 
+# http://purl.org/choucas.ign.fr/oor#Feuillus
+<http://purl.org/choucas.ign.fr/oor#Feuillus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#Feuillus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#CompositionEnsemble> .
+<http://purl.org/choucas.ign.fr/oor#Feuillus> <http://www.w3.org/2000/01/rdf-schema#comment> "A stand dominated by deciduous trees, representing over 75% of the relative canopy cover."@en .
+<http://purl.org/choucas.ign.fr/oor#Feuillus> <http://www.w3.org/2000/01/rdf-schema#comment> "Espace peuplé d’arbres forestiers composée de plus de 75 % de feuillus (taux de couvert relatif)."@fr .
+<http://purl.org/choucas.ign.fr/oor#Feuillus> <http://www.w3.org/2000/01/rdf-schema#label> "Deciduous"@en .
+<http://purl.org/choucas.ign.fr/oor#Feuillus> <http://www.w3.org/2000/01/rdf-schema#label> "Feuillus"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#Mixtes
+<http://purl.org/choucas.ign.fr/oor#Mixtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#Mixtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#CompositionEnsemble> .
+<http://purl.org/choucas.ign.fr/oor#Mixtes> <http://www.w3.org/2000/01/rdf-schema#comment> "A mixture of deciduous and coniferous species, with neither representing for more than 75% of the relative canopy cover."@en .
+<http://purl.org/choucas.ign.fr/oor#Mixtes> <http://www.w3.org/2000/01/rdf-schema#comment> "Espace peuplé d’arbres forestiers composée d'un mélange de feuillus et de conifères, dans lequel aucun des deux n’atteint 75 %"@fr .
+<http://purl.org/choucas.ign.fr/oor#Mixtes> <http://www.w3.org/2000/01/rdf-schema#label> "Mixed"@en .
+<http://purl.org/choucas.ign.fr/oor#Mixtes> <http://www.w3.org/2000/01/rdf-schema#label> "Mixtes"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#SPRI_FF21
+<http://purl.org/choucas.ign.fr/oor#SPRI_FF21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_FF21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#PRI> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_FF21> <http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark> <http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_FF21> <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://purl.org/choucas.ign.fr/oor#traverser_foret> .
+# 
+# http://purl.org/choucas.ign.fr/oor#SPRI_P1
+<http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#PRI> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark> <http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://purl.org/choucas.ign.fr/oor#access_parking> .
+<http://purl.org/choucas.ign.fr/oor#access_parking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# http://purl.org/choucas.ign.fr/oor#SPRI_V16
+<http://purl.org/choucas.ign.fr/oor#SPRI_V16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_V16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#PRI> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_V16> <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> .
+# 
+# http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096
+<http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#abri> .
+<http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://purl.org/choucas.ign.fr/oor#dataSource> "BDTOPO" .
+<http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://purl.org/choucas.ign.fr/oor#geographicalName> "Abri de la Peyrouse" .
+# 
+# http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421
+<http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> .
+<http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421> <http://purl.org/choucas.ign.fr/oor#dataSource> "BDTOPO" .
+# 
+# http://purl.org/choucas.ign.fr/oor#access_parking
+# 
+# http://purl.org/choucas.ign.fr/oor#atJonction
+<http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
+<http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/2000/01/rdf-schema#comment> "atJonction"@en .
+<http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/2000/01/rdf-schema#label> "A la jonction"@fr .
+# 
 # http://purl.org/choucas.ign.fr/oor#bruyère
 <http://purl.org/choucas.ign.fr/oor#bruyère> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#bruyère> <http://www.w3.org/2000/01/rdf-schema#label> "bruyère"@fr .
@@ -4519,41 +4753,157 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#buis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#buis> <http://www.w3.org/2000/01/rdf-schema#label> "buis"@fr .
 # 
-# http://purl.org/choucas.ign.fr/oor#feuillus
-<http://purl.org/choucas.ign.fr/oor#feuillus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/choucas.ign.fr/oor#feuillus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#FeuillusResineux> .
-<http://purl.org/choucas.ign.fr/oor#feuillus> <http://www.w3.org/2000/01/rdf-schema#comment> "A stand dominated by deciduous trees, representing over 75% of the relative canopy cover."@en .
-<http://purl.org/choucas.ign.fr/oor#feuillus> <http://www.w3.org/2000/01/rdf-schema#comment> "Espace peuplé d’arbres forestiers composée de plus de 75 % de feuillus (taux de couvert relatif)."@fr .
-<http://purl.org/choucas.ign.fr/oor#feuillus> <http://www.w3.org/2000/01/rdf-schema#label> "Deciduous"@en .
-<http://purl.org/choucas.ign.fr/oor#feuillus> <http://www.w3.org/2000/01/rdf-schema#label> "Feuillus"@fr .
+# http://purl.org/choucas.ign.fr/oor#crossing
+<http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
+<http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossing"@fr .
+<http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/2000/01/rdf-schema#label> "Crossing"@en .
+<http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/2000/01/rdf-schema#label> "Traverser"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#en_balcon
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2000/01/rdf-schema#comment> "c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l'abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.)."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2000/01/rdf-schema#label> "En balcon"@fr .
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2004/02/skos/core#altLabel> "en corniche"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée
+<http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/2000/01/rdf-schema#comment> "les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/2000/01/rdf-schema#label> "En fond de vallée"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#en_ligne_crête
+<http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/2000/01/rdf-schema#comment> "c’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/2000/01/rdf-schema#label> "En ligne de crête"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#en_pente_escarpée
+<http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/2000/01/rdf-schema#comment> "une portion de route escarpée, à fortes pentes."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/2000/01/rdf-schema#label> "En pente escarpée"@fr .
+<http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/2000/01/rdf-schema#label> "Steep"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes
+<http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/2000/01/rdf-schema#comment> "désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/2000/01/rdf-schema#label> "En route des crêtes"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets
+<http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/2000/01/rdf-schema#comment> "sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s'étalent le long d'une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d'angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux »."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/2000/01/rdf-schema#label> "Séries de virages en lacets"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#following
+<http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
+<http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/2000/01/rdf-schema#comment> "Following"@en .
+<http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/2000/01/rdf-schema#label> "Following"@en .
+<http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/2000/01/rdf-schema#label> "Longer"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#hêtraie
 <http://purl.org/choucas.ign.fr/oor#hêtraie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#hêtraie> <http://www.w3.org/2000/01/rdf-schema#label> "hêtraie"@fr .
 # 
-# http://purl.org/choucas.ign.fr/oor#mixtes
-<http://purl.org/choucas.ign.fr/oor#mixtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/choucas.ign.fr/oor#mixtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#FeuillusResineux> .
-<http://purl.org/choucas.ign.fr/oor#mixtes> <http://www.w3.org/2000/01/rdf-schema#comment> "A mixture of deciduous and coniferous species, with neither representing for more than 75% of the relative canopy cover."@en .
-<http://purl.org/choucas.ign.fr/oor#mixtes> <http://www.w3.org/2000/01/rdf-schema#comment> "Espace peuplé d’arbres forestiers composée d'un mélange de feuillus et de conifères, dans lequel aucun des deux n’atteint 75 %"@fr .
-<http://purl.org/choucas.ign.fr/oor#mixtes> <http://www.w3.org/2000/01/rdf-schema#label> "Mixed"@en .
-<http://purl.org/choucas.ign.fr/oor#mixtes> <http://www.w3.org/2000/01/rdf-schema#label> "Mixtes"@fr .
+# http://purl.org/choucas.ign.fr/oor#information
+<http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#information> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
+<http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/2000/01/rdf-schema#comment> "Des panneaux, pancartes, des carrefours, etc."@fr .
+<http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/2000/01/rdf-schema#label> "  "@en .
+<http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/2000/01/rdf-schema#label> "Information de navigation"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#longer_foret
+<http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#longer_foret> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#following> .
+<http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/2000/01/rdf-schema#comment> "longer une forêt"@fr .
+<http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/2000/01/rdf-schema#label> "Longer une forêt"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#longer_haie
+<http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#longer_haie> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#following> .
+<http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/2000/01/rdf-schema#comment> "longer une haie"@fr .
+<http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/2000/01/rdf-schema#label> "Longer une haie"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#longer_lac
+<http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#longer_lac> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#following> .
+<http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/2000/01/rdf-schema#comment> "Longer un lac."@fr .
+<http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/2000/01/rdf-schema#label> "Longer un lac"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#mélezin
 <http://purl.org/choucas.ign.fr/oor#mélezin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#mélezin> <http://www.w3.org/2000/01/rdf-schema#label> "mélezin"@fr .
 # 
-# http://purl.org/choucas.ign.fr/oor#résineux
-<http://purl.org/choucas.ign.fr/oor#résineux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/choucas.ign.fr/oor#résineux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#FeuillusResineux> .
-<http://purl.org/choucas.ign.fr/oor#résineux> <http://www.w3.org/2000/01/rdf-schema#comment> "A stand dominated by coniferous trees, representing over 75% of the relative canopy cover."@en .
-<http://purl.org/choucas.ign.fr/oor#résineux> <http://www.w3.org/2000/01/rdf-schema#comment> "Espace peuplé d’arbres forestiers composée de plus de 75 % de résineux (taux de couvert relatif)."@fr .
-<http://purl.org/choucas.ign.fr/oor#résineux> <http://www.w3.org/2000/01/rdf-schema#label> "Conifers"@en .
-<http://purl.org/choucas.ign.fr/oor#résineux> <http://www.w3.org/2000/01/rdf-schema#label> "Résineux"@fr .
-<http://purl.org/choucas.ign.fr/oor#résineux> <http://www.w3.org/2004/02/skos/core#altLabel> "Conifères"@fr .
+# http://purl.org/choucas.ign.fr/oor#nature_route
+<http://purl.org/choucas.ign.fr/oor#nature_route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#nature_route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#nature_route> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#crossing> .
+<http://purl.org/choucas.ign.fr/oor#nature_route> <http://www.w3.org/2000/01/rdf-schema#comment> "Prendre une route, un chemin ou un sentier"@fr .
+<http://purl.org/choucas.ign.fr/oor#nature_route> <http://www.w3.org/2000/01/rdf-schema#label> "Nature route"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#nearProximity
+<http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
+<http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Proximité immédiate"@en .
+<http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/2000/01/rdf-schema#label> "Proximité immédiate"@fr .
+<http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/2000/01/rdf-schema#label> "near proximity"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#point_de_cheminement
+<http://purl.org/choucas.ign.fr/oor#point_de_cheminement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#point_de_cheminement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#point_de_cheminement> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
+<http://purl.org/choucas.ign.fr/oor#point_de_cheminement> <http://www.w3.org/2000/01/rdf-schema#comment> "A waypoint is a reference point that helps us know where we are and where we're going. Whether we’re driving, sailing, or flying, waypoints help us find our way. Landmarks used as waypoints can be natural, such as a tree. They can also be artificial, such as a billboard."@en .
+<http://purl.org/choucas.ign.fr/oor#point_de_cheminement> <http://www.w3.org/2000/01/rdf-schema#comment> "Un point de cheminement est un point de référence qui nous permet de savoir où nous sommes et où nous allons. Que nous soyons en voiture, en bateau ou en avion. Ces points de repère peuvent être naturels, comme un arbre, ou artificiels, comme un panneau d'affichage."@fr .
+<http://purl.org/choucas.ign.fr/oor#point_de_cheminement> <http://www.w3.org/2000/01/rdf-schema#label> "Point de cheminement"@fr .
+<http://purl.org/choucas.ign.fr/oor#point_de_cheminement> <http://www.w3.org/2000/01/rdf-schema#label> "Route point proximity"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#prendre_pont
+<http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#crossing> .
+<http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/2000/01/rdf-schema#comment> "Prendre un pont"@fr .
+<http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/2000/01/rdf-schema#label> "Prendre un pont"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#proche_access_routier
+<http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
+<http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/2000/01/rdf-schema#comment> "Accès à un parking ou à un arrêt desservi par transport commun. Ne pas mettre les remontées mécaniques."@fr .
+<http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/2000/01/rdf-schema#label> "Close to road access"@en .
+<http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/2000/01/rdf-schema#label> "Proche d'un accès routier"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#proche_commodité
+<http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
+<http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/2000/01/rdf-schema#comment> "Des accomodités comme des bancs, tables de picnic, point d'eau, échelle, cordes, etc."@fr .
+<http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/2000/01/rdf-schema#label> "  "@en .
+<http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/2000/01/rdf-schema#label> "Proche d'une commodité"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#proche_viewpoint
+<http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
+<http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Des points de vue."@fr .
+<http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Proche point de vue"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#sapin
 <http://purl.org/choucas.ign.fr/oor#sapin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#sapin> <http://www.w3.org/2000/01/rdf-schema#label> "sapin"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#traverser_foret
+<http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
+<http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#crossing> .
+<http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/2000/01/rdf-schema#comment> "traverser une forêt"@fr .
+<http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/2000/01/rdf-schema#label> "Traverser une forêt"@fr .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
