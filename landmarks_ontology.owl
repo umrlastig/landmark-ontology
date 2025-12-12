@@ -4378,7 +4378,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <!-- http://purl.org/choucas.ign.fr/oor#point_d&apos;eau_potable -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#point_d&apos;eau_potable">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d&apos;eau_douce"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce"/>
         <rdfs:comment xml:lang="fr">Indique un accès à de l'eau potable</rdfs:comment>
         <skos:prefLabel xml:lang="fr">point d&apos;eau potable</skos:prefLabel>
         <skos:prefLabel xml:lang="en">drinking water</skos:prefLabel>
