@@ -39,13 +39,13 @@ Mustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle B
 Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany.</dc:description>
         <dc:issued>2020-01-28</dc:issued>
         <dc:modified>2025-12-12</dc:modified>
-        <dc:publisher>ANR CHOUCAS - LASTIG/IGN</dc:publisher>
-        <dc:rights xml:lang="en">Copyright © 2022 Choucas/LASTIG</dc:rights>
+        <dc:publisher>LASTIG/IGN</dc:publisher>
+        <dc:rights xml:lang="en">Copyright © 2025 LASTIG</dc:rights>
         <dc:title xml:lang="fr">Ontologie des Objets de Repères</dc:title>
         <dc:title xml:lang="en">Ontology Of landmaRks</dc:title>
         <vann:preferredNamespacePrefix>OOR</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>URI DU NAMESPACE</vann:preferredNamespaceUri>
-        <owl:versionInfo>1.0.2</owl:versionInfo>
+        <owl:versionInfo>2.0.0</owl:versionInfo>
     </owl:Ontology>
     
 
