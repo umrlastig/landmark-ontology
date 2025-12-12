@@ -102,6 +102,10 @@ rdfs:comment rdf:type owl:AnnotationProperty .
 rdfs:label rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#equivalentClass
+owl:equivalentClass rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
 
@@ -114,6 +118,16 @@ rdfs:label rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble
+:aCommeCompositionEnsemble rdf:type owl:ObjectProperty ;
+                           rdfs:domain :forêt ;
+                           rdfs:range :CompositionEnsemble ;
+                           rdfs:comment "To characterize the dominant stand composition of vegetation types (e.g., deciduous, coniferous) within a forest area."@en ,
+                                        "Pour modéliser la composition dominante des types de formation végétale (ex. feuillus, conifères)." ;
+                           rdfs:label "a comme composition dominante"@fr ,
+                                      "type of stand composition"@en .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#aPourCouleur
 :aPourCouleur rdf:type owl:ObjectProperty ;
               rdfs:comment "Pour modéliser la couleur d un objet (ex. une maison jaune)"@fr .
@@ -123,6 +137,26 @@ rdfs:label rdf:type owl:AnnotationProperty .
 :aPourForme rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:comment "pour modéliser la forme d un objet (ex. un lac rond)"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark
+:hasReferencedLandmark rdf:type owl:ObjectProperty ;
+                       rdfs:domain :RoutePortion ;
+                       rdfs:range :objet_de_repère .
+
+
+###  http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation
+:hasSemanticRouteAnnotation rdf:type owl:ObjectProperty ;
+                            rdfs:domain :RoutePortion ;
+                            rdfs:range :SemanticRouteAnnotation ;
+                            rdfs:comment "Pour modéliser les annotations sémantiques des itinéraires." ;
+                            rdfs:label "hasSemanticRouteAnnotation" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#locationRelation
+:locationRelation rdf:type owl:ObjectProperty ;
+                  rdfs:domain :RouteContext ;
+                  rdfs:range :LocationRelationship .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#peutEtreCoLocaliséAvec
@@ -140,18 +174,37 @@ rdfs:label rdf:type owl:AnnotationProperty .
                       rdfs:comment "pour modéliser les objets qui peuvent être confondu de par leur forme (ex : ligne électrique peutEtreConfonduAvec cable transporteur) ou par leur usage (ex. cabane/refuge)"@fr .
 
 
-###  http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux
-:typeFeuillusResineux rdf:type owl:ObjectProperty ;
-                      rdfs:domain :forêt ;
-                      rdfs:range :FeuillusResineux ;
-                      rdfs:comment "Pour modéliser la composition dominante des types de formation végétale (ex. feuillus, conifères) à une zone forestière."@fr ,
-                                   "To characterize the dominant stand composition of vegetation types (e.g., deciduous, coniferous) within a forest area."@en ;
-                      rdfs:label "type de composition du peuplement"@fr ,
-                                 "type of stand composition"@en .
+###  http://purl.org/choucas.ign.fr/oor#referencedLandmark
+:referencedLandmark rdf:type owl:ObjectProperty ;
+                    rdfs:domain :RouteContext .
 
 
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
 owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées dans cette version d’OOR"@fr .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/choucas.ign.fr/oor#dataSource
+:dataSource rdf:type owl:DatatypeProperty ;
+            rdfs:domain :objet_de_repère .
+
+
+###  http://purl.org/choucas.ign.fr/oor#geographicalName
+:geographicalName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :objet_de_repère ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Attribut permettant de préciser le nom (graphie) principal de l'objet de repère"@fr ;
+                  rdfs:label "nom géographique"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#idcc
+:idcc rdf:type owl:DatatypeProperty ;
+      rdfs:domain :PRI ;
+      rdfs:comment "Attribut permettant de préciser l'identifiant de la composante connexe"@fr ;
+      rdfs:label "Identifiant de la cc"@fr .
 
 
 #################################################################
@@ -182,19 +235,77 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                                                      "plateau adouci de forme compacte"@fr .
 
 
-###  http://purl.org/choucas.ign.fr/oor#FeuillusResineux
-:FeuillusResineux rdf:type owl:Class ;
-                  rdfs:subClassOf :NomenclatureCoucheForestière ;
-                  rdfs:comment "Composition du peuplement recensable en 3 classes (FEUILLU / RESINEUX / MIXTES)" ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Composition du peuplement en 3 classes"@fr ,
-                                                                  "Stand composition in 3 classes"@en .
+###  http://purl.org/choucas.ign.fr/oor#CompositionEnsemble
+:CompositionEnsemble rdf:type owl:Class ;
+                     rdfs:subClassOf :NomenclatureCoucheForestière ;
+                     rdfs:comment "Regroupe l'ensemble des compositions du niveau 3 de la nomenclature de la végétation." ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Compositions d'ensemble"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#LocationRelationship
+:LocationRelationship rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                      rdfs:comment "Represent the type of the relationships such as adjacency, following or crossing" ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Location relationship"@en ,
+                                                                      "Relations de localisation"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière
 :NomenclatureCoucheForestière rdf:type owl:Class ;
                               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                              rdfs:comment "Nomenclature de la composition de la couche forestière par essences plantées" ;
+                              rdfs:comment "Nomenclature de la couche forestière thématique nationale et hiérarchique à quatre niveaux : couverture du sol, densité du couvert, composition d’ensemble et essences" ;
                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Nomenclature de la couche forestière"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#PRI
+:PRI rdf:type owl:Class ;
+     rdfs:subClassOf :RoutePortion ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasSemanticRouteAnnotation ;
+                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                            owl:unionOf ( :RouteCharacteristic
+                                                          :RouteContext
+                                                        )
+                                          ]
+                     ] ;
+     <http://www.w3.org/2004/02/skos/core#altLabel> "Portion d'itinéraire avec une annotation sémantique"@fr ,
+                                                    "Route portion with semantic route annotation"@en ;
+     <http://www.w3.org/2004/02/skos/core#prefLabel> "PRI"@en ,
+                                                     "PRI"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#RouteCharacteristic
+:RouteCharacteristic rdf:type owl:Class ;
+                     rdfs:subClassOf :SemanticRouteAnnotation ;
+                     rdfs:comment "Regroupe l'ensemble des caractéristiques des routes."@fr ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "Caractéristiques de la portion de l'itinéraire"@fr ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques de l'itinéraire"@fr ,
+                                                                     "characteristics of the portion of route"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#RouteContext
+:RouteContext rdf:type owl:Class ;
+              rdfs:subClassOf :SemanticRouteAnnotation ;
+              rdfs:comment "Contextual Route Section" ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "Contexte de la portion de l'itinéraire"@fr ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Context of the portion of route"@en ,
+                                                              "Contexte de l'itinéraire"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#RoutePortion
+:RoutePortion rdf:type owl:Class ;
+              rdfs:comment "A portion of a route representing channels along which people move, potentially heterogeneous in its surface or structure. It may or may not be paved or vehicle-accessible."@fr ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Portion de route"@fr ,
+                                                              "Portion of route"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation
+:SemanticRouteAnnotation rdf:type owl:Class ;
+                         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                         rdfs:comment "Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage. Les propriétés sémantiques des itinéraires ont une validité dans leur ensemble, c’est à dire que si on enlève des portions composant cette propriété on peut en perdre sa caractéristique. Si on cumule des portions qui ont cette caractéristique, on la conserve. Afin de les définir et de les construire on peut proposer une combinaison de critères sémantiques qualifiant chaque propriété ainsi qu’une méthode permettant de l’instancier automatiquement sur les objets concernés. Très peu de travaux dans la littérature présentent cela." ;
+                         <http://www.w3.org/2004/02/skos/core#altLabel> "Annotation sémantique d'une portion d'un itinéraire"@fr ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotation sémantique"@fr ,
+                                                                         "Semantic annotation of a portion of route"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#abattoir
@@ -226,7 +337,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 ###  http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave
 :accidents-de-relief-concave rdf:type owl:Class ;
                              rdfs:subClassOf :dépression_ouverte ;
-                             rdfs:comment "Contient des formes de relief qui résultent d un phénomène naturel d érosion ( eau, vent, etc.) et  regroupe les formes de relief selon si elles sont ponctuellement localisées ou effilées"@fr ;
+                             rdfs:comment "Contient des formes de relief qui résultent d un phénomène naturel d érosion (eau, vent, etc.) et  regroupe les formes de relief selon si elles sont ponctuellement localisées ou effilées"@fr ;
                              <http://www.w3.org/2004/02/skos/core#prefLabel> "concave natural relief break"@en ,
                                                                              "rupture naturelle de relief concave"@fr .
 
@@ -388,7 +499,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#autoroute
 :autoroute rdf:type owl:Class ;
-           rdfs:subClassOf :infrastructure_de_transport_routier ;
+           rdfs:subClassOf :portion_de_voie_routier ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "bretelle"@fr ,
                                                           "voie rapide"@fr ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "autoroute"@fr .
@@ -550,6 +661,14 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                                                           "pillbox"@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "blockhaus"@fr ,
                                                            "blockhouse"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bois
+:bois rdf:type owl:Class ;
+      rdfs:subClassOf :végétation_arborée ,
+                      :végétation_basse ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "bois"@fr ,
+                                                      "wood"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#borne
@@ -988,8 +1107,8 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#chemin
 :chemin rdf:type owl:Class ;
-        rdfs:subClassOf :infrastructure_de_transport_routier ,
-                        :voie_de_communication_non_carrossable ;
+        rdfs:subClassOf :portion_de_voie_non_carrossable ,
+                        :portion_de_voie_routier ;
         rdfs:comment "Element du réseau routier prévu pour la circulation de véhicules ou d’engins d’exploitation. Un chemin peut être carrossables ou non carrosables."@fr ;
         <http://www.w3.org/2004/02/skos/core#altLabel> "allée forestière"@fr ,
                                                        "chemin d exploitation"@fr ,
@@ -1617,7 +1736,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#escalier
 :escalier rdf:type owl:Class ;
-          rdfs:subClassOf :voie_de_communication_non_carrossable ;
+          rdfs:subClassOf :portion_de_voie_non_carrossable ;
           rdfs:comment "Construction à l utilisation des piétons, constituée d une suite régulière de marches reliant deux lieux d altitudes différentes."@fr ;
           <http://www.w3.org/2004/02/skos/core#altLabel> "steps"@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "escalier"@fr ,
@@ -1748,37 +1867,43 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#forêt
 :forêt rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Class ;
+                             owl:unionOf ( :forêt_de_conifères
+                                           :forêt_de_feuillus
+                                           :forêt_mixtes
+                                         )
+                           ] ;
        rdfs:subClassOf :massif_boisé ;
-       <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée mixte"@fr ,
+       <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée"@fr ,
                                                       "forêt ouverte"@fr ;
-       <http://www.w3.org/2004/02/skos/core#prefLabel> "forêt"@fr ,
-                                                       "wood"@en .
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "forest"@en ,
+                                                       "forêt"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#forêt_de_conifères
+:forêt_de_conifères rdf:type owl:Class ;
+                    rdfs:subClassOf :forêt ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :aCommeCompositionEnsemble ;
+                                      owl:hasValue :Conifères
+                                    ] ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "forêt de résineux"@fr ,
+                                                                   "forêt fermée de conifères"@fr ,
+                                                                   "forêt fermée de résineux"@fr ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "coniferous forest"@en ,
+                                                                    "forêt de conifères"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus
 :forêt_de_feuillus rdf:type owl:Class ;
                    rdfs:subClassOf :forêt ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty :typeFeuillusResineux ;
-                                     owl:hasValue :feuillus
+                                     owl:onProperty :aCommeCompositionEnsemble ;
+                                     owl:hasValue :Feuillus
                                    ] ;
                    <http://www.w3.org/2004/02/skos/core#altLabel> "forêt fermée de feuillus"@fr ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "broadleaved forest"@fr ,
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "broadleaved forest"@en ,
                                                                    "forêt de feuillus"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#forêt_de_résineux
-:forêt_de_résineux rdf:type owl:Class ;
-                   rdfs:subClassOf :forêt ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :typeFeuillusResineux ;
-                                     owl:hasValue :résineux
-                                   ] ;
-                   <http://www.w3.org/2004/02/skos/core#altLabel> "forêt de conifères"@fr ,
-                                                                  "forêt fermée de conifères"@fr ,
-                                                                  "forêt fermée de résineux"@fr ;
-                   <http://www.w3.org/2004/02/skos/core#prefLabel> "coniferous forest"@fr ,
-                                                                   "forêt de résineux"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#forêt_domaniale
@@ -1792,8 +1917,8 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 :forêt_mixtes rdf:type owl:Class ;
               rdfs:subClassOf :forêt ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty :typeFeuillusResineux ;
-                                owl:hasValue :mixtes
+                                owl:onProperty :aCommeCompositionEnsemble ;
+                                owl:hasValue :Mixtes
                               ] ;
               rdfs:comment "Massif boisé dont la composition forestière est mixte: feuillus et résineux"@fr ;
               <http://www.w3.org/2004/02/skos/core#altLabel> "composite stand"@en ,
@@ -3053,7 +3178,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#piste_cyclable
 :piste_cyclable rdf:type owl:Class ;
-                rdfs:subClassOf :voie_de_communication_non_carrossable ;
+                rdfs:subClassOf :portion_de_voie_non_carrossable ;
                 rdfs:comment "Portion de la voirie aménagée pour la circulation des cycles non motorisés"@fr ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "bicycle path"@en ,
                                                                 "piste cyclable"@fr .
@@ -3214,6 +3339,34 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
                                                      "havre"@fr ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "harbor"@en ,
                                                       "port"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable
+:portion_de_voie_non_carrossable rdf:type owl:Class ;
+                                 owl:equivalentClass [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :chemin
+                                                                     :escalier
+                                                                     :piste_cyclable
+                                                                     :sentier
+                                                                   )
+                                                     ] ;
+                                 rdfs:subClassOf :voie_de_communication_non_carrossable ;
+                                 rdfs:comment "Portion de voie de communication destinée aux piétons, aux cycles ou aux animaux, homogène pour l'ensemble des attributs et des relations qui la concerne. Le tronçon de route peut être revêtu ou non revêtu (pas de revêtement de surface ou revêtement de surface fortement dégradé). La portion de voie non carrossable n'est pas indiquée ni praticable pour les automobiles." ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "portion de voie non carrossable"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier
+:portion_de_voie_routier rdf:type owl:Class ;
+                         owl:equivalentClass [ rdf:type owl:Class ;
+                                               owl:unionOf ( :autoroute
+                                                             :chemin
+                                                             :route
+                                                             :rue
+                                                           )
+                                             ] ;
+                         rdfs:subClassOf :infrastructure_de_transport_routier ;
+                         rdfs:comment "Portion de voie de communication destinée aux automobiles, aux piétons, aux cycles ou aux animaux, homogène pour l'ensemble des attributs et des relations qui la concerne. Le tronçon de route peut être revêtu ou non revêtu (pas de revêtement de surface ou revêtement de surface fortement dégradé)." ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "portion de voie routier"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#poste_de_gendarmerie
@@ -3510,7 +3663,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#route
 :route rdf:type owl:Class ;
-       rdfs:subClassOf :infrastructure_de_transport_routier ;
+       rdfs:subClassOf :portion_de_voie_routier ;
        rdfs:comment "Element du réseau de transport routier (autoroutes, routes à 1 chaussée ou 2 chaussée, bretelle) . Il s agit d une route goudronnée permettant la circulation des véhicules."@fr ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "road"@en ,
                                                        "route"@fr .
@@ -3518,7 +3671,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#rue
 :rue rdf:type owl:Class ;
-     rdfs:subClassOf :infrastructure_de_transport_routier ;
+     rdfs:subClassOf :portion_de_voie_routier ;
      <http://www.w3.org/2004/02/skos/core#altLabel> "allée"@fr ,
                                                     "ruelle"@fr ;
      <http://www.w3.org/2004/02/skos/core#prefLabel> "rue"@fr .
@@ -3795,7 +3948,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#sentier
 :sentier rdf:type owl:Class ;
-         rdfs:subClassOf :voie_de_communication_non_carrossable ;
+         rdfs:subClassOf :portion_de_voie_non_carrossable ;
          rdfs:comment "Voie étroite ne permettant pas le passage de véhicules automobiles. Un sentier peut être revetu ou non."@fr ;
          <http://www.w3.org/2004/02/skos/core#altLabel> "allée"@fr ,
                                                         "allée piétonne"@fr ,
@@ -5091,6 +5244,84 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 #    Individuals
 #################################################################
 
+###  http://purl.org/choucas.ign.fr/oor#Conifères
+:Conifères rdf:type owl:NamedIndividual ,
+                    :CompositionEnsemble ;
+           rdfs:comment "A stand dominated by coniferous trees, representing over 75% of the relative canopy cover."@en ,
+                        "Espace peuplé d’arbres forestiers composée de plus de 75 % de résineux (taux de couvert relatif)."@fr ;
+           rdfs:label "Conifers"@en ,
+                      "Résineux"@fr ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "Conifères"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086
+:EQ_RESEA0000000230065086 rdf:type owl:NamedIndividual ,
+                                   :parking_touristique_isole ;
+                          :dataSource "BDTOPO" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#Feuillus
+:Feuillus rdf:type owl:NamedIndividual ,
+                   :CompositionEnsemble ;
+          rdfs:comment "A stand dominated by deciduous trees, representing over 75% of the relative canopy cover."@en ,
+                       "Espace peuplé d’arbres forestiers composée de plus de 75 % de feuillus (taux de couvert relatif)."@fr ;
+          rdfs:label "Deciduous"@en ,
+                     "Feuillus"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#Mixtes
+:Mixtes rdf:type owl:NamedIndividual ,
+                 :CompositionEnsemble ;
+        rdfs:comment "A mixture of deciduous and coniferous species, with neither representing for more than 75% of the relative canopy cover."@en ,
+                     "Espace peuplé d’arbres forestiers composée d'un mélange de feuillus et de conifères, dans lequel aucun des deux n’atteint 75 %"@fr ;
+        rdfs:label "Mixed"@en ,
+                   "Mixtes"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#SPRI_FF21
+:SPRI_FF21 rdf:type owl:NamedIndividual ,
+                    :PRI ;
+           :hasReferencedLandmark :ZONEVEGE0000000341083421 ;
+           :hasSemanticRouteAnnotation :traverser_foret .
+
+
+###  http://purl.org/choucas.ign.fr/oor#SPRI_P1
+:SPRI_P1 rdf:type owl:NamedIndividual ,
+                  :PRI ;
+         :hasReferencedLandmark :EQ_RESEA0000000230065086 ;
+         :hasSemanticRouteAnnotation :access_parking .
+
+
+###  http://purl.org/choucas.ign.fr/oor#SPRI_V16
+:SPRI_V16 rdf:type owl:NamedIndividual ,
+                   :PRI ;
+          :hasSemanticRouteAnnotation :en_séries_de_virages_en_lacets .
+
+
+###  http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096
+:SURFACTI0000000007463096 rdf:type owl:NamedIndividual ,
+                                   :abri ;
+                          :dataSource "BDTOPO" ;
+                          :geographicalName "Abri de la Peyrouse" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421
+:ZONEVEGE0000000341083421 rdf:type owl:NamedIndividual ,
+                                   :forêt_de_feuillus ;
+                          :dataSource "BDTOPO" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#access_parking
+:access_parking rdf:type owl:NamedIndividual .
+
+
+###  http://purl.org/choucas.ign.fr/oor#atJonction
+:atJonction rdf:type owl:NamedIndividual ,
+                     :LocationRelationship ;
+            rdfs:comment "atJonction"@en ;
+            rdfs:label "A la jonction"@fr .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#bruyère
 :bruyère rdf:type owl:NamedIndividual ;
          rdfs:label "bruyère"@fr .
@@ -5101,13 +5332,64 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
       rdfs:label "buis"@fr .
 
 
-###  http://purl.org/choucas.ign.fr/oor#feuillus
-:feuillus rdf:type owl:NamedIndividual ,
-                   :FeuillusResineux ;
-          rdfs:comment "A stand dominated by deciduous trees, representing over 75% of the relative canopy cover."@en ,
-                       "Espace peuplé d’arbres forestiers composée de plus de 75 % de feuillus (taux de couvert relatif)."@fr ;
-          rdfs:label "Deciduous"@en ,
-                     "Feuillus"@fr .
+###  http://purl.org/choucas.ign.fr/oor#crossing
+:crossing rdf:type owl:NamedIndividual ,
+                   :LocationRelationship ;
+          rdfs:comment "Crossing"@fr ;
+          rdfs:label "Crossing"@en ,
+                     "Traverser"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#en_balcon
+:en_balcon rdf:type owl:NamedIndividual ,
+                    :RouteCharacteristic ;
+           rdfs:comment "c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l'abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.)."@fr ;
+           rdfs:label "En balcon"@fr ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "en corniche"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée
+:en_fond_de_vallée rdf:type owl:NamedIndividual ,
+                            :RouteCharacteristic ;
+                   rdfs:comment "les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée."@fr ;
+                   rdfs:label "En fond de vallée"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#en_ligne_crête
+:en_ligne_crête rdf:type owl:NamedIndividual ,
+                         :RouteCharacteristic ;
+                rdfs:comment "c’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."@fr ;
+                rdfs:label "En ligne de crête"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#en_pente_escarpée
+:en_pente_escarpée rdf:type owl:NamedIndividual ,
+                            :RouteCharacteristic ;
+                   rdfs:comment "une portion de route escarpée, à fortes pentes."@fr ;
+                   rdfs:label "En pente escarpée"@fr ,
+                              "Steep"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes
+:en_route_des_crêtes rdf:type owl:NamedIndividual ,
+                              :RouteCharacteristic ;
+                     rdfs:comment "désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête."@fr ;
+                     rdfs:label "En route des crêtes"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets
+:en_séries_de_virages_en_lacets rdf:type owl:NamedIndividual ,
+                                         :RouteCharacteristic ;
+                                rdfs:comment "sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s'étalent le long d'une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d'angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux »."@fr ;
+                                rdfs:label "Séries de virages en lacets"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#following
+:following rdf:type owl:NamedIndividual ,
+                    :LocationRelationship ;
+           rdfs:comment "Following"@en ;
+           rdfs:label "Following"@en ,
+                      "Longer"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#hêtraie
@@ -5115,13 +5397,37 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
          rdfs:label "hêtraie"@fr .
 
 
-###  http://purl.org/choucas.ign.fr/oor#mixtes
-:mixtes rdf:type owl:NamedIndividual ,
-                 :FeuillusResineux ;
-        rdfs:comment "A mixture of deciduous and coniferous species, with neither representing for more than 75% of the relative canopy cover."@en ,
-                     "Espace peuplé d’arbres forestiers composée d'un mélange de feuillus et de conifères, dans lequel aucun des deux n’atteint 75 %"@fr ;
-        rdfs:label "Mixed"@en ,
-                   "Mixtes"@fr .
+###  http://purl.org/choucas.ign.fr/oor#information
+:information rdf:type owl:NamedIndividual ,
+                      :RouteContext ;
+             :locationRelation :nearProximity ;
+             rdfs:comment "Des panneaux, pancartes, des carrefours, etc."@fr ;
+             rdfs:label "  "@en ,
+                        "Information de navigation"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#longer_foret
+:longer_foret rdf:type owl:NamedIndividual ,
+                       :RouteContext ;
+              :locationRelation :following ;
+              rdfs:comment "longer une forêt"@fr ;
+              rdfs:label "Longer une forêt"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#longer_haie
+:longer_haie rdf:type owl:NamedIndividual ,
+                      :RouteContext ;
+             :locationRelation :following ;
+             rdfs:comment "longer une haie"@fr ;
+             rdfs:label "Longer une haie"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#longer_lac
+:longer_lac rdf:type owl:NamedIndividual ,
+                     :RouteContext ;
+            :locationRelation :following ;
+            rdfs:comment "Longer un lac."@fr ;
+            rdfs:label "Longer un lac"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#mélezin
@@ -5129,19 +5435,77 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
          rdfs:label "mélezin"@fr .
 
 
-###  http://purl.org/choucas.ign.fr/oor#résineux
-:résineux rdf:type owl:NamedIndividual ,
-                   :FeuillusResineux ;
-          rdfs:comment "A stand dominated by coniferous trees, representing over 75% of the relative canopy cover."@en ,
-                       "Espace peuplé d’arbres forestiers composée de plus de 75 % de résineux (taux de couvert relatif)."@fr ;
-          rdfs:label "Conifers"@en ,
-                     "Résineux"@fr ;
-          <http://www.w3.org/2004/02/skos/core#altLabel> "Conifères"@fr .
+###  http://purl.org/choucas.ign.fr/oor#nature_route
+:nature_route rdf:type owl:NamedIndividual ,
+                       :RouteContext ;
+              :locationRelation :crossing ;
+              rdfs:comment "Prendre une route, un chemin ou un sentier"@fr ;
+              rdfs:label "Nature route"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#nearProximity
+:nearProximity rdf:type owl:NamedIndividual ,
+                        :LocationRelationship ;
+               rdfs:comment "Proximité immédiate"@en ;
+               rdfs:label "Proximité immédiate"@fr ,
+                          "near proximity"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#point_de_cheminement
+:point_de_cheminement rdf:type owl:NamedIndividual ,
+                               :RouteContext ;
+                      :locationRelation :nearProximity ;
+                      rdfs:comment "A waypoint is a reference point that helps us know where we are and where we're going. Whether we’re driving, sailing, or flying, waypoints help us find our way. Landmarks used as waypoints can be natural, such as a tree. They can also be artificial, such as a billboard."@en ,
+                                   "Un point de cheminement est un point de référence qui nous permet de savoir où nous sommes et où nous allons. Que nous soyons en voiture, en bateau ou en avion. Ces points de repère peuvent être naturels, comme un arbre, ou artificiels, comme un panneau d'affichage."@fr ;
+                      rdfs:label "Point de cheminement"@fr ,
+                                 "Route point proximity"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#prendre_pont
+:prendre_pont rdf:type owl:NamedIndividual ,
+                       :RouteContext ;
+              :locationRelation :crossing ;
+              rdfs:comment "Prendre un pont"@fr ;
+              rdfs:label "Prendre un pont"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#proche_access_routier
+:proche_access_routier rdf:type owl:NamedIndividual ,
+                                :RouteContext ;
+                       :locationRelation :nearProximity ;
+                       rdfs:comment "Accès à un parking ou à un arrêt desservi par transport commun. Ne pas mettre les remontées mécaniques."@fr ;
+                       rdfs:label "Close to road access"@en ,
+                                  "Proche d'un accès routier"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#proche_commodité
+:proche_commodité rdf:type owl:NamedIndividual ,
+                           :RouteContext ;
+                  :locationRelation :nearProximity ;
+                  rdfs:comment "Des accomodités comme des bancs, tables de picnic, point d'eau, échelle, cordes, etc."@fr ;
+                  rdfs:label "  "@en ,
+                             "Proche d'une commodité"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#proche_viewpoint
+:proche_viewpoint rdf:type owl:NamedIndividual ,
+                           :RouteContext ;
+                  :locationRelation :nearProximity ;
+                  rdfs:comment "Des points de vue."@fr ;
+                  rdfs:label "Proche point de vue"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#sapin
 :sapin rdf:type owl:NamedIndividual ;
        rdfs:label "sapin"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#traverser_foret
+:traverser_foret rdf:type owl:NamedIndividual ,
+                          :RouteContext ;
+                 :locationRelation :crossing ;
+                 rdfs:comment "traverser une forêt"@fr ;
+                 rdfs:label "Traverser une forêt"@fr .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

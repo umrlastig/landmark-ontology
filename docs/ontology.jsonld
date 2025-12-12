@@ -1,29 +1,88 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#feuillus"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#Feuillus"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#Mixtes"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#chemin"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#escalier"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#piste_cyclable"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#sentier"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#autoroute"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#chemin"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#route"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#rue"
+    } ]
   } ]
 }, {
   "@id" : "_:genid2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#résineux"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+    } ]
   } ]
 }, {
-  "@id" : "_:genid3",
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_conifères"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_mixtes"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#mixtes"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#Conifères"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble"
   } ]
 }, {
   "@id" : "http://creativecommons.org/ns#licence",
@@ -147,26 +206,112 @@
     "@value" : "plateau adouci de forme compacte"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#FeuillusResineux",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#CompositionEnsemble",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Composition du peuplement recensable en 3 classes (FEUILLU / RESINEUX / MIXTES)"
+    "@value" : "Regroupe l'ensemble des compositions du niveau 3 de la nomenclature de la végétation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
-    "@value" : "Composition du peuplement en 3 classes"
-  }, {
+    "@value" : "Compositions d'ensemble"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#Conifères",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#CompositionEnsemble"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Stand composition in 3 classes"
+    "@value" : "A stand dominated by coniferous trees, representing over 75% of the relative canopy cover."
+  }, {
+    "@language" : "fr",
+    "@value" : "Espace peuplé d’arbres forestiers composée de plus de 75 % de résineux (taux de couvert relatif)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Conifers"
+  }, {
+    "@language" : "fr",
+    "@value" : "Résineux"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Conifères"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#dataSource" : [ {
+    "@value" : "BDTOPO"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#parking_touristique_isole"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#Feuillus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#CompositionEnsemble"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A stand dominated by deciduous trees, representing over 75% of the relative canopy cover."
+  }, {
+    "@language" : "fr",
+    "@value" : "Espace peuplé d’arbres forestiers composée de plus de 75 % de feuillus (taux de couvert relatif)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Deciduous"
+  }, {
+    "@language" : "fr",
+    "@value" : "Feuillus"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Represent the type of the relationships such as adjacency, following or crossing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Location relationship"
+  }, {
+    "@language" : "fr",
+    "@value" : "Relations de localisation"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#Mixtes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#CompositionEnsemble"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A mixture of deciduous and coniferous species, with neither representing for more than 75% of the relative canopy cover."
+  }, {
+    "@language" : "fr",
+    "@value" : "Espace peuplé d’arbres forestiers composée d'un mélange de feuillus et de conifères, dans lequel aucun des deux n’atteint 75 %"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mixed"
+  }, {
+    "@language" : "fr",
+    "@value" : "Mixtes"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#NomenclatureCoucheForestière",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Nomenclature de la composition de la couche forestière par essences plantées"
+    "@value" : "Nomenclature de la couche forestière thématique nationale et hiérarchique à quatre niveaux : couverture du sol, densité du couvert, composition d’ensemble et essences"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
@@ -174,6 +319,179 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
     "@value" : "Nomenclature de la couche forestière"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#PRI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RoutePortion"
+  }, {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Portion d'itinéraire avec une annotation sémantique"
+  }, {
+    "@language" : "en",
+    "@value" : "Route portion with semantic route annotation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "PRI"
+  }, {
+    "@language" : "fr",
+    "@value" : "PRI"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Regroupe l'ensemble des caractéristiques des routes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Caractéristiques de la portion de l'itinéraire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Caractéristiques de l'itinéraire"
+  }, {
+    "@language" : "en",
+    "@value" : "characteristics of the portion of route"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Contextual Route Section"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Contexte de la portion de l'itinéraire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Context of the portion of route"
+  }, {
+    "@language" : "fr",
+    "@value" : "Contexte de l'itinéraire"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#RoutePortion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "A portion of a route representing channels along which people move, potentially heterogeneous in its surface or structure. It may or may not be paved or vehicle-accessible."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Portion de route"
+  }, {
+    "@language" : "en",
+    "@value" : "Portion of route"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#SPRI_FF21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#traverser_foret"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#SPRI_P1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#access_parking"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#SPRI_V16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#dataSource" : [ {
+    "@value" : "BDTOPO"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#geographicalName" : [ {
+    "@value" : "Abri de la Peyrouse"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#abri"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage. Les propriétés sémantiques des itinéraires ont une validité dans leur ensemble, c’est à dire que si on enlève des portions composant cette propriété on peut en perdre sa caractéristique. Si on cumule des portions qui ont cette caractéristique, on la conserve. Afin de les définir et de les construire on peut proposer une combinaison de critères sémantiques qualifiant chaque propriété ainsi qu’une méthode permettant de l’instancier automatiquement sur les objets concernés. Très peu de travaux dans la littérature présentent cela."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Annotation sémantique d'une portion d'un itinéraire"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Annotation sémantique"
+  }, {
+    "@language" : "en",
+    "@value" : "Semantic annotation of a portion of route"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#dataSource" : [ {
+    "@value" : "BDTOPO"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "To characterize the dominant stand composition of vegetation types (e.g., deciduous, coniferous) within a forest area."
+  }, {
+    "@value" : "Pour modéliser la composition dominante des types de formation végétale (ex. feuillus, conifères)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "a comme composition dominante"
+  }, {
+    "@language" : "en",
+    "@value" : "type of stand composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#CompositionEnsemble"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#aPourCouleur",
@@ -251,11 +569,14 @@
     "@value" : "shelter"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#access_parking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Contient des formes de relief qui résultent d un phénomène naturel d érosion ( eau, vent, etc.) et  regroupe les formes de relief selon si elles sont ponctuellement localisées ou effilées"
+    "@value" : "Contient des formes de relief qui résultent d un phénomène naturel d érosion (eau, vent, etc.) et  regroupe les formes de relief selon si elles sont ponctuellement localisées ou effilées"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#dépression_ouverte"
@@ -657,10 +978,24 @@
     "@value" : "edge"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#atJonction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "atJonction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "A la jonction"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#autoroute",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -1024,6 +1359,21 @@
   }, {
     "@language" : "en",
     "@value" : "blockhouse"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#bois",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#végétation_arborée"
+  }, {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#végétation_basse"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "bois"
+  }, {
+    "@language" : "en",
+    "@value" : "wood"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#borne",
@@ -2174,9 +2524,9 @@
     "@value" : "Element du réseau routier prévu pour la circulation de véhicules ou d’engins d’exploitation. Un chemin peut être carrossables ou non carrosables."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable"
   }, {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -3108,6 +3458,23 @@
     "@value" : "cross"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#crossing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Crossing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Crossing"
+  }, {
+    "@language" : "fr",
+    "@value" : "Traverser"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#croupe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3259,6 +3626,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#pente_abrupte"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#dataSource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#decrochement_le_long_d_un_axe",
@@ -3544,6 +3917,97 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#sommet_de_forme_arrondie"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#en_balcon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l'abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "En balcon"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "fr",
+    "@value" : "en corniche"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "En fond de vallée"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#en_ligne_crête",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "c’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "En ligne de crête"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#en_pente_escarpée",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "une portion de route escarpée, à fortes pentes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "En pente escarpée"
+  }, {
+    "@language" : "en",
+    "@value" : "Steep"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "En route des crêtes"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s'étalent le long d'une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d'angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux »."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Séries de virages en lacets"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#enceinte",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -3621,7 +4085,7 @@
     "@value" : "Construction à l utilisation des piétons, constituée d une suite régulière de marches reliant deux lieux d altitudes différentes."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -3782,26 +4246,6 @@
     "@value" : "ferme"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#feuillus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#FeuillusResineux"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A stand dominated by deciduous trees, representing over 75% of the relative canopy cover."
-  }, {
-    "@language" : "fr",
-    "@value" : "Espace peuplé d’arbres forestiers composée de plus de 75 % de feuillus (taux de couvert relatif)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Deciduous"
-  }, {
-    "@language" : "fr",
-    "@value" : "Feuillus"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#fissure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3856,6 +4300,23 @@
   }, {
     "@language" : "en",
     "@value" : "major river"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#following",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Following"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Following"
+  }, {
+    "@language" : "fr",
+    "@value" : "Longer"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#fond_de_vallée",
@@ -3929,50 +4390,34 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#massif_boisé"
   } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid5"
+  } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
-    "@value" : "forêt fermée mixte"
+    "@value" : "forêt fermée"
   }, {
     "@language" : "fr",
     "@value" : "forêt ouverte"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "forest"
+  }, {
     "@language" : "fr",
     "@value" : "forêt"
-  }, {
-    "@language" : "en",
-    "@value" : "wood"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_conifères",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
   }, {
-    "@id" : "_:genid1"
+    "@id" : "_:genid9"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
-    "@value" : "forêt fermée de feuillus"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "broadleaved forest"
-  }, {
-    "@language" : "fr",
-    "@value" : "forêt de feuillus"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_résineux",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
-  }, {
-    "@id" : "_:genid2"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "fr",
-    "@value" : "forêt de conifères"
+    "@value" : "forêt de résineux"
   }, {
     "@language" : "fr",
     "@value" : "forêt fermée de conifères"
@@ -3981,11 +4426,30 @@
     "@value" : "forêt fermée de résineux"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
+    "@language" : "en",
     "@value" : "coniferous forest"
   }, {
     "@language" : "fr",
-    "@value" : "forêt de résineux"
+    "@value" : "forêt de conifères"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
+  }, {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "fr",
+    "@value" : "forêt fermée de feuillus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "broadleaved forest"
+  }, {
+    "@language" : "fr",
+    "@value" : "forêt de feuillus"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_domaniale",
@@ -4010,7 +4474,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
   }, {
-    "@id" : "_:genid3"
+    "@id" : "_:genid11"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -4247,6 +4711,23 @@
   }, {
     "@language" : "fr",
     "@value" : "gazex"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#geographicalName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Attribut permettant de préciser le nom (graphie) principal de l'objet de repère"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "nom géographique"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#glacier",
@@ -4555,6 +5036,30 @@
     "@value" : "industrial hangar"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RoutePortion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Pour modéliser les annotations sémantiques des itinéraires."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RoutePortion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasSemanticRouteAnnotation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#hippodrome",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -4735,6 +5240,20 @@
     "@value" : "hôtel"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#idcc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Attribut permettant de préciser l'identifiant de la composante connexe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Identifiant de la cc"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#igue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4774,6 +5293,26 @@
   }, {
     "@language" : "fr",
     "@value" : "immeuble collectif"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#information",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Des panneaux, pancartes, des carrefours, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "  "
+  }, {
+    "@language" : "fr",
+    "@value" : "Information de navigation"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure",
@@ -5528,6 +6067,66 @@
     "@value" : "materialized border"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#locationRelation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#longer_foret",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#following"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "longer une forêt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Longer une forêt"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#longer_haie",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#following"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "longer une haie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Longer une haie"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#longer_lac",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#following"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Longer un lac."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Longer un lac"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#lotissement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -5918,26 +6517,6 @@
     "@value" : "wetland"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#mixtes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#FeuillusResineux"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A mixture of deciduous and coniferous species, with neither representing for more than 75% of the relative canopy cover."
-  }, {
-    "@language" : "fr",
-    "@value" : "Espace peuplé d’arbres forestiers composée d'un mélange de feuillus et de conifères, dans lequel aucun des deux n’atteint 75 %"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Mixed"
-  }, {
-    "@language" : "fr",
-    "@value" : "Mixtes"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#monument",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6162,6 +6741,40 @@
   }, {
     "@language" : "fr",
     "@value" : "nappe d eau"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#nature_route",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#crossing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Prendre une route, un chemin ou un sentier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Nature route"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Proximité immédiate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Proximité immédiate"
+  }, {
+    "@language" : "en",
+    "@value" : "near proximity"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#noeud_hydrographique",
@@ -6985,7 +7598,7 @@
     "@value" : "Portion de la voirie aménagée pour la circulation des cycles non motorisés"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -7351,6 +7964,29 @@
     "@value" : "point d'eau potable"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#point_de_cheminement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A waypoint is a reference point that helps us know where we are and where we're going. Whether we’re driving, sailing, or flying, waypoints help us find our way. Landmarks used as waypoints can be natural, such as a tree. They can also be artificial, such as a billboard."
+  }, {
+    "@language" : "fr",
+    "@value" : "Un point de cheminement est un point de référence qui nous permet de savoir où nous sommes et où nous allons. Que nous soyons en voiture, en bateau ou en avion. Ces points de repère peuvent être naturels, comme un arbre, ou artificiels, comme un panneau d'affichage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Point de cheminement"
+  }, {
+    "@language" : "en",
+    "@value" : "Route point proximity"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#pont",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -7408,6 +8044,38 @@
   }, {
     "@language" : "fr",
     "@value" : "port"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Portion de voie de communication destinée aux piétons, aux cycles ou aux animaux, homogène pour l'ensemble des attributs et des relations qui la concerne. Le tronçon de route peut être revêtu ou non revêtu (pas de revêtement de surface ou revêtement de surface fortement dégradé). La portion de voie non carrossable n'est pas indiquée ni praticable pour les automobiles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid12"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "portion de voie non carrossable"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Portion de voie de communication destinée aux automobiles, aux piétons, aux cycles ou aux animaux, homogène pour l'ensemble des attributs et des relations qui la concerne. Le tronçon de route peut être revêtu ou non revêtu (pas de revêtement de surface ou revêtement de surface fortement dégradé)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid17"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "portion de voie routier"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#poste_de_gendarmerie",
@@ -7517,6 +8185,23 @@
     "@value" : "prairie"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#prendre_pont",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#crossing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Prendre un pont"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Prendre un pont"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#prison",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -7542,6 +8227,63 @@
   }, {
     "@language" : "fr",
     "@value" : "prison"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#proche_access_routier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Accès à un parking ou à un arrêt desservi par transport commun. Ne pas mettre les remontées mécaniques."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Close to road access"
+  }, {
+    "@language" : "fr",
+    "@value" : "Proche d'un accès routier"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#proche_commodité",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Des accomodités comme des bancs, tables de picnic, point d'eau, échelle, cordes, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "  "
+  }, {
+    "@language" : "fr",
+    "@value" : "Proche d'une commodité"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#proche_viewpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Des points de vue."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Proche point de vue"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#promontoire",
@@ -7756,6 +8498,12 @@
   }, {
     "@language" : "en",
     "@value" : "recycling"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#referencedLandmark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#refuge",
@@ -8082,7 +8830,7 @@
     "@value" : "Element du réseau de transport routier (autoroutes, routes à 1 chaussée ou 2 chaussée, bretelle) . Il s agit d une route goudronnée permettant la circulation des véhicules."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -8095,7 +8843,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#rue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_routier"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -8425,30 +9173,6 @@
     "@value" : "réservoir industriel"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#résineux",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#FeuillusResineux"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A stand dominated by coniferous trees, representing over 75% of the relative canopy cover."
-  }, {
-    "@language" : "fr",
-    "@value" : "Espace peuplé d’arbres forestiers composée de plus de 75 % de résineux (taux de couvert relatif)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Conifers"
-  }, {
-    "@language" : "fr",
-    "@value" : "Résineux"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Conifères"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#rétrécissement_du_débit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -8771,7 +9495,7 @@
     "@value" : "Voie étroite ne permettant pas le passage de véhicules automobiles. Un sentier peut être revetu ou non."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#portion_de_voie_non_carrossable"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -9861,6 +10585,23 @@
     "@value" : "transition terre"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#traverser_foret",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#crossing"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "traverser une forêt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Traverser une forêt"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#trouée",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -9923,29 +10664,6 @@
   }, {
     "@language" : "fr",
     "@value" : "tunnel"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#typeFeuillusResineux",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Pour modéliser la composition dominante des types de formation végétale (ex. feuillus, conifères) à une zone forestière."
-  }, {
-    "@language" : "en",
-    "@value" : "To characterize the dominant stand composition of vegetation types (e.g., deciduous, coniferous) within a forest area."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "type de composition du peuplement"
-  }, {
-    "@language" : "en",
-    "@value" : "type of stand composition"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#FeuillusResineux"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#tyrolienne",
@@ -11210,6 +11928,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
