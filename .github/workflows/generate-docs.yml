@@ -43,6 +43,7 @@ jobs:
         java -jar widoco.jar -ontFile $ONTOLOGY_FILE -outFolder docs/ -uniteSections
         # -getOntologyMetadata -includeImportedOntologies
         mv docs/index-en.html docs/index.html
+        cp -a docs/ontology.owl docs/landmarks_ontology.owl
 
     - name: Commit and push
       env:
