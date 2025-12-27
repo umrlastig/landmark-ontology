@@ -56,6 +56,7 @@ jobs:
         git add docs/ontology.jsonld
         git add docs/ontology.nt
         git add docs/ontology.ttl
+        git add docs/landmarks_ontology.owl
         git add docs/provenance/
         git add docs/resources/
         git add generated.txt
