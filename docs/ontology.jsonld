@@ -117,7 +117,7 @@
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "fr",
-    "@value" : "Ontologie des objets géographiques pouvant servir d objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. \n\nCette ontologie a été proposée dans le cadre du projet Choucas (ANR-16-CE23-0018). Elle est inspiré de l Ontologie GeOnto (Mustière et al., 2011) et LFRO (Sinha, Gaurav et al. 2018. )\n\nMustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180\n\nSinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."
+    "@value" : "Ontologie des objets géographiques pouvant servir d'objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. \n\nCette ontologie a été proposée dans le cadre du projet Choucas (ANR-16-CE23-0018). Elle est inspiré de l Ontologie GeOnto (Mustière et al., 2011) et LFRO (Sinha, Gaurav et al. 2018. )\n\nMustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d'alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180\n\nSinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."
   }, {
     "@language" : "en",
     "@value" : "Ontology of geographical objects used as reference objects in a mountain context.\n\nThis ontology is proposed during ANR Choucas project (ANR-16-CE23-0018). It is inspired from  GeOnto Ontology  (Mustière et al., 2011) et LFRO ontology (Sinha, Gaurav et al. 2018).\n\nMustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al Analyses linguistiques et techniques d alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180\n\nSinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."
@@ -142,17 +142,23 @@
     "@language" : "en",
     "@value" : "Ontology Of landmaRks"
   } ],
+  "http://purl.org/dc/terms/type" : [ {
+    "@id" : "http://purl.org/adms/assettype/Ontology"
+  } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "OOR"
+    "@value" : "oor"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "URI DU NAMESPACE"
+    "@value" : "http://purl.org/choucas.ign.fr/oor#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "2.0.0"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.umr-lastig.fr/landmark-ontology/index.html"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#AD",
@@ -336,10 +342,10 @@
     "@value" : "Route portion with semantic route annotation"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "PRI"
-  }, {
     "@language" : "fr",
+    "@value" : "PII"
+  }, {
+    "@language" : "en",
     "@value" : "PRI"
   } ]
 }, {
@@ -416,7 +422,7 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086"
   } ],
   "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#access_parking"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#proche_access_routier"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
@@ -514,7 +520,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#abattoir",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d%20élevage"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d_élevage"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -569,9 +575,6 @@
     "@value" : "shelter"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#access_parking",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#accidents-de-relief-concave",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -592,7 +595,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#agglomération",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d%20habitation"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d_habitation"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -660,7 +663,7 @@
     "@value" : "aiguille"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#aire_d_autoroute",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -874,7 +877,7 @@
     "@value" : "http://id.eaufrance.fr/nsa/831"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -1304,7 +1307,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#bief",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -1393,7 +1396,7 @@
     "@value" : "marker"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#borne_d%20incendie",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#borne_d_incendie",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1546,7 +1549,7 @@
     "@value" : "Bâtiment où se trouve des guides de montagne"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_information"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -1624,7 +1627,7 @@
     "@value" : "cultural building"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1641,7 +1644,7 @@
     "@value" : "residential feature"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1658,7 +1661,7 @@
     "@value" : "bâtiment d hébergement"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_information",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -1927,7 +1930,7 @@
     "@value" : "http://id.eaufrance.fr/nsa/831"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -1941,10 +1944,10 @@
     "@value" : "canal"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#canal_d_irrigation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -1989,7 +1992,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#canalisation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -2029,7 +2032,7 @@
     "@value" : "Une portion de rivière permettant la descente de canyons ou la randonnée nautique"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2073,7 +2076,7 @@
     "@value" : "Site où l eau dévalet un relief vertical pour provoquer une cascade. Une chute d eau."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -2278,7 +2281,7 @@
     "@value" : "centre SAMU"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#centre_d_interprétation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2380,7 +2383,7 @@
     "@value" : "equestrian centre"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#chalet_d_alpage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2397,7 +2400,7 @@
     "@value" : "chalet d alpage"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2647,7 +2650,7 @@
     "@value" : "château"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#château_d%20eau",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#château_d_eau",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -2656,7 +2659,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_remarquable"
   }, {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -2773,7 +2776,7 @@
     "@value" : "Réservoir d eau alimenté par de l eau de pluie. A se différentier du réservoir qui est réservoir est alimenté par un réseau"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -2935,7 +2938,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#collège",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -3066,7 +3069,7 @@
     "@value" : "http://id.eaufrance.fr/nsa/831"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -3087,7 +3090,7 @@
     "@value" : "http://id.eaufrance.fr/nsa/831"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -3182,9 +3185,9 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#coopérative",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_de_culture"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d_élevage"
   }, {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d%20élevage"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_de_culture"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -3251,7 +3254,7 @@
     "@value" : "lava flow"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -3268,10 +3271,10 @@
     "@value" : "watercourse"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -3498,7 +3501,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#crèche",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -3629,9 +3632,12 @@
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#dataSource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "xsd:string"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#decrochement_le_long_d_un_axe",
@@ -4230,9 +4236,9 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#ferme",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_de_culture"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d_élevage"
   }, {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d%20élevage"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_de_culture"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -4292,7 +4298,7 @@
     "@value" : "Cours d eau important, généralement caractérisé par une très grande longueur et largeur, un débit abondant, des affluents nombreux, et qui se jette le plus souvent dans la mer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -4343,7 +4349,7 @@
     "@value" : "Construction comportant une alimentation en eau et, généralement, un bassin"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -4686,7 +4692,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#gave",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -4714,7 +4720,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#geographicalName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
     "@value" : "Attribut permettant de préciser le nom (graphie) principal de l'objet de repère"
@@ -4727,7 +4733,7 @@
     "@value" : "nom géographique"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "xsd:string"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#glacier",
@@ -5006,7 +5012,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#hameau",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d%20habitation"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d_habitation"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -5124,7 +5130,7 @@
     "@value" : "Un bâtiment ayant le rôle d héberger des visiteurs pendant une durée limitée. Il est facilement accessible via le réseau routier principal. Il n a pas de rôle de résidence secondaire ou principale"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -5141,7 +5147,7 @@
     "@value" : "Bâtiment ayant le rôle d habriter des personnes ou des animaux pour une durée courte. Il est accessible généralement via des sentiers et des chemin ou par voie aérienne. Il structure l espace de haute montagne; il peut servir à s abriter"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -5241,7 +5247,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#idcc",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
     "@value" : "Attribut permettant de préciser l'identifiant de la composante connexe"
@@ -5252,6 +5258,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Identifiant de la cc"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "xsd:integer"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#igue",
@@ -5278,7 +5287,7 @@
     "@value" : "Un bâtiment à plusieurs étages destiné à assurer un  usage d habitation. Il est divisé en différentes parties privatives (ex appartements) et communes. Ils possèdent un ou plusieurs propriétaires  ."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -5379,7 +5388,7 @@
     "@value" : "transport infrastructure on earth surface"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_eau"
@@ -5405,7 +5414,7 @@
     "@value" : "sewage treatment plant"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_eau"
@@ -5585,10 +5594,10 @@
     "@value" : "infrastructure électricité"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d%20aquaculture",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d%20élevage"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d_élevage"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -5598,7 +5607,7 @@
     "@value" : "installation d aquaculture"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d%20élevage",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d_élevage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation_agricole"
@@ -6140,7 +6149,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#lycée",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -6214,7 +6223,7 @@
     "@value" : "Bâtiment ayant le rôle d hébergements de personnes. Il peut être destiné à des usages tels que résidentiel, touristique ou de loisirs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -6255,7 +6264,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_culturel"
   }, {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_information"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#maison_forestière",
@@ -6710,7 +6719,7 @@
     "@value" : "mélezin"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#nappe_d%20eau",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#nappe_d_eau",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "fr",
@@ -6899,7 +6908,7 @@
     "@value" : "Bâtiment qui accueille du public et dont la principale mission est l information et la promotion du tourisme et des activités touristiques"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_d_information"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -7024,7 +7033,7 @@
     "@value" : "water park"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#parc_d%20attraction",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#parc_d_attraction",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -7185,7 +7194,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : " Parc à voitures aménagé, servant de support à une activité touristique. Seuls les parkings isolés à\nproximité d un point d intérêt touristique sont sélectionnés."
+    "@value" : " Parc à voitures aménagé, servant de support à une activité touristique. Seuls les parkings isolés à proximité d un point d intérêt touristique sont sélectionnés."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#parking"
@@ -7406,7 +7415,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "Surface, terrain en pente\n\n\nDes éléments qui ne sont pas toujours vus  comme de la très haute montagne"
+    "@value" : "Surface, terrain en pente. Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#verticale"
@@ -7605,7 +7614,7 @@
     "@value" : "piste cyclable"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#piste_de_sport"
@@ -7625,7 +7634,7 @@
     "@value" : "running track"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#piste_d%20aviation",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#piste_d_aviation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_aérien"
@@ -7951,7 +7960,7 @@
     "@value" : "Indique un accès à de l'eau potable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -8243,7 +8252,7 @@
     "@value" : "Close to road access"
   }, {
     "@language" : "fr",
-    "@value" : "Proche d'un accès routier"
+    "@value" : "Proche accès routier"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#proche_commodité",
@@ -8314,9 +8323,9 @@
     "@value" : "Puits à eau est une installation de captage d eau souterraine"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#rupture_naturelle_du_relief_concave_non_linéaire"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"
   }, {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#rupture_naturelle_du_relief_concave_non_linéaire"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -8429,7 +8438,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#quartier",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d%20habitation"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d_habitation"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -8766,7 +8775,7 @@
     "@value" : "Cours d eau moyennement abondant qui se jette dans un fleuve, dans la mer ou parfois dans un lac."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -8878,7 +8887,7 @@
     "@value" : "Un ruisseau est un petit cours d eau peu profond"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -9131,9 +9140,9 @@
     "@value" : "Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation; http://id.eaufrance.fr/nsa/831"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#plan_d_eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"
   }, {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#plan_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -9298,7 +9307,7 @@
     "@value" : "secteur couvert"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -9315,7 +9324,7 @@
     "@value" : "site d atterrissage parapente"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -9577,7 +9586,7 @@
     "@value" : "https://www.cnrtl.fr/definition/siphon"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -9587,7 +9596,7 @@
     "@value" : "siphon"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#site_d%20escalade",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#site_d_escalade",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -9858,7 +9867,7 @@
     "@value" : "spot de slackline"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#station_d%20épuration",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#station_d_épuration",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -9888,7 +9897,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#station_de_pompage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -9908,7 +9917,7 @@
     "@value" : "station de pompage"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#quartier"
@@ -9951,7 +9960,7 @@
     "@value" : "taxi station"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -10156,7 +10165,7 @@
     "@value" : "sérac"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#table_d%20orientation",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#table_d_orientation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -10272,7 +10281,7 @@
     "@value" : "temple protestant"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#terrain_d_aviation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_aérien"
@@ -10451,7 +10460,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#torrent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -10528,7 +10537,7 @@
     "@value" : "tourbière"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#tourne_d%20avalanche",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#pare-avalanche"
@@ -10747,7 +10756,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#université",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -10891,7 +10900,7 @@
     "@value" : "Lieu d origine naturelle circulaire ou élliptique remplit de l eau. Il se situe dans un ruisseau, torrent, etc."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -11319,7 +11328,7 @@
     "@value" : "zonage"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d%20activité",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d_activité",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -11355,7 +11364,7 @@
     "@value" : "zone d activité"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d%20habitation",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#zone_d_habitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
@@ -11490,7 +11499,7 @@
     "@value" : "L écurie est le bâtiment, et éventuellement l enclos réservé aux chevaux"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d%20élevage"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d_élevage"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -11542,7 +11551,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#égout",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -11783,7 +11792,7 @@
   "@id" : "http://purl.org/choucas.ign.fr/oor#étable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d%20élevage"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#installation_d_élevage"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -11793,7 +11802,7 @@
     "@value" : "étable"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation"
@@ -11912,6 +11921,9 @@
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -11944,4 +11956,13 @@
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "xsd:integer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "xsd:string",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

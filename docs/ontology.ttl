@@ -18,11 +18,11 @@
                                                                                 "Olivier Favre" ,
                                                                                 "Sebastien Mustière" ,
                                                                                 "Véronique Gendner" ;
-                                      <http://purl.org/dc/elements/1.1/description> """Ontologie des objets géographiques pouvant servir d objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. 
+                                      <http://purl.org/dc/elements/1.1/description> """Ontologie des objets géographiques pouvant servir d'objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. 
 
 Cette ontologie a été proposée dans le cadre du projet Choucas (ANR-16-CE23-0018). Elle est inspiré de l Ontologie GeOnto (Mustière et al., 2011) et LFRO (Sinha, Gaurav et al. 2018. )
 
-Mustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180
+Mustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d'alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180
 
 Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."""@fr ,
                                                                                     """Ontology of geographical objects used as reference objects in a mountain context.
@@ -38,9 +38,11 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
                                       <http://purl.org/dc/elements/1.1/rights> "Copyright © 2025 LASTIG"@en ;
                                       <http://purl.org/dc/elements/1.1/title> "Ontologie des Objets de Repères"@fr ,
                                                                               "Ontology Of landmaRks"@en ;
-                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "OOR" ;
-                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "URI DU NAMESPACE" ;
-                                      owl:versionInfo "2.0.0" .
+                                      <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> ;
+                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "oor" ;
+                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/choucas.ign.fr/oor#" ;
+                                      owl:versionInfo "2.0.0" ;
+                                      <http://xmlns.com/foaf/0.1/homepage> <https://www.umr-lastig.fr/landmark-ontology/index.html> .
 
 #################################################################
 #    Annotation properties
@@ -86,6 +88,10 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
@@ -114,6 +120,10 @@ owl:equivalentClass rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
 
 
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -139,6 +149,18 @@ owl:equivalentClass rdf:type owl:AnnotationProperty .
             rdfs:comment "pour modéliser la forme d un objet (ex. un lac rond)"@fr .
 
 
+###  http://purl.org/choucas.ign.fr/oor#dataSource
+:dataSource rdf:type owl:ObjectProperty ;
+            rdfs:domain :objet_de_repère ;
+            rdfs:range <xsd:string> .
+
+
+###  http://purl.org/choucas.ign.fr/oor#geographicalName
+:geographicalName rdf:type owl:ObjectProperty ;
+                  rdfs:domain :objet_de_repère ;
+                  rdfs:range <xsd:string> .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark
 :hasReferencedLandmark rdf:type owl:ObjectProperty ;
                        rdfs:domain :RoutePortion ;
@@ -151,6 +173,12 @@ owl:equivalentClass rdf:type owl:AnnotationProperty .
                             rdfs:range :SemanticRouteAnnotation ;
                             rdfs:comment "Pour modéliser les annotations sémantiques des itinéraires." ;
                             rdfs:label "hasSemanticRouteAnnotation" .
+
+
+###  http://purl.org/choucas.ign.fr/oor#idcc
+:idcc rdf:type owl:ObjectProperty ;
+      rdfs:domain :PRI ;
+      rdfs:range <xsd:integer> .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#locationRelation
@@ -188,23 +216,15 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 #################################################################
 
 ###  http://purl.org/choucas.ign.fr/oor#dataSource
-:dataSource rdf:type owl:DatatypeProperty ;
-            rdfs:domain :objet_de_repère .
+:dataSource rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#geographicalName
-:geographicalName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :objet_de_repère ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "Attribut permettant de préciser le nom (graphie) principal de l'objet de repère"@fr ;
-                  rdfs:label "nom géographique"@fr .
+:geographicalName rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#idcc
-:idcc rdf:type owl:DatatypeProperty ;
-      rdfs:domain :PRI ;
-      rdfs:comment "Attribut permettant de préciser l'identifiant de la composante connexe"@fr ;
-      rdfs:label "Identifiant de la cc"@fr .
+:idcc rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -270,8 +290,8 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                      ] ;
      <http://www.w3.org/2004/02/skos/core#altLabel> "Portion d'itinéraire avec une annotation sémantique"@fr ,
                                                     "Route portion with semantic route annotation"@en ;
-     <http://www.w3.org/2004/02/skos/core#prefLabel> "PRI"@en ,
-                                                     "PRI"@fr .
+     <http://www.w3.org/2004/02/skos/core#prefLabel> "PII"@fr ,
+                                                     "PRI"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#RouteCharacteristic
@@ -310,7 +330,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#abattoir
 :abattoir rdf:type owl:Class ;
-          rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> ;
+          rdfs:subClassOf :installation_d_élevage ;
           <http://www.w3.org/2004/02/skos/core#altLabel> "slaughter-house"@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "abattoir"@en ,
                                                           "abattoir"@fr .
@@ -344,7 +364,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#agglomération
 :agglomération rdf:type owl:Class ;
-               rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> ;
+               rdfs:subClassOf :zone_d_habitation ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "agglomeration"@en ,
                                                               "bourg"@fr ,
                                                               "bourgade"@en ,
@@ -368,6 +388,17 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
           <http://www.w3.org/2004/02/skos/core#altLabel> "spine"@en ,
                                                          "stack"@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "aiguille"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#aire_d_autoroute
+:aire_d_autoroute rdf:type owl:Class ;
+                  rdfs:subClassOf :infrastructure_de_transport_routier ;
+                  rdfs:comment "Structure aménagée en bordure d autoroute prposant différentes services (repos, ravitaillement, etc.)"@fr ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "aire de repos"@fr ,
+                                                                 "aire de service"@fr ,
+                                                                 "service area"@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "aire d autoroute"@fr ,
+                                                                  "rest area"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#aire_de_pique-nique
@@ -447,7 +478,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#aqueduc
 :aqueduc rdf:type owl:Class ;
-         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> ;
+         rdfs:subClassOf :infrastructure_de_transport_d_eau ;
          rdfs:comment "Chenal artificiel conçu pour le transport de l eau (usage hydroéléctique, industriel,...)"@fr ;
          rdfs:isDefinedBy "http://id.eaufrance.fr/nsa/831"@fr ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "aqueduc"@fr ,
@@ -638,7 +669,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#bief
 :bief rdf:type owl:Class ;
-      rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> ;
+      rdfs:subClassOf :cours_d_eau_artificiel ;
       <http://www.w3.org/2004/02/skos/core#altLabel> "level"@en ,
                                                      "reach"@en ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "bay"@en ,
@@ -677,6 +708,14 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
        rdfs:comment "Lieu géographique matérialisant à travers un bloc de pierre, un poteau une plaque, etc. et indique une information (frontière, altitude, etc.)."@fr ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "borne"@fr ,
                                                        "marker"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#borne_d_incendie
+:borne_d_incendie rdf:type owl:Class ;
+                  rdfs:subClassOf :borne ;
+                  rdfs:comment "Borne indiquant la bouche d incendie"@fr ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "borne d incendie"@fr ,
+                                                                  "fire hydtrant"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#borne_frontière
@@ -733,7 +772,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#bureau_de_guides
 :bureau_de_guides rdf:type owl:Class ;
-                  rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> ;
+                  rdfs:subClassOf :bâtiment_d_information ;
                   rdfs:comment "Bâtiment où se trouve des guides de montagne"@fr ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "bureau de guides"@fr ,
                                                                   "guide office"@en .
@@ -769,6 +808,30 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                    rdfs:comment "Bâtiment ayant un usage culturel"@fr ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment culturel"@fr ,
                                                                    "cultural building"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation
+:bâtiment_d_habitation rdf:type owl:Class ;
+                       rdfs:subClassOf :bâtiment_et_installation ;
+                       rdfs:comment "Batiment ayant le rôle d héberger les humains. A le rôle de résidence prinicipale ou secondaire"@fr ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d habitation"@fr ,
+                                                                       "residential feature"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement
+:bâtiment_d_hébergement rdf:type owl:Class ;
+                        rdfs:subClassOf :bâtiment_et_installation ;
+                        rdfs:comment "Bâtiment ayant le rôle d héberger ou d habriter des visiteurs pour une durée limitée. Il n a pas de rôle de résidence secondaire ou principale"@fr ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "accomodation building"@en ,
+                                                                        "bâtiment d hébergement"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#bâtiment_d_information
+:bâtiment_d_information rdf:type owl:Class ;
+                        rdfs:subClassOf :bâtiment_et_installation ;
+                        rdfs:comment "Bâtiment ayant comme vocation d accueillir du public pour l information de la pratique des sports et des loisirs"@fr ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d information"@fr ,
+                                                                        "information building"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation
@@ -881,12 +944,25 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#canal
 :canal rdf:type owl:Class ;
-       rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> ;
+       rdfs:subClassOf :cours_d_eau_artificiel ;
        rdfs:comment "Voie d eau artificielle à surface libre"@fr ;
        rdfs:isDefinedBy "http://id.eaufrance.fr/nsa/831"@fr ;
        <http://www.w3.org/2004/02/skos/core#altLabel> "channel"@en ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "canal"@en ,
                                                        "canal"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#canal_d_irrigation
+:canal_d_irrigation rdf:type owl:Class ;
+                    rdfs:subClassOf :cours_d_eau_artificiel ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "bief"@fr ,
+                                                                   "bisse"@en ,
+                                                                   "bisse"@fr ,
+                                                                   "béal"@fr ,
+                                                                   "rigole"@fr ,
+                                                                   "roubine"@fr ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "canal d irrigation"@fr ,
+                                                                    "irrigation channel"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#canal_de_navigation
@@ -898,7 +974,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#canalisation
 :canalisation rdf:type owl:Class ;
-              rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> ;
+              rdfs:subClassOf :infrastructure_de_transport_d_eau ;
               <http://www.w3.org/2004/02/skos/core#altLabel> "galerie d amenée d eau"@fr ,
                                                              "main"@en ,
                                                              "pipe"@en ;
@@ -915,7 +991,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#canyon
 :canyon rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+        rdfs:subClassOf :cours_d_eau ;
         rdfs:comment "Une portion de rivière permettant la descente de canyons ou la randonnée nautique"@fr ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "canyon"@en ,
                                                         "canyon"@fr .
@@ -934,7 +1010,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#cascade
 :cascade rdf:type owl:Class ;
-         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+         rdfs:subClassOf :cours_d_eau ;
          rdfs:comment "Site où l eau dévalet un relief vertical pour provoquer une cascade. Une chute d eau."@fr ;
          <http://www.w3.org/2004/02/skos/core#altLabel> "cascade"@en ,
                                                         "chute d eau"@fr ,
@@ -1023,6 +1099,14 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                                                              "centre SAMU"@fr .
 
 
+###  http://purl.org/choucas.ign.fr/oor#centre_d_interprétation
+:centre_d_interprétation rdf:type owl:Class ;
+                         rdfs:subClassOf :musée ;
+                         rdfs:comment "Un type de musée dont le projet muséal ne se fonde pas sur l existence d une collection mais qui a le rôle de présenter un patrimoine, que ce soit un paysage, un territoire, un site, des vestiges ou encore un monument, ou même une histoire."@fr ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "centre d interprétation"@fr ,
+                                                                         "interpretation center"@en .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#centre_de_soin
 :centre_de_soin rdf:type owl:Class ;
                 rdfs:subClassOf :établissement_de_santé ;
@@ -1059,6 +1143,24 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                  rdfs:comment "Un établissement contenant un équipement ayant pour vocation la pratique de l équitation"@fr ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "centre équestre"@fr ,
                                                                  "equestrian centre"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#chalet_d_alpage
+:chalet_d_alpage rdf:type owl:Class ;
+                 rdfs:subClassOf :hébergement_isolé ;
+                 rdfs:comment "Bâtiment isolé, situé en montagne, utilisé traditionnellement de façon saisonnière  pour abriter l’homme et le bétail"@fr ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "alpine chalet"@en ,
+                                                                 "chalet d alpage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes
+:chambre_d_hôtes rdf:type owl:Class ;
+                 rdfs:subClassOf :hébergement_accessible ;
+                 rdfs:comment "Un type d hébergement meublé (chambre) aménagé avec une salle de bain privative loué et loué par des visiteurs. Sa location se fait à la nuit."@fr ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "bed and breakfast"@en ,
+                                                                "maison d hôtes"@fr ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "chambre d hôtes"@fr ,
+                                                                 "guest rooms"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#champ
@@ -1160,6 +1262,15 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                                                          "château"@fr .
 
 
+###  http://purl.org/choucas.ign.fr/oor#château_d_eau
+:château_d_eau rdf:type owl:Class ;
+               rdfs:subClassOf :bâtiment_remarquable ,
+                               :infrastructure_de_gestion_d_eau_douce ;
+               rdfs:comment "Réservoir d’eau construit en hauteur pour surélever le niveau de l’eau par rapport aux constructions environnantes et destiné à l alimentation en eau d une collectivité."@fr ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "château d eau"@fr ,
+                                                               "water tower"@en .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#chèvrerie
 :chèvrerie rdf:type owl:Class ;
            rdfs:subClassOf :hébergement_isolé ;
@@ -1204,7 +1315,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#citerne
 :citerne rdf:type owl:Class ;
-         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> ;
+         rdfs:subClassOf :infrastructure_de_gestion_d_eau_douce ;
          rdfs:comment "Réservoir d eau alimenté par de l eau de pluie. A se différentier du réservoir qui est réservoir est alimenté par un réseau"@fr ;
          <http://www.w3.org/2004/02/skos/core#altLabel> "cistern"@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "citerne"@fr ,
@@ -1274,7 +1385,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#collège
 :collège rdf:type owl:Class ;
-         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> ;
+         rdfs:subClassOf :établissement_d_enseignement ;
          <http://www.w3.org/2004/02/skos/core#altLabel> "middle school"@en ,
                                                         "school"@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "collège"@fr ,
@@ -1329,7 +1440,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#conduit_buse
 :conduit_buse rdf:type owl:Class ;
-              rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> ;
+              rdfs:subClassOf :infrastructure_de_transport_d_eau ;
               rdfs:comment "Ouvrage constitué d au moins un conduit transversal, généralement fait de béton ou de métal, laissant circuler l eau sous une route, une voie ferrée ou une autre structure"@fr ;
               rdfs:isDefinedBy "http://id.eaufrance.fr/nsa/831"@fr ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "conduit buse"@fr ,
@@ -1338,7 +1449,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#conduit_forcé
 :conduit_forcé rdf:type owl:Class ;
-               rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> ;
+               rdfs:subClassOf :infrastructure_de_transport_d_eau ;
                rdfs:comment "Tuyau artificiel conçu pour le transport de l eau (usage hydroéléctique, industriel,...)"@fr ;
                rdfs:isDefinedBy "http://id.eaufrance.fr/nsa/831"@fr ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "conduit forcé"@fr ,
@@ -1383,8 +1494,8 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#coopérative
 :coopérative rdf:type owl:Class ;
-             rdfs:subClassOf :installation_de_culture ,
-                             <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> ;
+             rdfs:subClassOf :installation_d_élevage ,
+                             :installation_de_culture ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "co-operative stores"@en ,
                                                              "coopérative"@fr .
 
@@ -1413,6 +1524,21 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                 rdfs:comment "Formation volcanique constituée d un épanchement de lave issue d un volcan"@fr ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "coulée de lave"@fr ,
                                                                 "lava flow"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cours_d_eau
+:cours_d_eau rdf:type owl:Class ;
+             rdfs:subClassOf :hydrographie ;
+             rdfs:comment "Un écoulement d’eaux courantes dans un lit naturel à l’origine, alimenté par une source et présentant un débit suffisant la majeure partie de l’année » (CE. SSR. 21 octobre 2011, Ministre de l’écologie c. EARL Cintrat, n° 334322, publiée au Recueil)."@fr ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "cours d eau"@fr ,
+                                                             "watercourse"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel
+:cours_d_eau_artificiel rdf:type owl:Class ;
+                        rdfs:subClassOf :infrastructure_de_transport_d_eau ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "artificial waterway"@en ,
+                                                                        "cours d eau artificiel"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#court_de_tennis
@@ -1506,7 +1632,7 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 
 ###  http://purl.org/choucas.ign.fr/oor#crèche
 :crèche rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> ;
+        rdfs:subClassOf :établissement_d_enseignement ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "crèche"@fr ,
                                                         "nursery"@en .
 
@@ -1804,8 +1930,8 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#ferme
 :ferme rdf:type owl:Class ;
-       rdfs:subClassOf :installation_de_culture ,
-                       <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> ;
+       rdfs:subClassOf :installation_d_élevage ,
+                       :installation_de_culture ;
        <http://www.w3.org/2004/02/skos/core#altLabel> "exploitation agricole"@fr ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "farm"@en ,
                                                        "ferme"@fr .
@@ -1830,7 +1956,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#fleuve
 :fleuve rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+        rdfs:subClassOf :cours_d_eau ;
         rdfs:comment "Cours d eau important, généralement caractérisé par une très grande longueur et largeur, un débit abondant, des affluents nombreux, et qui se jette le plus souvent dans la mer"@fr ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "fleuve"@fr ,
                                                         "major river"@en .
@@ -1846,7 +1972,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#fontaine
 :fontaine rdf:type owl:Class ;
-          rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> ;
+          rdfs:subClassOf :infrastructure_de_gestion_d_eau_douce ;
           rdfs:comment "Construction comportant une alimentation en eau et, généralement, un bassin"@fr ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "fontaine"@fr ,
                                                           "fountain"@en .
@@ -2011,7 +2137,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#gave
 :gave rdf:type owl:Class ;
-      rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+      rdfs:subClassOf :cours_d_eau ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "gave"@en ,
                                                       "gave"@fr .
 
@@ -2144,7 +2270,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#hameau
 :hameau rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> ;
+        rdfs:subClassOf :zone_d_habitation ;
         <http://www.w3.org/2004/02/skos/core#altLabel> "local placename"@en ,
                                                        "écart"@fr ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "hameau"@fr ,
@@ -2186,7 +2312,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#hébergement_accessible
 :hébergement_accessible rdf:type owl:Class ;
-                        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> ;
+                        rdfs:subClassOf :bâtiment_d_hébergement ;
                         rdfs:comment "Un bâtiment ayant le rôle d héberger des visiteurs pendant une durée limitée. Il est facilement accessible via le réseau routier principal. Il n a pas de rôle de résidence secondaire ou principale"@fr ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "accessible accomodation"@en ,
                                                                         "hébergement accessible"@fr .
@@ -2194,7 +2320,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#hébergement_isolé
 :hébergement_isolé rdf:type owl:Class ;
-                   rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> ;
+                   rdfs:subClassOf :bâtiment_d_hébergement ;
                    rdfs:comment "Bâtiment ayant le rôle d habriter des personnes ou des animaux pour une durée courte. Il est accessible généralement via des sentiers et des chemin ou par voie aérienne. Il structure l espace de haute montagne; il peut servir à s abriter"@fr ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "hébergement isolé"@fr ,
                                                                    "isolated accomodation"@en .
@@ -2244,7 +2370,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#immeuble_collectif
 :immeuble_collectif rdf:type owl:Class ;
-                    rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> ;
+                    rdfs:subClassOf :bâtiment_d_habitation ;
                     rdfs:comment "Un bâtiment à plusieurs étages destiné à assurer un  usage d habitation. Il est divisé en différentes parties privatives (ex appartements) et communes. Ils possèdent un ou plusieurs propriétaires  ."@fr ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "immeuble d habitation"@fr ,
                                                                    "residential building"@en ;
@@ -2283,11 +2409,25 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
                                                                                          "transport infrastructure on earth surface"@en .
 
 
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce
+:infrastructure_de_gestion_d_eau_douce rdf:type owl:Class ;
+                                       rdfs:subClassOf :infrastructure_eau ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "fresh water catchment infrastructure"@en ,
+                                                                                       "infrastructure de gestion d eau douce"@fr .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux
 :infrastructure_de_traitement_des_eaux rdf:type owl:Class ;
                                        rdfs:subClassOf :infrastructure_eau ;
                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de traitement des eaux"@fr ,
                                                                                        "sewage treatment plant"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau
+:infrastructure_de_transport_d_eau rdf:type owl:Class ;
+                                   rdfs:subClassOf :infrastructure_eau ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de transport d eau"@fr ,
+                                                                                   "water transport"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_ferré
@@ -2371,6 +2511,26 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
                             rdfs:subClassOf :infrastructure_eau_énergie_télécom ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "electricity transport infrastructure"@en ,
                                                                             "infrastructure électricité"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture
+:installation_d_aquaculture rdf:type owl:Class ;
+                            rdfs:subClassOf :installation_d_élevage ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "aquaculture"@en ,
+                                                                            "installation d aquaculture"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#installation_d_élevage
+:installation_d_élevage rdf:type owl:Class ;
+                        rdfs:subClassOf :bâtiment_et_installation_agricole ;
+                        <http://www.w3.org/2004/02/skos/core#altLabel> "cattle ranch"@en ,
+                                                                       "livestock building"@en ,
+                                                                       "livestock facility"@en ,
+                                                                       "poultry farm"@en ,
+                                                                       "ranch"@en ,
+                                                                       "stable"@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "animal farm"@en ,
+                                                                        "installation d élevage"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#installation_de_culture
@@ -2581,7 +2741,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#lycée
 :lycée rdf:type owl:Class ;
-       rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> ;
+       rdfs:subClassOf :établissement_d_enseignement ;
        <http://www.w3.org/2004/02/skos/core#altLabel> "grammar-school"@en ,
                                                       "secondary school"@en ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "high school"@en ,
@@ -2611,7 +2771,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#maison
 :maison rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> ;
+        rdfs:subClassOf :bâtiment_d_habitation ;
         rdfs:comment "Bâtiment ayant le rôle d hébergements de personnes. Il peut être destiné à des usages tels que résidentiel, touristique ou de loisirs."@fr ;
         <http://www.w3.org/2004/02/skos/core#altLabel> "chalet"@en ,
                                                        "chaumière"@fr ,
@@ -2627,7 +2787,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 ###  http://purl.org/choucas.ign.fr/oor#maison_du_parc
 :maison_du_parc rdf:type owl:Class ;
                 rdfs:subClassOf :bâtiment_culturel ,
-                                <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> ;
+                                :bâtiment_d_information ;
                 rdfs:comment "A definir"@fr .
 
 
@@ -2826,6 +2986,18 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
                                                        "musée"@fr .
 
 
+###  http://purl.org/choucas.ign.fr/oor#nappe_d_eau
+:nappe_d_eau rdf:type owl:Class ;
+             rdfs:subClassOf :plan_d_eau ;
+             rdfs:isDefinedBy "Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation. http://id.eaufrance.fr/nsa/831"@fr ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "basin"@en ,
+                                                            "bassin"@fr ,
+                                                            "gour"@fr ,
+                                                            "plan d eau de gravière"@fr ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "body of water"@en ,
+                                                             "nappe d eau"@fr .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#noeud_hydrographique
 :noeud_hydrographique rdf:type owl:Class ;
                       rdfs:subClassOf :hydrographie ;
@@ -2884,7 +3056,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
 ###  http://purl.org/choucas.ign.fr/oor#office_de_tourisme
 :office_de_tourisme rdf:type owl:Class ;
-                    rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> ;
+                    rdfs:subClassOf :bâtiment_d_information ;
                     rdfs:comment "Bâtiment qui accueille du public et dont la principale mission est l information et la promotion du tourisme et des activités touristiques"@fr ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "point d information touristique"@fr ,
                                                                    "syndicat d initiative"@fr ,
@@ -2937,6 +3109,15 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
                 rdfs:comment "Infrastructure permettant  la pratique de loisirs aquatiques"@fr ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "parc aquatique"@fr ,
                                                                 "water park"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#parc_d_attraction
+:parc_d_attraction rdf:type owl:Class ;
+                   rdfs:subClassOf :parc_de_loisir ;
+                   rdfs:comment "Infrastructure permettant  la pratique de loisirs de formes diverses (montagnes russes, toboggans, terrain de jeux, etc.)"@fr ;
+                   <http://www.w3.org/2004/02/skos/core#altLabel> "amusement grounds"@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "amusement park"@en ,
+                                                                   "parc d attraction"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#parc_de_loisir
@@ -3003,8 +3184,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 ###  http://purl.org/choucas.ign.fr/oor#parking_touristique_isole
 :parking_touristique_isole rdf:type owl:Class ;
                            rdfs:subClassOf :parking ;
-                           rdfs:comment """ Parc à voitures aménagé, servant de support à une activité touristique. Seuls les parkings isolés à
-proximité d un point d intérêt touristique sont sélectionnés."""@fr ;
+                           rdfs:comment " Parc à voitures aménagé, servant de support à une activité touristique. Seuls les parkings isolés à proximité d un point d intérêt touristique sont sélectionnés."@fr ;
                            <http://www.w3.org/2004/02/skos/core#prefLabel> "isolated car park"@en ,
                                                                            "parking touristique isolé"@fr .
 
@@ -3103,10 +3283,7 @@ proximité d un point d intérêt touristique sont sélectionnés."""@fr ;
 ###  http://purl.org/choucas.ign.fr/oor#pente
 :pente rdf:type owl:Class ;
        rdfs:subClassOf :verticale ;
-       rdfs:comment """Surface, terrain en pente
-
-
-Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""@fr ;
+       rdfs:comment "Surface, terrain en pente. Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"@fr ;
        <http://www.w3.org/2004/02/skos/core#altLabel> "déclivité"@fr ,
                                                       "rampe"@fr ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "pente"@fr ,
@@ -3182,6 +3359,24 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
                 rdfs:comment "Portion de la voirie aménagée pour la circulation des cycles non motorisés"@fr ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "bicycle path"@en ,
                                                                 "piste cyclable"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme
+:piste_d_athlétisme rdf:type owl:Class ;
+                    rdfs:subClassOf :piste_de_sport ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "bridle path"@en ,
+                                                                   "track"@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "piste d athlétisme"@fr ,
+                                                                    "running track"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#piste_d_aviation
+:piste_d_aviation rdf:type owl:Class ;
+                  rdfs:subClassOf :infrastructure_de_déplacement_aérien ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "taxiway"@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "altisurface"@fr ,
+                                                                  "piste d aviation"@fr ,
+                                                                  "runway"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#piste_de_VTT
@@ -3439,8 +3634,8 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#puits
 :puits rdf:type owl:Class ;
-       rdfs:subClassOf :rupture_naturelle_du_relief_concave_non_linéaire ,
-                       <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> ;
+       rdfs:subClassOf :infrastructure_de_gestion_d_eau_douce ,
+                       :rupture_naturelle_du_relief_concave_non_linéaire ;
        rdfs:comment "Puits à eau est une installation de captage d eau souterraine"@fr ;
        <http://www.w3.org/2004/02/skos/core#altLabel> "well"@en ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "puits"@fr ,
@@ -3491,7 +3686,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#quartier
 :quartier rdf:type owl:Class ;
-          rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> ;
+          rdfs:subClassOf :zone_d_habitation ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "quarter"@en ,
                                                           "quartier"@fr .
 
@@ -3636,7 +3831,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#rivière
 :rivière rdf:type owl:Class ;
-         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+         rdfs:subClassOf :cours_d_eau ;
          rdfs:comment "Cours d eau moyennement abondant qui se jette dans un fleuve, dans la mer ou parfois dans un lac."@fr ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "river"@en ,
                                                          "rivière"@fr .
@@ -3687,7 +3882,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#ruisseau
 :ruisseau rdf:type owl:Class ;
-          rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+          rdfs:subClassOf :cours_d_eau ;
           rdfs:comment "Un ruisseau est un petit cours d eau peu profond"@fr ;
           <http://www.w3.org/2004/02/skos/core#altLabel> "brook"@en ,
                                                          "burn"@en ,
@@ -3802,8 +3997,8 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#réservoir
 :réservoir rdf:type owl:Class ;
-           rdfs:subClassOf :plan_d_eau ,
-                           <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> ;
+           rdfs:subClassOf :infrastructure_de_gestion_d_eau_douce ,
+                           :plan_d_eau ;
            rdfs:isDefinedBy "Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation; http://id.eaufrance.fr/nsa/831"@fr ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "bassin"@fr ,
                                                           "forebay"@en ,
@@ -3872,6 +4067,22 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
                  rdfs:comment "Zone couverte par un couvert végétal"@fr ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "cover area"@en ,
                                                                  "secteur couvert"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente
+:secteur_d_atterrissage_parapente rdf:type owl:Class ;
+                                  rdfs:subClassOf :équipement_sport_de_nature ;
+                                  rdfs:comment "Zone délimitée pour l atterissage de parapente"@fr ;
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "paragliding landing area"@en ,
+                                                                                  "site d atterrissage parapente"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche
+:secteur_d_avalanche rdf:type owl:Class ;
+                     rdfs:subClassOf :secteur ;
+                     rdfs:comment "Zone où des avalanches se sont produites ou zone où le risque d avalanche est important"@fr ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "avalanche area"@en ,
+                                                                     "secteur d avalanche"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#secteur_de_décollage_parapente
@@ -3982,11 +4193,24 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"""
 
 ###  http://purl.org/choucas.ign.fr/oor#siphon
 :siphon rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+        rdfs:subClassOf :cours_d_eau ;
         rdfs:comment "Conduit naturel noyé ou rempli d eau"@fr ;
         rdfs:isDefinedBy "https://www.cnrtl.fr/definition/siphon" ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "siphon"@en ,
                                                         "siphon"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#site_d_escalade
+:site_d_escalade rdf:type owl:Class ;
+                 rdfs:subClassOf :équipement_sport_de_nature ;
+                 rdfs:comment "Site équipé pour la pratique de l escalade"@fr ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "artificial climbing wall"@en ,
+                                                                "climbing outdoor"@en ,
+                                                                "climbing rock"@en ,
+                                                                "mur d escalade artificiel"@fr ,
+                                                                "rocher d escalade"@fr ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "rock climbing place"@en ,
+                                                                 "site d escalade"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#site_de_canyoning
@@ -4095,14 +4319,36 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
                                                                    "spot de slackline"@fr .
 
 
+###  http://purl.org/choucas.ign.fr/oor#station_d_épuration
+:station_d_épuration rdf:type owl:Class ;
+                     rdfs:subClassOf :infrastructure_de_traitement_des_eaux ;
+                     rdfs:comment "Installation destinée à épurer les eaux usées domestiques ou industrielles et les eaux pluviales avant le rejet dans le milieu nature. L eau n est pas potable (réf Hygiene-publique.gov.fr)"@fr ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "bassin de décantation"@fr ,
+                                                                    "bassin de filtrage"@fr ,
+                                                                    "bassin de lagunage"@fr ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "station d épuration"@fr ,
+                                                                     "water treatment plant"@en .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#station_de_pompage
 :station_de_pompage rdf:type owl:Class ;
-                    rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> ;
+                    rdfs:subClassOf :infrastructure_de_gestion_d_eau_douce ;
                     <http://www.w3.org/2004/02/skos/core#altLabel> "captage"@fr ,
                                                                    "prise d eau"@fr ,
                                                                    "water catchment"@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "pumping station"@en ,
                                                                     "station de pompage"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver
+:station_de_sports_d_hiver rdf:type owl:Class ;
+                           rdfs:subClassOf :quartier ;
+                           <http://www.w3.org/2004/02/skos/core#altLabel> "domaine skiable"@fr ,
+                                                                          "station"@fr ,
+                                                                          "station de ski"@fr ,
+                                                                          "winter sport resort"@en ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "resort"@en ,
+                                                                           "station de sports d hiver"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#station_de_taxi
@@ -4111,6 +4357,14 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
                  rdfs:comment "Lieu aménagé pour recevoir les taxis"@fr ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "station de taxi"@fr ,
                                                                  "taxi station"@en .
+
+
+###  http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable
+:station_de_traitement_d_eau_potable rdf:type owl:Class ;
+                                     rdfs:subClassOf :infrastructure_de_traitement_des_eaux ;
+                                     rdfs:comment "Station de traitement de l eau dont le but est de rendre l eau potable conforme aux normes de potabilité (Réf. Hygiene-publique.gov.fr)"@fr ;
+                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "drinking water treatment plant"@en ,
+                                                                                     "station de traitement d eau potable"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#station_météorologique
@@ -4199,6 +4453,14 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
                                                        "sérac"@fr .
 
 
+###  http://purl.org/choucas.ign.fr/oor#table_d_orientation
+:table_d_orientation rdf:type owl:Class ;
+                     rdfs:subClassOf :infrastructure_sport_et_loisirs ;
+                     rdfs:comment "Construction à vocation touristique située dans un point culminant et indiquant les éléments vus depuis le point de vue panoramique"@fr ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "orientation table"@en ,
+                                                                     "table d orientation"@fr .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#talus
 :talus rdf:type owl:Class ;
        rdfs:subClassOf :AD ;
@@ -4248,6 +4510,17 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
                    rdfs:subClassOf :temple ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "protestant temple"@en ,
                                                                    "temple protestant"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#terrain_d_aviation
+:terrain_d_aviation rdf:type owl:Class ;
+                    rdfs:subClassOf :infrastructure_de_déplacement_aérien ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "aerodrome"@en ,
+                                                                   "altiport"@en ,
+                                                                   "aérodrome"@fr ,
+                                                                   "hélistation"@fr ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "airfield"@en ,
+                                                                    "terrain d aviation"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#terrain_de_football
@@ -4321,7 +4594,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
 
 ###  http://purl.org/choucas.ign.fr/oor#torrent
 :torrent rdf:type owl:Class ;
-         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+         rdfs:subClassOf :cours_d_eau ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "torrent"@en ,
                                                          "torrent"@fr .
 
@@ -4356,6 +4629,13 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
            <http://www.w3.org/2004/02/skos/core#altLabel> "peat bog"@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "bog"@en ,
                                                            "tourbière"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche
+:tourne_d_avalanche rdf:type owl:Class ;
+                    rdfs:subClassOf :pare-avalanche ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "avanlanche turn"@en ,
+                                                                    "tourne d avalanche"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#tranchée
@@ -4442,7 +4722,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
 
 ###  http://purl.org/choucas.ign.fr/oor#université
 :université rdf:type owl:Class ;
-            rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> ;
+            rdfs:subClassOf :établissement_d_enseignement ;
             <http://www.w3.org/2004/02/skos/core#altLabel> "college"@en ,
                                                            "grande école"@fr ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "university"@en ,
@@ -4500,7 +4780,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
 
 ###  http://purl.org/choucas.ign.fr/oor#vasque
 :vasque rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> ;
+        rdfs:subClassOf :cours_d_eau ;
         rdfs:comment "Lieu d origine naturelle circulaire ou élliptique remplit de l eau. Il se situe dans un ruisseau, torrent, etc."@fr ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "bowl"@en ,
                                                         "vasque"@fr .
@@ -4694,6 +4974,28 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
                                                         "zonage"@fr .
 
 
+###  http://purl.org/choucas.ign.fr/oor#zone_d_activité
+:zone_d_activité rdf:type owl:Class ;
+                 rdfs:subClassOf :zonage ;
+                 rdfs:comment "Délimitation de fait ou légale d une zone contenant principalement des activités éconnomiques"@fr ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "industrial estate"@en ,
+                                                                "industrial park"@en ,
+                                                                "parc d activité"@fr ,
+                                                                "zone artisanale"@fr ,
+                                                                "zone commerciale"@fr ,
+                                                                "zone industrielle"@fr ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "business area"@en ,
+                                                                 "zone d activité"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#zone_d_habitation
+:zone_d_habitation rdf:type owl:Class ;
+                   rdfs:subClassOf :zonage ;
+                   rdfs:comment "Délimitation de fait d une zone contenant un ou plusieurs batiments d habitation"@fr ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "built-up area"@en ,
+                                                                   "zone d habitation"@fr .
+
+
 ###  http://purl.org/choucas.ign.fr/oor#zone_militaire
 :zone_militaire rdf:type owl:Class ;
                 rdfs:subClassOf :zonage ;
@@ -4744,7 +5046,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
 
 ###  http://purl.org/choucas.ign.fr/oor#écurie
 :écurie rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> ;
+        rdfs:subClassOf :installation_d_élevage ;
         rdfs:comment "L écurie est le bâtiment, et éventuellement l enclos réservé aux chevaux"@fr ;
         <http://www.w3.org/2004/02/skos/core#altLabel> "haras"@fr ,
                                                        "ranch"@en ,
@@ -4767,7 +5069,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
 
 ###  http://purl.org/choucas.ign.fr/oor#égout
 :égout rdf:type owl:Class ;
-       rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> ;
+       rdfs:subClassOf :cours_d_eau_artificiel ;
        <http://www.w3.org/2004/02/skos/core#altLabel> "waste water disposal"@en ;
        <http://www.w3.org/2004/02/skos/core#prefLabel> "sewer"@en ,
                                                        "égout"@fr .
@@ -4888,9 +5190,25 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 
 ###  http://purl.org/choucas.ign.fr/oor#étable
 :étable rdf:type owl:Class ;
-        rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> ;
+        rdfs:subClassOf :installation_d_élevage ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "barn"@en ,
                                                         "étable"@fr .
+
+
+###  http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement
+:établissement_d_enseignement rdf:type owl:Class ;
+                              rdfs:subClassOf :bâtiment_et_installation ;
+                              <http://www.w3.org/2004/02/skos/core#altLabel> "elemetnary school"@en ,
+                                                                             "kindergarten"@en ,
+                                                                             "maternelle"@fr ,
+                                                                             "nursery school"@en ,
+                                                                             "primary education school"@en ,
+                                                                             "primary school"@en ,
+                                                                             "school"@en ,
+                                                                             "école"@fr ,
+                                                                             "école primaire"@fr ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "elementary school"@en ,
+                                                                              "établissement d enseignement"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#établissement_de_santé
@@ -4918,314 +5236,12 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
                                                      "île"@fr .
 
 
-###  http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> rdf:type owl:Class ;
-                                                        rdfs:subClassOf :infrastructure_de_transport_routier ;
-                                                        rdfs:comment "Structure aménagée en bordure d autoroute prposant différentes services (repos, ravitaillement, etc.)"@fr ;
-                                                        <http://www.w3.org/2004/02/skos/core#altLabel> "aire de repos"@fr ,
-                                                                                                       "aire de service"@fr ,
-                                                                                                       "service area"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "aire d autoroute"@fr ,
-                                                                                                        "rest area"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#borne_d%20incendie
-<http://purl.org/choucas.ign.fr/oor#borne_d%20incendie> rdf:type owl:Class ;
-                                                        rdfs:subClassOf :borne ;
-                                                        rdfs:comment "Borne indiquant la bouche d incendie"@fr ;
-                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "borne d incendie"@fr ,
-                                                                                                        "fire hydtrant"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> rdf:type owl:Class ;
-                                                             rdfs:subClassOf :bâtiment_et_installation ;
-                                                             rdfs:comment "Batiment ayant le rôle d héberger les humains. A le rôle de résidence prinicipale ou secondaire"@fr ;
-                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d habitation"@fr ,
-                                                                                                             "residential feature"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> rdf:type owl:Class ;
-                                                              rdfs:subClassOf :bâtiment_et_installation ;
-                                                              rdfs:comment "Bâtiment ayant le rôle d héberger ou d habriter des visiteurs pour une durée limitée. Il n a pas de rôle de résidence secondaire ou principale"@fr ;
-                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "accomodation building"@en ,
-                                                                                                              "bâtiment d hébergement"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> rdf:type owl:Class ;
-                                                              rdfs:subClassOf :bâtiment_et_installation ;
-                                                              rdfs:comment "Bâtiment ayant comme vocation d accueillir du public pour l information de la pratique des sports et des loisirs"@fr ;
-                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d information"@fr ,
-                                                                                                              "information building"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> ;
-                                                          <http://www.w3.org/2004/02/skos/core#altLabel> "bief"@fr ,
-                                                                                                         "bisse"@en ,
-                                                                                                         "bisse"@fr ,
-                                                                                                         "béal"@fr ,
-                                                                                                         "rigole"@fr ,
-                                                                                                         "roubine"@fr ;
-                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "canal d irrigation"@fr ,
-                                                                                                          "irrigation channel"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation
-<http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation> rdf:type owl:Class ;
-                                                               rdfs:subClassOf :musée ;
-                                                               rdfs:comment "Un type de musée dont le projet muséal ne se fonde pas sur l existence d une collection mais qui a le rôle de présenter un patrimoine, que ce soit un paysage, un territoire, un site, des vestiges ou encore un monument, ou même une histoire."@fr ;
-                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "centre d interprétation"@fr ,
-                                                                                                               "interpretation center"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage
-<http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage> rdf:type owl:Class ;
-                                                       rdfs:subClassOf :hébergement_isolé ;
-                                                       rdfs:comment "Bâtiment isolé, situé en montagne, utilisé traditionnellement de façon saisonnière  pour abriter l’homme et le bétail"@fr ;
-                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "alpine chalet"@en ,
-                                                                                                       "chalet d alpage"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes
-<http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes> rdf:type owl:Class ;
-                                                       rdfs:subClassOf :hébergement_accessible ;
-                                                       rdfs:comment "Un type d hébergement meublé (chambre) aménagé avec une salle de bain privative loué et loué par des visiteurs. Sa location se fait à la nuit."@fr ;
-                                                       <http://www.w3.org/2004/02/skos/core#altLabel> "bed and breakfast"@en ,
-                                                                                                      "maison d hôtes"@fr ;
-                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "chambre d hôtes"@fr ,
-                                                                                                       "guest rooms"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#château_d%20eau
-<http://purl.org/choucas.ign.fr/oor#château_d%20eau> rdf:type owl:Class ;
-                                                     rdfs:subClassOf :bâtiment_remarquable ,
-                                                                     <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> ;
-                                                     rdfs:comment "Réservoir d’eau construit en hauteur pour surélever le niveau de l’eau par rapport aux constructions environnantes et destiné à l alimentation en eau d une collectivité."@fr ;
-                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "château d eau"@fr ,
-                                                                                                     "water tower"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#cours_d%20eau
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau> rdf:type owl:Class ;
-                                                   rdfs:subClassOf :hydrographie ;
-                                                   rdfs:comment "Un écoulement d’eaux courantes dans un lit naturel à l’origine, alimenté par une source et présentant un débit suffisant la majeure partie de l’année » (CE. SSR. 21 octobre 2011, Ministre de l’écologie c. EARL Cintrat, n° 334322, publiée au Recueil)."@fr ;
-                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "cours d eau"@fr ,
-                                                                                                   "watercourse"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> rdf:type owl:Class ;
-                                                              rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> ;
-                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "artificial waterway"@en ,
-                                                                                                              "cours d eau artificiel"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> rdf:type owl:Class ;
-                                                                             rdfs:subClassOf :infrastructure_eau ;
-                                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "fresh water catchment infrastructure"@en ,
-                                                                                                                             "infrastructure de gestion d eau douce"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf :infrastructure_eau ;
-                                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de transport d eau"@fr ,
-                                                                                                                         "water transport"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#installation_d%20aquaculture
-<http://purl.org/choucas.ign.fr/oor#installation_d%20aquaculture> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> ;
-                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "aquaculture"@en ,
-                                                                                                                  "installation d aquaculture"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#installation_d%20élevage
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> rdf:type owl:Class ;
-                                                              rdfs:subClassOf :bâtiment_et_installation_agricole ;
-                                                              <http://www.w3.org/2004/02/skos/core#altLabel> "cattle ranch"@en ,
-                                                                                                             "livestock building"@en ,
-                                                                                                             "livestock facility"@en ,
-                                                                                                             "poultry farm"@en ,
-                                                                                                             "ranch"@en ,
-                                                                                                             "stable"@en ;
-                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "animal farm"@en ,
-                                                                                                              "installation d élevage"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#nappe_d%20eau
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> rdf:type owl:Class ;
-                                                   rdfs:subClassOf :plan_d_eau ;
-                                                   rdfs:isDefinedBy "Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation. http://id.eaufrance.fr/nsa/831"@fr ;
-                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "basin"@en ,
-                                                                                                  "bassin"@fr ,
-                                                                                                  "gour"@fr ,
-                                                                                                  "plan d eau de gravière"@fr ;
-                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "body of water"@en ,
-                                                                                                   "nappe d eau"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#parc_d%20attraction
-<http://purl.org/choucas.ign.fr/oor#parc_d%20attraction> rdf:type owl:Class ;
-                                                         rdfs:subClassOf :parc_de_loisir ;
-                                                         rdfs:comment "Infrastructure permettant  la pratique de loisirs de formes diverses (montagnes russes, toboggans, terrain de jeux, etc.)"@fr ;
-                                                         <http://www.w3.org/2004/02/skos/core#altLabel> "amusement grounds"@en ;
-                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "amusement park"@en ,
-                                                                                                         "parc d attraction"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme
-<http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme> rdf:type owl:Class ;
-                                                          rdfs:subClassOf :piste_de_sport ;
-                                                          <http://www.w3.org/2004/02/skos/core#altLabel> "bridle path"@en ,
-                                                                                                         "track"@en ;
-                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "piste d athlétisme"@fr ,
-                                                                                                          "running track"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#piste_d%20aviation
-<http://purl.org/choucas.ign.fr/oor#piste_d%20aviation> rdf:type owl:Class ;
-                                                        rdfs:subClassOf :infrastructure_de_déplacement_aérien ;
-                                                        <http://www.w3.org/2004/02/skos/core#altLabel> "taxiway"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "altisurface"@fr ,
-                                                                                                        "piste d aviation"@fr ,
-                                                                                                        "runway"@en .
-
-
 ###  http://purl.org/choucas.ign.fr/oor#point_d'eau_potable
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> ;
+                                                         rdfs:subClassOf :infrastructure_de_gestion_d_eau_douce ;
                                                          rdfs:comment "Indique un accès à de l'eau potable"@fr ;
                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "drinking water"@en ,
                                                                                                          "point d'eau potable"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente> rdf:type owl:Class ;
-                                                                        rdfs:subClassOf :équipement_sport_de_nature ;
-                                                                        rdfs:comment "Zone délimitée pour l atterissage de parapente"@fr ;
-                                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "paragliding landing area"@en ,
-                                                                                                                        "site d atterrissage parapente"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche> rdf:type owl:Class ;
-                                                           rdfs:subClassOf :secteur ;
-                                                           rdfs:comment "Zone où des avalanches se sont produites ou zone où le risque d avalanche est important"@fr ;
-                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "avalanche area"@en ,
-                                                                                                           "secteur d avalanche"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#site_d%20escalade
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> rdf:type owl:Class ;
-                                                       rdfs:subClassOf :équipement_sport_de_nature ;
-                                                       rdfs:comment "Site équipé pour la pratique de l escalade"@fr ;
-                                                       <http://www.w3.org/2004/02/skos/core#altLabel> "artificial climbing wall"@en ,
-                                                                                                      "climbing outdoor"@en ,
-                                                                                                      "climbing rock"@en ,
-                                                                                                      "mur d escalade artificiel"@fr ,
-                                                                                                      "rocher d escalade"@fr ;
-                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "rock climbing place"@en ,
-                                                                                                       "site d escalade"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#station_d%20épuration
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> rdf:type owl:Class ;
-                                                           rdfs:subClassOf :infrastructure_de_traitement_des_eaux ;
-                                                           rdfs:comment "Installation destinée à épurer les eaux usées domestiques ou industrielles et les eaux pluviales avant le rejet dans le milieu nature. L eau n est pas potable (réf Hygiene-publique.gov.fr)"@fr ;
-                                                           <http://www.w3.org/2004/02/skos/core#altLabel> "bassin de décantation"@fr ,
-                                                                                                          "bassin de filtrage"@fr ,
-                                                                                                          "bassin de lagunage"@fr ;
-                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "station d épuration"@fr ,
-                                                                                                           "water treatment plant"@en .
-
-
-###  http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf :quartier ;
-                                                                 <http://www.w3.org/2004/02/skos/core#altLabel> "domaine skiable"@fr ,
-                                                                                                                "station"@fr ,
-                                                                                                                "station de ski"@fr ,
-                                                                                                                "winter sport resort"@en ;
-                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "resort"@en ,
-                                                                                                                 "station de sports d hiver"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable
-<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf :infrastructure_de_traitement_des_eaux ;
-                                                                           rdfs:comment "Station de traitement de l eau dont le but est de rendre l eau potable conforme aux normes de potabilité (Réf. Hygiene-publique.gov.fr)"@fr ;
-                                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "drinking water treatment plant"@en ,
-                                                                                                                           "station de traitement d eau potable"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#table_d%20orientation
-<http://purl.org/choucas.ign.fr/oor#table_d%20orientation> rdf:type owl:Class ;
-                                                           rdfs:subClassOf :infrastructure_sport_et_loisirs ;
-                                                           rdfs:comment "Construction à vocation touristique située dans un point culminant et indiquant les éléments vus depuis le point de vue panoramique"@fr ;
-                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "orientation table"@en ,
-                                                                                                           "table d orientation"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> rdf:type owl:Class ;
-                                                          rdfs:subClassOf :infrastructure_de_déplacement_aérien ;
-                                                          <http://www.w3.org/2004/02/skos/core#altLabel> "aerodrome"@en ,
-                                                                                                         "altiport"@en ,
-                                                                                                         "aérodrome"@fr ,
-                                                                                                         "hélistation"@fr ;
-                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "airfield"@en ,
-                                                                                                          "terrain d aviation"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#tourne_d%20avalanche
-<http://purl.org/choucas.ign.fr/oor#tourne_d%20avalanche> rdf:type owl:Class ;
-                                                          rdfs:subClassOf :pare-avalanche ;
-                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "avanlanche turn"@en ,
-                                                                                                          "tourne d avalanche"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#zone_d%20activité
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> rdf:type owl:Class ;
-                                                       rdfs:subClassOf :zonage ;
-                                                       rdfs:comment "Délimitation de fait ou légale d une zone contenant principalement des activités éconnomiques"@fr ;
-                                                       <http://www.w3.org/2004/02/skos/core#altLabel> "industrial estate"@en ,
-                                                                                                      "industrial park"@en ,
-                                                                                                      "parc d activité"@fr ,
-                                                                                                      "zone artisanale"@fr ,
-                                                                                                      "zone commerciale"@fr ,
-                                                                                                      "zone industrielle"@fr ;
-                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "business area"@en ,
-                                                                                                       "zone d activité"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#zone_d%20habitation
-<http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> rdf:type owl:Class ;
-                                                         rdfs:subClassOf :zonage ;
-                                                         rdfs:comment "Délimitation de fait d une zone contenant un ou plusieurs batiments d habitation"@fr ;
-                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "built-up area"@en ,
-                                                                                                         "zone d habitation"@fr .
-
-
-###  http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> rdf:type owl:Class ;
-                                                                    rdfs:subClassOf :bâtiment_et_installation ;
-                                                                    <http://www.w3.org/2004/02/skos/core#altLabel> "elemetnary school"@en ,
-                                                                                                                   "kindergarten"@en ,
-                                                                                                                   "maternelle"@fr ,
-                                                                                                                   "nursery school"@en ,
-                                                                                                                   "primary education school"@en ,
-                                                                                                                   "primary school"@en ,
-                                                                                                                   "school"@en ,
-                                                                                                                   "école"@fr ,
-                                                                                                                   "école primaire"@fr ;
-                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "elementary school"@en ,
-                                                                                                                    "établissement d enseignement"@fr .
 
 
 ###  http://www.geonames.org/ontology#Feature
@@ -5234,6 +5250,14 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  xsd:integer
+<xsd:integer> rdf:type owl:Class .
+
+
+###  xsd:string
+<xsd:string> rdf:type owl:Class .
 
 
 #################################################################
@@ -5285,7 +5309,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 :SPRI_P1 rdf:type owl:NamedIndividual ,
                   :PRI ;
          :hasReferencedLandmark :EQ_RESEA0000000230065086 ;
-         :hasSemanticRouteAnnotation :access_parking .
+         :hasSemanticRouteAnnotation :proche_access_routier .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#SPRI_V16
@@ -5305,10 +5329,6 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 :ZONEVEGE0000000341083421 rdf:type owl:NamedIndividual ,
                                    :forêt_de_feuillus ;
                           :dataSource "BDTOPO" .
-
-
-###  http://purl.org/choucas.ign.fr/oor#access_parking
-:access_parking rdf:type owl:NamedIndividual .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#atJonction
@@ -5471,7 +5491,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
                        :locationRelation :nearProximity ;
                        rdfs:comment "Accès à un parking ou à un arrêt desservi par transport commun. Ne pas mettre les remontées mécaniques."@fr ;
                        rdfs:label "Close to road access"@en ,
-                                  "Proche d'un accès routier"@fr .
+                                  "Proche accès routier"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#proche_commodité
@@ -5502,6 +5522,18 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
                  :locationRelation :crossing ;
                  rdfs:comment "traverser une forêt"@fr ;
                  rdfs:label "Traverser une forêt"@fr .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:geographicalName rdfs:comment "Attribut permettant de préciser le nom (graphie) principal de l'objet de repère"@fr ;
+                  rdfs:label "nom géographique"@fr .
+
+
+:idcc rdfs:comment "Attribut permettant de préciser l'identifiant de la composante connexe"@fr ;
+      rdfs:label "Identifiant de la cc"@fr .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
