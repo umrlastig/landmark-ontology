@@ -2,6 +2,8 @@
 <rdf:RDF xmlns="http://purl.org/choucas.ign.fr/oor"
      xml:base="http://purl.org/choucas.ign.fr/oor"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:geo="http://www.opengis.net/ont/geosparql#"
      xmlns:ns="http://creativecommons.org/ns#"
      xmlns:oor="http://purl.org/choucas.ign.fr/oor#"
@@ -24,11 +26,13 @@
         <dc:creator>Olivier Favre</dc:creator>
         <dc:creator>Sebastien Mustière</dc:creator>
         <dc:creator>Véronique Gendner</dc:creator>
-        <dc:description xml:lang="fr">Ontologie des objets géographiques pouvant servir d objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. 
+        <terms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+        <foaf:homepage rdf:resource="https://www.umr-lastig.fr/landmark-ontology/index.html"/>
+        <dc:description xml:lang="fr">Ontologie des objets géographiques pouvant servir d'objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. 
 
 Cette ontologie a été proposée dans le cadre du projet Choucas (ANR-16-CE23-0018). Elle est inspiré de l Ontologie GeOnto (Mustière et al., 2011) et LFRO (Sinha, Gaurav et al. 2018. )
 
-Mustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180
+Mustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d'alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180
 
 Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany.</dc:description>
         <dc:description xml:lang="en">Ontology of geographical objects used as reference objects in a mountain context.
@@ -44,8 +48,8 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
         <dc:rights xml:lang="en">Copyright © 2025 LASTIG</dc:rights>
         <dc:title xml:lang="fr">Ontologie des Objets de Repères</dc:title>
         <dc:title xml:lang="en">Ontology Of landmaRks</dc:title>
-        <vann:preferredNamespacePrefix>OOR</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>URI DU NAMESPACE</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix>oor</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://purl.org/choucas.ign.fr/oor#</vann:preferredNamespaceUri>
         <owl:versionInfo>2.0.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -280,7 +284,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
     <owl:DatatypeProperty rdf:about="http://purl.org/choucas.ign.fr/oor#geographicalName">
         <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="xsd:string"/>
         <rdfs:comment xml:lang="fr">Attribut permettant de préciser le nom (graphie) principal de l&apos;objet de repère</rdfs:comment>
         <rdfs:label xml:lang="fr">nom géographique</rdfs:label>
     </owl:DatatypeProperty>
@@ -291,6 +295,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
     <owl:DatatypeProperty rdf:about="http://purl.org/choucas.ign.fr/oor#dataSource">
         <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
+        <rdfs:range rdf:resource="xsd:string"/>
     </owl:DatatypeProperty>
 
 
@@ -299,6 +304,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
     <owl:DatatypeProperty rdf:about="http://purl.org/choucas.ign.fr/oor#idcc">
         <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#PRI"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
         <rdfs:comment xml:lang="fr">Attribut permettant de préciser l'identifiant de la composante connexe</rdfs:comment>
         <rdfs:label xml:lang="fr">Identifiant de la cc</rdfs:label>
     </owl:DatatypeProperty>
@@ -353,7 +359,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#abattoir -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#abattoir">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d élevage"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d_élevage"/>
         <skos:altLabel xml:lang="en">slaughter-house</skos:altLabel>
         <skos:prefLabel xml:lang="en">abattoir</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">abattoir</skos:prefLabel>
@@ -399,7 +405,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#agglomération -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#agglomération">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#zone_d habitation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#zone_d_habitation"/>
         <skos:altLabel xml:lang="en">agglomeration</skos:altLabel>
         <skos:altLabel xml:lang="fr">bourg</skos:altLabel>
         <skos:altLabel xml:lang="en">bourgade</skos:altLabel>
@@ -529,7 +535,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#aqueduc -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#aqueduc">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"/>
         <rdfs:comment xml:lang="fr">Chenal artificiel conçu pour le transport de l eau (usage hydroéléctique, industriel,...)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="fr">http://id.eaufrance.fr/nsa/831</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="fr">aqueduc</skos:prefLabel>
@@ -786,7 +792,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#bief -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#bief">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau_artificiel"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel"/>
         <skos:altLabel xml:lang="en">level</skos:altLabel>
         <skos:altLabel xml:lang="en">reach</skos:altLabel>
         <skos:prefLabel xml:lang="en">bay</skos:prefLabel>
@@ -914,7 +920,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#bureau_de_guides -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#bureau_de_guides">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d information"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d_information"/>
         <rdfs:comment xml:lang="fr">Bâtiment où se trouve des guides de montagne</rdfs:comment>
         <skos:prefLabel xml:lang="fr">bureau de guides</skos:prefLabel>
         <skos:prefLabel xml:lang="en">guide office</skos:prefLabel>
@@ -1113,7 +1119,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#canal -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#canal">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau_artificiel"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel"/>
         <rdfs:comment xml:lang="fr">Voie d eau artificielle à surface libre</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="fr">http://id.eaufrance.fr/nsa/831</rdfs:isDefinedBy>
         <skos:altLabel xml:lang="en">channel</skos:altLabel>
@@ -1136,7 +1142,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#canalisation -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#canalisation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"/>
         <skos:altLabel xml:lang="fr">galerie d amenée d eau</skos:altLabel>
         <skos:altLabel xml:lang="en">main</skos:altLabel>
         <skos:altLabel xml:lang="en">pipe</skos:altLabel>
@@ -1159,7 +1165,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#canyon -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#canyon">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <rdfs:comment xml:lang="fr">Une portion de rivière permettant la descente de canyons ou la randonnée nautique</rdfs:comment>
         <skos:prefLabel xml:lang="en">canyon</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">canyon</skos:prefLabel>
@@ -1184,7 +1190,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#cascade -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#cascade">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <rdfs:comment xml:lang="fr">Site où l eau dévalet un relief vertical pour provoquer une cascade. Une chute d eau.</rdfs:comment>
         <skos:altLabel xml:lang="en">cascade</skos:altLabel>
         <skos:altLabel xml:lang="fr">chute d eau</skos:altLabel>
@@ -1535,7 +1541,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#citerne -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#citerne">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"/>
         <rdfs:comment xml:lang="fr">Réservoir d eau alimenté par de l eau de pluie. A se différentier du réservoir qui est réservoir est alimenté par un réseau</rdfs:comment>
         <skos:altLabel xml:lang="en">cistern</skos:altLabel>
         <skos:prefLabel xml:lang="fr">citerne</skos:prefLabel>
@@ -1626,7 +1632,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#collège -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#collège">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#établissement_d enseignement"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement"/>
         <skos:altLabel xml:lang="en">middle school</skos:altLabel>
         <skos:altLabel xml:lang="en">school</skos:altLabel>
         <skos:prefLabel xml:lang="fr">collège</skos:prefLabel>
@@ -1709,7 +1715,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#conduit_buse -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#conduit_buse">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"/>
         <rdfs:comment xml:lang="fr">Ouvrage constitué d au moins un conduit transversal, généralement fait de béton ou de métal, laissant circuler l eau sous une route, une voie ferrée ou une autre structure</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="fr">http://id.eaufrance.fr/nsa/831</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="fr">conduit buse</skos:prefLabel>
@@ -1721,7 +1727,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#conduit_forcé -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#conduit_forcé">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"/>
         <rdfs:comment xml:lang="fr">Tuyau artificiel conçu pour le transport de l eau (usage hydroéléctique, industriel,...)</rdfs:comment>
         <rdfs:isDefinedBy xml:lang="fr">http://id.eaufrance.fr/nsa/831</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="fr">conduit forcé</skos:prefLabel>
@@ -1782,7 +1788,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#coopérative">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_de_culture"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d élevage"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d_élevage"/>
         <skos:prefLabel xml:lang="en">co-operative stores</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">coopérative</skos:prefLabel>
     </owl:Class>
@@ -1946,7 +1952,7 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     <!-- http://purl.org/choucas.ign.fr/oor#crèche -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#crèche">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#établissement_d enseignement"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement"/>
         <skos:prefLabel xml:lang="fr">crèche</skos:prefLabel>
         <skos:prefLabel xml:lang="en">nursery</skos:prefLabel>
     </owl:Class>
@@ -2353,7 +2359,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#ferme">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_de_culture"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d élevage"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d_élevage"/>
         <skos:altLabel xml:lang="fr">exploitation agricole</skos:altLabel>
         <skos:prefLabel xml:lang="en">farm</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">ferme</skos:prefLabel>
@@ -2387,7 +2393,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#fleuve -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#fleuve">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <rdfs:comment xml:lang="fr">Cours d eau important, généralement caractérisé par une très grande longueur et largeur, un débit abondant, des affluents nombreux, et qui se jette le plus souvent dans la mer</rdfs:comment>
         <skos:prefLabel xml:lang="fr">fleuve</skos:prefLabel>
         <skos:prefLabel xml:lang="en">major river</skos:prefLabel>
@@ -2409,7 +2415,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#fontaine -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#fontaine">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"/>
         <rdfs:comment xml:lang="fr">Construction comportant une alimentation en eau et, généralement, un bassin</rdfs:comment>
         <skos:prefLabel xml:lang="fr">fontaine</skos:prefLabel>
         <skos:prefLabel xml:lang="en">fountain</skos:prefLabel>
@@ -2629,7 +2635,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#gave -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#gave">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <skos:prefLabel xml:lang="en">gave</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">gave</skos:prefLabel>
     </owl:Class>
@@ -2804,7 +2810,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#hameau -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#hameau">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#zone_d habitation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#zone_d_habitation"/>
         <skos:altLabel xml:lang="en">local placename</skos:altLabel>
         <skos:altLabel xml:lang="fr">écart</skos:altLabel>
         <skos:prefLabel xml:lang="fr">hameau</skos:prefLabel>
@@ -2861,7 +2867,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#hébergement_accessible -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#hébergement_accessible">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d hébergement"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement"/>
         <rdfs:comment xml:lang="fr">Un bâtiment ayant le rôle d héberger des visiteurs pendant une durée limitée. Il est facilement accessible via le réseau routier principal. Il n a pas de rôle de résidence secondaire ou principale</rdfs:comment>
         <skos:prefLabel xml:lang="en">accessible accomodation</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">hébergement accessible</skos:prefLabel>
@@ -2872,7 +2878,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#hébergement_isolé -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#hébergement_isolé">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d hébergement"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement"/>
         <rdfs:comment xml:lang="fr">Bâtiment ayant le rôle d habriter des personnes ou des animaux pour une durée courte. Il est accessible généralement via des sentiers et des chemin ou par voie aérienne. Il structure l espace de haute montagne; il peut servir à s abriter</rdfs:comment>
         <skos:prefLabel xml:lang="fr">hébergement isolé</skos:prefLabel>
         <skos:prefLabel xml:lang="en">isolated accomodation</skos:prefLabel>
@@ -2937,7 +2943,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#immeuble_collectif -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#immeuble_collectif">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d habitation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation"/>
         <rdfs:comment xml:lang="fr">Un bâtiment à plusieurs étages destiné à assurer un  usage d habitation. Il est divisé en différentes parties privatives (ex appartements) et communes. Ils possèdent un ou plusieurs propriétaires  .</rdfs:comment>
         <skos:altLabel xml:lang="fr">immeuble d habitation</skos:altLabel>
         <skos:altLabel xml:lang="en">residential building</skos:altLabel>
@@ -3397,7 +3403,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#lycée -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#lycée">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#établissement_d enseignement"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement"/>
         <skos:altLabel xml:lang="en">grammar-school</skos:altLabel>
         <skos:altLabel xml:lang="en">secondary school</skos:altLabel>
         <skos:prefLabel xml:lang="en">high school</skos:prefLabel>
@@ -3436,7 +3442,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#maison -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#maison">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d habitation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation"/>
         <rdfs:comment xml:lang="fr">Bâtiment ayant le rôle d hébergements de personnes. Il peut être destiné à des usages tels que résidentiel, touristique ou de loisirs.</rdfs:comment>
         <skos:altLabel xml:lang="en">chalet</skos:altLabel>
         <skos:altLabel xml:lang="fr">chaumière</skos:altLabel>
@@ -3455,7 +3461,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#maison_du_parc">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_culturel"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d information"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d_information"/>
         <rdfs:comment xml:lang="fr">A definir</rdfs:comment>
     </owl:Class>
     
@@ -3810,7 +3816,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <!-- http://purl.org/choucas.ign.fr/oor#office_de_tourisme -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#office_de_tourisme">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d information"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_d_information"/>
         <rdfs:comment xml:lang="fr">Bâtiment qui accueille du public et dont la principale mission est l information et la promotion du tourisme et des activités touristiques</rdfs:comment>
         <skos:altLabel xml:lang="fr">point d information touristique</skos:altLabel>
         <skos:altLabel xml:lang="fr">syndicat d initiative</skos:altLabel>
@@ -3968,8 +3974,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#parking_touristique_isole">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#parking"/>
-        <rdfs:comment xml:lang="fr"> Parc à voitures aménagé, servant de support à une activité touristique. Seuls les parkings isolés à
-proximité d un point d intérêt touristique sont sélectionnés.</rdfs:comment>
+        <rdfs:comment xml:lang="fr"> Parc à voitures aménagé, servant de support à une activité touristique. Seuls les parkings isolés à proximité d un point d intérêt touristique sont sélectionnés.</rdfs:comment>
         <skos:prefLabel xml:lang="en">isolated car park</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">parking touristique isolé</skos:prefLabel>
     </owl:Class>
@@ -4101,10 +4106,7 @@ proximité d un point d intérêt touristique sont sélectionnés.</rdfs:comment
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#pente">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#verticale"/>
-        <rdfs:comment xml:lang="fr">Surface, terrain en pente
-
-
-Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Surface, terrain en pente. Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</rdfs:comment>
         <skos:altLabel xml:lang="fr">déclivité</skos:altLabel>
         <skos:altLabel xml:lang="fr">rampe</skos:altLabel>
         <skos:prefLabel xml:lang="fr">pente</skos:prefLabel>
@@ -4378,7 +4380,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <!-- http://purl.org/choucas.ign.fr/oor#point_d&apos;eau_potable -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#point_d&apos;eau_potable">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"/>
         <rdfs:comment xml:lang="fr">Indique un accès à de l'eau potable</rdfs:comment>
         <skos:prefLabel xml:lang="fr">point d&apos;eau potable</skos:prefLabel>
         <skos:prefLabel xml:lang="en">drinking water</skos:prefLabel>
@@ -4549,7 +4551,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#puits">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#rupture_naturelle_du_relief_concave_non_linéaire"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"/>
         <rdfs:comment xml:lang="fr">Puits à eau est une installation de captage d eau souterraine</rdfs:comment>
         <skos:altLabel xml:lang="en">well</skos:altLabel>
         <skos:prefLabel xml:lang="fr">puits</skos:prefLabel>
@@ -4615,7 +4617,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <!-- http://purl.org/choucas.ign.fr/oor#quartier -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#quartier">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#zone_d habitation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#zone_d_habitation"/>
         <skos:prefLabel xml:lang="en">quarter</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">quartier</skos:prefLabel>
     </owl:Class>
@@ -4808,7 +4810,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <!-- http://purl.org/choucas.ign.fr/oor#rivière -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#rivière">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <rdfs:comment xml:lang="fr">Cours d eau moyennement abondant qui se jette dans un fleuve, dans la mer ou parfois dans un lac.</rdfs:comment>
         <skos:prefLabel xml:lang="en">river</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">rivière</skos:prefLabel>
@@ -4877,7 +4879,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <!-- http://purl.org/choucas.ign.fr/oor#ruisseau -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#ruisseau">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <rdfs:comment xml:lang="fr">Un ruisseau est un petit cours d eau peu profond</rdfs:comment>
         <skos:altLabel xml:lang="en">brook</skos:altLabel>
         <skos:altLabel xml:lang="en">burn</skos:altLabel>
@@ -5031,7 +5033,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <!-- http://purl.org/choucas.ign.fr/oor#réservoir -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#réservoir">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#plan_d_eau"/>
         <rdfs:isDefinedBy xml:lang="fr">Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation; http://id.eaufrance.fr/nsa/831</rdfs:isDefinedBy>
         <skos:altLabel xml:lang="fr">bassin</skos:altLabel>
@@ -5271,7 +5273,7 @@ Des éléments qui ne sont pas toujours vus  comme de la très haute montagne</r
     <!-- http://purl.org/choucas.ign.fr/oor#siphon -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#siphon">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <rdfs:comment xml:lang="fr">Conduit naturel noyé ou rempli d eau</rdfs:comment>
         <rdfs:isDefinedBy>https://www.cnrtl.fr/definition/siphon</rdfs:isDefinedBy>
         <skos:prefLabel xml:lang="en">siphon</skos:prefLabel>
@@ -5422,7 +5424,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
     <!-- http://purl.org/choucas.ign.fr/oor#station_de_pompage -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#station_de_pompage">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"/>
         <skos:altLabel xml:lang="fr">captage</skos:altLabel>
         <skos:altLabel xml:lang="fr">prise d eau</skos:altLabel>
         <skos:altLabel xml:lang="en">water catchment</skos:altLabel>
@@ -5727,7 +5729,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
     <!-- http://purl.org/choucas.ign.fr/oor#torrent -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#torrent">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <skos:prefLabel xml:lang="en">torrent</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">torrent</skos:prefLabel>
     </owl:Class>
@@ -5890,7 +5892,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
     <!-- http://purl.org/choucas.ign.fr/oor#université -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#université">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#établissement_d enseignement"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement"/>
         <skos:altLabel xml:lang="en">college</skos:altLabel>
         <skos:altLabel xml:lang="fr">grande école</skos:altLabel>
         <skos:prefLabel xml:lang="en">university</skos:prefLabel>
@@ -5963,7 +5965,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
     <!-- http://purl.org/choucas.ign.fr/oor#vasque -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#vasque">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau"/>
         <rdfs:comment xml:lang="fr">Lieu d origine naturelle circulaire ou élliptique remplit de l eau. Il se situe dans un ruisseau, torrent, etc.</rdfs:comment>
         <skos:prefLabel xml:lang="en">bowl</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">vasque</skos:prefLabel>
@@ -6288,7 +6290,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
     <!-- http://purl.org/choucas.ign.fr/oor#écurie -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#écurie">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d élevage"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d_élevage"/>
         <rdfs:comment xml:lang="fr">L écurie est le bâtiment, et éventuellement l enclos réservé aux chevaux</rdfs:comment>
         <skos:altLabel xml:lang="fr">haras</skos:altLabel>
         <skos:altLabel xml:lang="en">ranch</skos:altLabel>
@@ -6317,7 +6319,7 @@ Exemples: canoë-kayak, hydrospeed, rafting, sports en eaux vives
     <!-- http://purl.org/choucas.ign.fr/oor#égout -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#égout">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau_artificiel"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel"/>
         <skos:altLabel xml:lang="en">waste water disposal</skos:altLabel>
         <skos:prefLabel xml:lang="en">sewer</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">égout</skos:prefLabel>
@@ -6486,7 +6488,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <!-- http://purl.org/choucas.ign.fr/oor#étable -->
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#étable">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d élevage"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d_élevage"/>
         <skos:prefLabel xml:lang="en">barn</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">étable</skos:prefLabel>
     </owl:Class>
@@ -6527,9 +6529,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#aire_d autoroute -->
+    <!-- http://purl.org/choucas.ign.fr/oor#aire_d_autoroute -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#aire_d autoroute">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#aire_d_autoroute">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier"/>
         <rdfs:comment xml:lang="fr">Structure aménagée en bordure d autoroute prposant différentes services (repos, ravitaillement, etc.)</rdfs:comment>
         <skos:altLabel xml:lang="fr">aire de repos</skos:altLabel>
@@ -6541,9 +6543,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#borne_d incendie -->
+    <!-- http://purl.org/choucas.ign.fr/oor#borne_d_incendie -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#borne_d incendie">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#borne_d_incendie">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#borne"/>
         <rdfs:comment xml:lang="fr">Borne indiquant la bouche d incendie</rdfs:comment>
         <skos:prefLabel xml:lang="fr">borne d incendie</skos:prefLabel>
@@ -6552,9 +6554,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#bâtiment_d habitation -->
+    <!-- http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#bâtiment_d habitation">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation"/>
         <rdfs:comment xml:lang="fr">Batiment ayant le rôle d héberger les humains. A le rôle de résidence prinicipale ou secondaire</rdfs:comment>
         <skos:prefLabel xml:lang="fr">bâtiment d habitation</skos:prefLabel>
@@ -6563,9 +6565,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#bâtiment_d hébergement -->
+    <!-- http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#bâtiment_d hébergement">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation"/>
         <rdfs:comment xml:lang="fr">Bâtiment ayant le rôle d héberger ou d habriter des visiteurs pour une durée limitée. Il n a pas de rôle de résidence secondaire ou principale</rdfs:comment>
         <skos:prefLabel xml:lang="en">accomodation building</skos:prefLabel>
@@ -6574,9 +6576,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#bâtiment_d information -->
+    <!-- http://purl.org/choucas.ign.fr/oor#bâtiment_d_information -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#bâtiment_d information">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#bâtiment_d_information">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation"/>
         <rdfs:comment xml:lang="fr">Bâtiment ayant comme vocation d accueillir du public pour l information de la pratique des sports et des loisirs</rdfs:comment>
         <skos:prefLabel xml:lang="fr">bâtiment d information</skos:prefLabel>
@@ -6585,10 +6587,10 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#canal_d irrigation -->
+    <!-- http://purl.org/choucas.ign.fr/oor#canal_d_irrigation -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#canal_d irrigation">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d eau_artificiel"/>
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#canal_d_irrigation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel"/>
         <skos:altLabel xml:lang="fr">bief</skos:altLabel>
         <skos:altLabel xml:lang="en">bisse</skos:altLabel>
         <skos:altLabel xml:lang="fr">bisse</skos:altLabel>
@@ -6601,9 +6603,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#centre_d interprétation -->
+    <!-- http://purl.org/choucas.ign.fr/oor#centre_d_interprétation -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#centre_d interprétation">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#centre_d_interprétation">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#musée"/>
         <rdfs:comment xml:lang="fr">Un type de musée dont le projet muséal ne se fonde pas sur l existence d une collection mais qui a le rôle de présenter un patrimoine, que ce soit un paysage, un territoire, un site, des vestiges ou encore un monument, ou même une histoire.</rdfs:comment>
         <skos:prefLabel xml:lang="fr">centre d interprétation</skos:prefLabel>
@@ -6612,9 +6614,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#chalet_d alpage -->
+    <!-- http://purl.org/choucas.ign.fr/oor#chalet_d_alpage -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#chalet_d alpage">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#chalet_d_alpage">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#hébergement_isolé"/>
         <rdfs:comment xml:lang="fr">Bâtiment isolé, situé en montagne, utilisé traditionnellement de façon saisonnière  pour abriter l’homme et le bétail</rdfs:comment>
         <skos:prefLabel xml:lang="en">alpine chalet</skos:prefLabel>
@@ -6623,9 +6625,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#chambre_d hôtes -->
+    <!-- http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#chambre_d hôtes">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#hébergement_accessible"/>
         <rdfs:comment xml:lang="fr">Un type d hébergement meublé (chambre) aménagé avec une salle de bain privative loué et loué par des visiteurs. Sa location se fait à la nuit.</rdfs:comment>
         <skos:altLabel xml:lang="en">bed and breakfast</skos:altLabel>
@@ -6636,11 +6638,11 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#château_d eau -->
+    <!-- http://purl.org/choucas.ign.fr/oor#château_d_eau -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#château_d eau">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#château_d_eau">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_remarquable"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce"/>
         <rdfs:comment xml:lang="fr">Réservoir d’eau construit en hauteur pour surélever le niveau de l’eau par rapport aux constructions environnantes et destiné à l alimentation en eau d une collectivité.</rdfs:comment>
         <skos:prefLabel xml:lang="fr">château d eau</skos:prefLabel>
         <skos:prefLabel xml:lang="en">water tower</skos:prefLabel>
@@ -6648,9 +6650,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#cours_d eau -->
+    <!-- http://purl.org/choucas.ign.fr/oor#cours_d_eau -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#cours_d eau">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#cours_d_eau">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#hydrographie"/>
         <rdfs:comment xml:lang="fr">Un écoulement d’eaux courantes dans un lit naturel à l’origine, alimenté par une source et présentant un débit suffisant la majeure partie de l’année » (CE. SSR. 21 octobre 2011, Ministre de l’écologie c. EARL Cintrat, n° 334322, publiée au Recueil).</rdfs:comment>
         <skos:prefLabel xml:lang="fr">cours d eau</skos:prefLabel>
@@ -6659,19 +6661,19 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#cours_d eau_artificiel -->
+    <!-- http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#cours_d eau_artificiel">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d eau"/>
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau"/>
         <skos:prefLabel xml:lang="en">artificial waterway</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">cours d eau artificiel</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce -->
+    <!-- http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d eau_douce">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_eau"/>
         <skos:prefLabel xml:lang="en">fresh water catchment infrastructure</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">infrastructure de gestion d eau douce</skos:prefLabel>
@@ -6679,9 +6681,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d eau -->
+    <!-- http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d eau">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_eau"/>
         <skos:prefLabel xml:lang="fr">infrastructure de transport d eau</skos:prefLabel>
         <skos:prefLabel xml:lang="en">water transport</skos:prefLabel>
@@ -6689,19 +6691,19 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#installation_d aquaculture -->
+    <!-- http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#installation_d aquaculture">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d élevage"/>
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture">
+        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#installation_d_élevage"/>
         <skos:prefLabel xml:lang="en">aquaculture</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">installation d aquaculture</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#installation_d élevage -->
+    <!-- http://purl.org/choucas.ign.fr/oor#installation_d_élevage -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#installation_d élevage">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#installation_d_élevage">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation_agricole"/>
         <skos:altLabel xml:lang="en">cattle ranch</skos:altLabel>
         <skos:altLabel xml:lang="en">livestock building</skos:altLabel>
@@ -6715,9 +6717,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#nappe_d eau -->
+    <!-- http://purl.org/choucas.ign.fr/oor#nappe_d_eau -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#nappe_d eau">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#nappe_d_eau">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#plan_d_eau"/>
         <rdfs:isDefinedBy xml:lang="fr">Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation. http://id.eaufrance.fr/nsa/831</rdfs:isDefinedBy>
         <skos:altLabel xml:lang="en">basin</skos:altLabel>
@@ -6730,9 +6732,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#parc_d attraction -->
+    <!-- http://purl.org/choucas.ign.fr/oor#parc_d_attraction -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#parc_d attraction">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#parc_d_attraction">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#parc_de_loisir"/>
         <rdfs:comment xml:lang="fr">Infrastructure permettant  la pratique de loisirs de formes diverses (montagnes russes, toboggans, terrain de jeux, etc.)</rdfs:comment>
         <skos:altLabel xml:lang="en">amusement grounds</skos:altLabel>
@@ -6742,9 +6744,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#piste_d athlétisme -->
+    <!-- http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#piste_d athlétisme">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#piste_de_sport"/>
         <skos:altLabel xml:lang="en">bridle path</skos:altLabel>
         <skos:altLabel xml:lang="en">track</skos:altLabel>
@@ -6754,9 +6756,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#piste_d aviation -->
+    <!-- http://purl.org/choucas.ign.fr/oor#piste_d_aviation -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#piste_d aviation">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#piste_d_aviation">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_aérien"/>
         <skos:altLabel xml:lang="en">taxiway</skos:altLabel>
         <skos:prefLabel xml:lang="fr">altisurface</skos:prefLabel>
@@ -6777,9 +6779,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#secteur_d atterrissage_parapente -->
+    <!-- http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#secteur_d atterrissage_parapente">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#équipement_sport_de_nature"/>
         <rdfs:comment xml:lang="fr">Zone délimitée pour l atterissage de parapente</rdfs:comment>
         <skos:prefLabel xml:lang="en">paragliding landing area</skos:prefLabel>
@@ -6788,9 +6790,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#secteur_d avalanche -->
+    <!-- http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#secteur_d avalanche">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#secteur"/>
         <rdfs:comment xml:lang="fr">Zone où des avalanches se sont produites ou zone où le risque d avalanche est important</rdfs:comment>
         <skos:prefLabel xml:lang="en">avalanche area</skos:prefLabel>
@@ -6799,9 +6801,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#site_d escalade -->
+    <!-- http://purl.org/choucas.ign.fr/oor#site_d_escalade -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#site_d escalade">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#site_d_escalade">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#équipement_sport_de_nature"/>
         <rdfs:comment xml:lang="fr">Site équipé pour la pratique de l escalade</rdfs:comment>
         <skos:altLabel xml:lang="en">artificial climbing wall</skos:altLabel>
@@ -6815,9 +6817,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#station_d épuration -->
+    <!-- http://purl.org/choucas.ign.fr/oor#station_d_épuration -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#station_d épuration">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#station_d_épuration">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux"/>
         <rdfs:comment xml:lang="fr">Installation destinée à épurer les eaux usées domestiques ou industrielles et les eaux pluviales avant le rejet dans le milieu nature. L eau n est pas potable (réf Hygiene-publique.gov.fr)</rdfs:comment>
         <skos:altLabel xml:lang="fr">bassin de décantation</skos:altLabel>
@@ -6829,9 +6831,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#station_de_sports_d hiver -->
+    <!-- http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#station_de_sports_d hiver">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#quartier"/>
         <skos:altLabel xml:lang="fr">domaine skiable</skos:altLabel>
         <skos:altLabel xml:lang="fr">station</skos:altLabel>
@@ -6843,9 +6845,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#station_de_traitement_d eau_potable -->
+    <!-- http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#station_de_traitement_d eau_potable">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux"/>
         <rdfs:comment xml:lang="fr">Station de traitement de l eau dont le but est de rendre l eau potable conforme aux normes de potabilité (Réf. Hygiene-publique.gov.fr)</rdfs:comment>
         <skos:prefLabel xml:lang="en">drinking water treatment plant</skos:prefLabel>
@@ -6854,9 +6856,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#table_d orientation -->
+    <!-- http://purl.org/choucas.ign.fr/oor#table_d_orientation -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#table_d orientation">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#table_d_orientation">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_sport_et_loisirs"/>
         <rdfs:comment xml:lang="fr">Construction à vocation touristique située dans un point culminant et indiquant les éléments vus depuis le point de vue panoramique</rdfs:comment>
         <skos:prefLabel xml:lang="en">orientation table</skos:prefLabel>
@@ -6865,9 +6867,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#terrain_d aviation -->
+    <!-- http://purl.org/choucas.ign.fr/oor#terrain_d_aviation -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#terrain_d aviation">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#terrain_d_aviation">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_aérien"/>
         <skos:altLabel xml:lang="en">aerodrome</skos:altLabel>
         <skos:altLabel xml:lang="en">altiport</skos:altLabel>
@@ -6879,9 +6881,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#tourne_d avalanche -->
+    <!-- http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#tourne_d avalanche">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#pare-avalanche"/>
         <skos:prefLabel xml:lang="en">avanlanche turn</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">tourne d avalanche</skos:prefLabel>
@@ -6889,9 +6891,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#zone_d activité -->
+    <!-- http://purl.org/choucas.ign.fr/oor#zone_d_activité -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#zone_d activité">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#zone_d_activité">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#zonage"/>
         <rdfs:comment xml:lang="fr">Délimitation de fait ou légale d une zone contenant principalement des activités éconnomiques</rdfs:comment>
         <skos:altLabel xml:lang="en">industrial estate</skos:altLabel>
@@ -6906,9 +6908,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#zone_d habitation -->
+    <!-- http://purl.org/choucas.ign.fr/oor#zone_d_habitation -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#zone_d habitation">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#zone_d_habitation">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#zonage"/>
         <rdfs:comment xml:lang="fr">Délimitation de fait d une zone contenant un ou plusieurs batiments d habitation</rdfs:comment>
         <skos:prefLabel xml:lang="en">built-up area</skos:prefLabel>
@@ -6917,9 +6919,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#établissement_d enseignement -->
+    <!-- http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement -->
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#établissement_d enseignement">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation"/>
         <skos:altLabel xml:lang="en">elemetnary school</skos:altLabel>
         <skos:altLabel xml:lang="en">kindergarten</skos:altLabel>
@@ -7014,7 +7016,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:prefLabel xml:lang="fr">PRI</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">PII</skos:prefLabel>
         <skos:prefLabel xml:lang="en">PRI</skos:prefLabel>
         <skos:altLabel xml:lang="fr">Portion d&apos;itinéraire avec une annotation sémantique</skos:altLabel>
         <skos:altLabel xml:lang="en">Route portion with semantic route annotation</skos:altLabel>
@@ -7171,6 +7173,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
         <skos:altLabel xml:lang="fr">en corniche</skos:altLabel>
     </owl:NamedIndividual>
     
+
+
+
     <!-- http://purl.org/choucas.ign.fr/oor#en_pente_escarpée -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_pente_escarpée">
@@ -7203,6 +7208,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
         <rdfs:comment xml:lang="fr">désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête.</rdfs:comment>
         <rdfs:label xml:lang="fr">En route des crêtes</rdfs:label>
     </owl:NamedIndividual>
+
+
     
     <!-- http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets -->
 
@@ -7274,7 +7281,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#proche_access_routier">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <oor:locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
-        <rdfs:label xml:lang="fr">Proche d'un accès routier</rdfs:label>
+        <rdfs:label xml:lang="fr">Proche accès routier</rdfs:label>
         <rdfs:label xml:lang="en">Close to road access</rdfs:label>
         <rdfs:comment xml:lang="fr">Accès à un parking ou à un arrêt desservi par transport commun. Ne pas mettre les remontées mécaniques.</rdfs:comment>
     </owl:NamedIndividual>
@@ -7376,7 +7383,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#SPRI_P1">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#PRI" />
         <oor:hasReferencedLandmark rdf:resource="http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086"/>
-        <oor:hasSemanticRouteAnnotation rdf:resource="http://purl.org/choucas.ign.fr/oor#access_parking"/>
+        <oor:hasSemanticRouteAnnotation rdf:resource="http://purl.org/choucas.ign.fr/oor#proche_access_routier"/>
     </owl:NamedIndividual>
 
 
