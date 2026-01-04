@@ -999,13 +999,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "atJonction"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "at the jonction"
+  }, {
     "@language" : "fr",
-    "@value" : "A la jonction"
+    "@value" : "à la jonction"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#autoroute",
@@ -3479,10 +3478,6 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Crossing"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Crossing"
@@ -3941,13 +3936,26 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "along a cliffside"
+  }, {
+    "@language" : "en",
+    "@value" : "sidehill trail"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "It is a relatively long and narrow trail, with limited elevation change allowing for easy walking, which follows the side of a mountain escarpment at the edge of a steep slope and offers unobstructed views of the landscape below (valley) or of a body of water (lake, river, etc.)."
+  }, {
     "@language" : "fr",
     "@value" : "c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l'abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "En balcon"
+  }, {
+    "@language" : "en",
+    "@value" : "balcony trail"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -3960,10 +3968,16 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Valley-bottom trails sometimes offer a beautiful discovery of the river or the surrounding valley landscape."
+  }, {
     "@language" : "fr",
     "@value" : "les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "A path along the valley floor."
+  }, {
     "@language" : "fr",
     "@value" : "En fond de vallée"
   } ]
@@ -3975,11 +3989,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
-    "@value" : "c’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."
+    "@value" : "C’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."
+  }, {
+    "@language" : "en",
+    "@value" : "It is a relatively long and narrow trail, with a slightly more variable elevation profile than a balcony trail, that follows a ridgeline. It is different from a ridge-top road."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "En ligne de crête"
+  }, {
+    "@language" : "en",
+    "@value" : "Ridge-top trail"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#en_pente_escarpée",
@@ -3988,6 +4008,9 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "a road segment with steep slopes."
+  }, {
     "@language" : "fr",
     "@value" : "une portion de route escarpée, à fortes pentes."
   } ],
@@ -3996,7 +4019,7 @@
     "@value" : "En pente escarpée"
   }, {
     "@language" : "en",
-    "@value" : "Steep"
+    "@value" : "On a steep slope"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes",
@@ -4007,10 +4030,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "fr",
     "@value" : "désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête."
+  }, {
+    "@language" : "en",
+    "@value" : "refers to a mountain scenic road offering numerous viewpoints. Not to be confused with a ridge-top trail."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "En route des crêtes"
+  }, {
+    "@language" : "en",
+    "@value" : "Ridge-top road"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets",
@@ -4019,10 +4048,16 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "on a trail or route, they can be defined as a series of turns extending along a slope in successive levels. Each hairpin turn is a turn where the path pivots and reverses in a direction roughly opposite to its initial direction, but generally at a slightly different altitude. If the turns have a very sharp angle and a small radius of curvature, they are called “Hairpin turns”"
+  }, {
     "@language" : "fr",
     "@value" : "sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s'étalent le long d'une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d'angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux »."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Series of switchbacks"
+  }, {
     "@language" : "fr",
     "@value" : "Séries de virages en lacets"
   } ]
@@ -4325,10 +4360,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Following"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -5330,11 +5361,11 @@
     "@value" : "Des panneaux, pancartes, des carrefours, etc."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "  "
-  }, {
     "@language" : "fr",
     "@value" : "Information de navigation"
+  }, {
+    "@language" : "en",
+    "@value" : "Navigation information"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure",
@@ -6103,11 +6134,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "longer une forêt"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Along a forest"
+  }, {
     "@language" : "fr",
     "@value" : "Longer une forêt"
   } ]
@@ -6120,11 +6150,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "longer une haie"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Following a hedge"
+  }, {
     "@language" : "fr",
     "@value" : "Longer une haie"
   } ]
@@ -6137,11 +6166,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Longer un lac."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Along a lake"
+  }, {
     "@language" : "fr",
     "@value" : "Longer un lac"
   } ]
@@ -6783,10 +6811,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Proximité immédiate"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
@@ -8212,11 +8236,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Prendre un pont"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Cross a bridge"
+  }, {
     "@language" : "fr",
     "@value" : "Prendre un pont"
   } ]
@@ -8282,7 +8305,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "  "
+    "@value" : "Close to amenities"
   }, {
     "@language" : "fr",
     "@value" : "Proche d'une commodité"
@@ -8296,11 +8319,10 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Des points de vue."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Nearby viewpoint"
+  }, {
     "@language" : "fr",
     "@value" : "Proche point de vue"
   } ]
@@ -10612,13 +10634,12 @@
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "traverser une forêt"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Traverser une forêt"
+  }, {
+    "@language" : "en",
+    "@value" : "Walking through a forest"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#trouée",
@@ -11945,6 +11966,9 @@
 }, {
   "@id" : "http://www.geonames.org/ontology#Feature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#comment",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

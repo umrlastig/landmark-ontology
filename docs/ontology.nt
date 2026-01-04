@@ -71,6 +71,9 @@
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.w3.org/2000/01/rdf-schema#altLabel
+<http://www.w3.org/2000/01/rdf-schema#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/2000/01/rdf-schema#comment
 <http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -4761,8 +4764,8 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/choucas.ign.fr/oor#atJonction
 <http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
-<http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/2000/01/rdf-schema#comment> "atJonction"@en .
-<http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/2000/01/rdf-schema#label> "A la jonction"@fr .
+<http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/2000/01/rdf-schema#label> "at the jonction"@en .
+<http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/2000/01/rdf-schema#label> "à la jonction"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#bruyère
 <http://purl.org/choucas.ign.fr/oor#bruyère> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4775,52 +4778,63 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/choucas.ign.fr/oor#crossing
 <http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
-<http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/2000/01/rdf-schema#comment> "Crossing"@fr .
 <http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/2000/01/rdf-schema#label> "Crossing"@en .
 <http://purl.org/choucas.ign.fr/oor#crossing> <http://www.w3.org/2000/01/rdf-schema#label> "Traverser"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#en_balcon
 <http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2000/01/rdf-schema#altLabel> "along a cliffside"@en .
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2000/01/rdf-schema#altLabel> "sidehill trail"@en .
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a relatively long and narrow trail, with limited elevation change allowing for easy walking, which follows the side of a mountain escarpment at the edge of a steep slope and offers unobstructed views of the landscape below (valley) or of a body of water (lake, river, etc.)."@en .
 <http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2000/01/rdf-schema#comment> "c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l'abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.)."@fr .
 <http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2000/01/rdf-schema#label> "En balcon"@fr .
+<http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2000/01/rdf-schema#label> "balcony trail"@en .
 <http://purl.org/choucas.ign.fr/oor#en_balcon> <http://www.w3.org/2004/02/skos/core#altLabel> "en corniche"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée
 <http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/2000/01/rdf-schema#comment> "Valley-bottom trails sometimes offer a beautiful discovery of the river or the surrounding valley landscape."@en .
 <http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/2000/01/rdf-schema#comment> "les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/2000/01/rdf-schema#label> "A path along the valley floor."@en .
 <http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée> <http://www.w3.org/2000/01/rdf-schema#label> "En fond de vallée"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#en_ligne_crête
 <http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
-<http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/2000/01/rdf-schema#comment> "c’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/2000/01/rdf-schema#comment> "C’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a relatively long and narrow trail, with a slightly more variable elevation profile than a balcony trail, that follows a ridgeline. It is different from a ridge-top road."@en .
 <http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/2000/01/rdf-schema#label> "En ligne de crête"@fr .
+<http://purl.org/choucas.ign.fr/oor#en_ligne_crête> <http://www.w3.org/2000/01/rdf-schema#label> "Ridge-top trail"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#en_pente_escarpée
 <http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/2000/01/rdf-schema#comment> "a road segment with steep slopes."@en .
 <http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/2000/01/rdf-schema#comment> "une portion de route escarpée, à fortes pentes."@fr .
 <http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/2000/01/rdf-schema#label> "En pente escarpée"@fr .
-<http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/2000/01/rdf-schema#label> "Steep"@en .
+<http://purl.org/choucas.ign.fr/oor#en_pente_escarpée> <http://www.w3.org/2000/01/rdf-schema#label> "On a steep slope"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes
 <http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
 <http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/2000/01/rdf-schema#comment> "désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to a mountain scenic road offering numerous viewpoints. Not to be confused with a ridge-top trail."@en .
 <http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/2000/01/rdf-schema#label> "En route des crêtes"@fr .
+<http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes> <http://www.w3.org/2000/01/rdf-schema#label> "Ridge-top road"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets
 <http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> .
+<http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/2000/01/rdf-schema#comment> "on a trail or route, they can be defined as a series of turns extending along a slope in successive levels. Each hairpin turn is a turn where the path pivots and reverses in a direction roughly opposite to its initial direction, but generally at a slightly different altitude. If the turns have a very sharp angle and a small radius of curvature, they are called “Hairpin turns”"@en .
 <http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/2000/01/rdf-schema#comment> "sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s'étalent le long d'une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d'angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux »."@fr .
+<http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/2000/01/rdf-schema#label> "Series of switchbacks"@en .
 <http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets> <http://www.w3.org/2000/01/rdf-schema#label> "Séries de virages en lacets"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#following
 <http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
-<http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/2000/01/rdf-schema#comment> "Following"@en .
 <http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/2000/01/rdf-schema#label> "Following"@en .
 <http://purl.org/choucas.ign.fr/oor#following> <http://www.w3.org/2000/01/rdf-schema#label> "Longer"@fr .
 # 
@@ -4833,28 +4847,28 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 <http://purl.org/choucas.ign.fr/oor#information> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
 <http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/2000/01/rdf-schema#comment> "Des panneaux, pancartes, des carrefours, etc."@fr .
-<http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/2000/01/rdf-schema#label> "  "@en .
 <http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/2000/01/rdf-schema#label> "Information de navigation"@fr .
+<http://purl.org/choucas.ign.fr/oor#information> <http://www.w3.org/2000/01/rdf-schema#label> "Navigation information"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#longer_foret
 <http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 <http://purl.org/choucas.ign.fr/oor#longer_foret> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#following> .
-<http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/2000/01/rdf-schema#comment> "longer une forêt"@fr .
+<http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/2000/01/rdf-schema#label> "Along a forest"@en .
 <http://purl.org/choucas.ign.fr/oor#longer_foret> <http://www.w3.org/2000/01/rdf-schema#label> "Longer une forêt"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#longer_haie
 <http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 <http://purl.org/choucas.ign.fr/oor#longer_haie> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#following> .
-<http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/2000/01/rdf-schema#comment> "longer une haie"@fr .
+<http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/2000/01/rdf-schema#label> "Following a hedge"@en .
 <http://purl.org/choucas.ign.fr/oor#longer_haie> <http://www.w3.org/2000/01/rdf-schema#label> "Longer une haie"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#longer_lac
 <http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 <http://purl.org/choucas.ign.fr/oor#longer_lac> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#following> .
-<http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/2000/01/rdf-schema#comment> "Longer un lac."@fr .
+<http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/2000/01/rdf-schema#label> "Along a lake"@en .
 <http://purl.org/choucas.ign.fr/oor#longer_lac> <http://www.w3.org/2000/01/rdf-schema#label> "Longer un lac"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#mélezin
@@ -4871,7 +4885,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/choucas.ign.fr/oor#nearProximity
 <http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#LocationRelationship> .
-<http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/2000/01/rdf-schema#comment> "Proximité immédiate"@en .
 <http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/2000/01/rdf-schema#label> "Proximité immédiate"@fr .
 <http://purl.org/choucas.ign.fr/oor#nearProximity> <http://www.w3.org/2000/01/rdf-schema#label> "near proximity"@en .
 # 
@@ -4888,7 +4901,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 <http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#crossing> .
-<http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/2000/01/rdf-schema#comment> "Prendre un pont"@fr .
+<http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/2000/01/rdf-schema#label> "Cross a bridge"@fr .
 <http://purl.org/choucas.ign.fr/oor#prendre_pont> <http://www.w3.org/2000/01/rdf-schema#label> "Prendre un pont"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#proche_access_routier
@@ -4904,14 +4917,14 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 <http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
 <http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/2000/01/rdf-schema#comment> "Des accomodités comme des bancs, tables de picnic, point d'eau, échelle, cordes, etc."@fr .
-<http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/2000/01/rdf-schema#label> "  "@en .
+<http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/2000/01/rdf-schema#label> "Close to amenities"@en .
 <http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/2000/01/rdf-schema#label> "Proche d'une commodité"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#proche_viewpoint
 <http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 <http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
-<http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Des points de vue."@fr .
+<http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Nearby viewpoint"@fr .
 <http://purl.org/choucas.ign.fr/oor#proche_viewpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Proche point de vue"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#sapin
@@ -4922,8 +4935,8 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#RouteContext> .
 <http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#crossing> .
-<http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/2000/01/rdf-schema#comment> "traverser une forêt"@fr .
 <http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/2000/01/rdf-schema#label> "Traverser une forêt"@fr .
+<http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/2000/01/rdf-schema#label> "Walking through a forest"@en .
 # 
 # 
 # 

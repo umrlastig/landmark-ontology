@@ -100,6 +100,10 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2000/01/rdf-schema#altLabel
+rdfs:altLabel rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2000/01/rdf-schema#comment
 rdfs:comment rdf:type owl:AnnotationProperty .
 
@@ -5338,8 +5342,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 ###  http://purl.org/choucas.ign.fr/oor#atJonction
 :atJonction rdf:type owl:NamedIndividual ,
                      :LocationRelationship ;
-            rdfs:comment "atJonction"@en ;
-            rdfs:label "A la jonction"@fr .
+            rdfs:label "at the jonction"@en ,
+                       "à la jonction"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#bruyère
@@ -5355,7 +5359,6 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 ###  http://purl.org/choucas.ign.fr/oor#crossing
 :crossing rdf:type owl:NamedIndividual ,
                    :LocationRelationship ;
-          rdfs:comment "Crossing"@fr ;
           rdfs:label "Crossing"@en ,
                      "Traverser"@fr .
 
@@ -5363,51 +5366,63 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 ###  http://purl.org/choucas.ign.fr/oor#en_balcon
 :en_balcon rdf:type owl:NamedIndividual ,
                     :RouteCharacteristic ;
-           rdfs:comment "c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l'abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.)."@fr ;
-           rdfs:label "En balcon"@fr ;
+           rdfs:altLabel "along a cliffside"@en ,
+                         "sidehill trail"@en ;
+           rdfs:comment "It is a relatively long and narrow trail, with limited elevation change allowing for easy walking, which follows the side of a mountain escarpment at the edge of a steep slope and offers unobstructed views of the landscape below (valley) or of a body of water (lake, river, etc.)."@en ,
+                        "c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l'abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.)."@fr ;
+           rdfs:label "En balcon"@fr ,
+                      "balcony trail"@en ;
            <http://www.w3.org/2004/02/skos/core#altLabel> "en corniche"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée
 :en_fond_de_vallée rdf:type owl:NamedIndividual ,
                             :RouteCharacteristic ;
-                   rdfs:comment "les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée."@fr ;
-                   rdfs:label "En fond de vallée"@fr .
+                   rdfs:comment "Valley-bottom trails sometimes offer a beautiful discovery of the river or the surrounding valley landscape."@en ,
+                                "les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée."@fr ;
+                   rdfs:label "A path along the valley floor."@en ,
+                              "En fond de vallée"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#en_ligne_crête
 :en_ligne_crête rdf:type owl:NamedIndividual ,
                          :RouteCharacteristic ;
-                rdfs:comment "c’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."@fr ;
-                rdfs:label "En ligne de crête"@fr .
+                rdfs:comment "C’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."@fr ,
+                             "It is a relatively long and narrow trail, with a slightly more variable elevation profile than a balcony trail, that follows a ridgeline. It is different from a ridge-top road."@en ;
+                rdfs:label "En ligne de crête"@fr ,
+                           "Ridge-top trail"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#en_pente_escarpée
 :en_pente_escarpée rdf:type owl:NamedIndividual ,
                             :RouteCharacteristic ;
-                   rdfs:comment "une portion de route escarpée, à fortes pentes."@fr ;
+                   rdfs:comment "a road segment with steep slopes."@en ,
+                                "une portion de route escarpée, à fortes pentes."@fr ;
                    rdfs:label "En pente escarpée"@fr ,
-                              "Steep"@en .
+                              "On a steep slope"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes
 :en_route_des_crêtes rdf:type owl:NamedIndividual ,
                               :RouteCharacteristic ;
-                     rdfs:comment "désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête."@fr ;
-                     rdfs:label "En route des crêtes"@fr .
+                     rdfs:comment "désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête."@fr ,
+                                  "refers to a mountain scenic road offering numerous viewpoints. Not to be confused with a ridge-top trail."@en ;
+                     rdfs:label "En route des crêtes"@fr ,
+                                "Ridge-top road"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets
 :en_séries_de_virages_en_lacets rdf:type owl:NamedIndividual ,
                                          :RouteCharacteristic ;
-                                rdfs:comment "sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s'étalent le long d'une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d'angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux »."@fr ;
-                                rdfs:label "Séries de virages en lacets"@fr .
+                                rdfs:comment "on a trail or route, they can be defined as a series of turns extending along a slope in successive levels. Each hairpin turn is a turn where the path pivots and reverses in a direction roughly opposite to its initial direction, but generally at a slightly different altitude. If the turns have a very sharp angle and a small radius of curvature, they are called “Hairpin turns”"@en ,
+                                             "sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s'étalent le long d'une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d'angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux »."@fr ;
+                                rdfs:label "Series of switchbacks"@en ,
+                                           "Séries de virages en lacets"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#following
 :following rdf:type owl:NamedIndividual ,
                     :LocationRelationship ;
-           rdfs:comment "Following"@en ;
            rdfs:label "Following"@en ,
                       "Longer"@fr .
 
@@ -5422,32 +5437,32 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
                       :RouteContext ;
              :locationRelation :nearProximity ;
              rdfs:comment "Des panneaux, pancartes, des carrefours, etc."@fr ;
-             rdfs:label "  "@en ,
-                        "Information de navigation"@fr .
+             rdfs:label "Information de navigation"@fr ,
+                        "Navigation information"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#longer_foret
 :longer_foret rdf:type owl:NamedIndividual ,
                        :RouteContext ;
               :locationRelation :following ;
-              rdfs:comment "longer une forêt"@fr ;
-              rdfs:label "Longer une forêt"@fr .
+              rdfs:label "Along a forest"@en ,
+                         "Longer une forêt"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#longer_haie
 :longer_haie rdf:type owl:NamedIndividual ,
                       :RouteContext ;
              :locationRelation :following ;
-             rdfs:comment "longer une haie"@fr ;
-             rdfs:label "Longer une haie"@fr .
+             rdfs:label "Following a hedge"@en ,
+                        "Longer une haie"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#longer_lac
 :longer_lac rdf:type owl:NamedIndividual ,
                      :RouteContext ;
             :locationRelation :following ;
-            rdfs:comment "Longer un lac."@fr ;
-            rdfs:label "Longer un lac"@fr .
+            rdfs:label "Along a lake"@en ,
+                       "Longer un lac"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#mélezin
@@ -5466,7 +5481,6 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 ###  http://purl.org/choucas.ign.fr/oor#nearProximity
 :nearProximity rdf:type owl:NamedIndividual ,
                         :LocationRelationship ;
-               rdfs:comment "Proximité immédiate"@en ;
                rdfs:label "Proximité immédiate"@fr ,
                           "near proximity"@en .
 
@@ -5485,8 +5499,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 :prendre_pont rdf:type owl:NamedIndividual ,
                        :RouteContext ;
               :locationRelation :crossing ;
-              rdfs:comment "Prendre un pont"@fr ;
-              rdfs:label "Prendre un pont"@fr .
+              rdfs:label "Cross a bridge"@fr ,
+                         "Prendre un pont"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#proche_access_routier
@@ -5503,7 +5517,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
                            :RouteContext ;
                   :locationRelation :nearProximity ;
                   rdfs:comment "Des accomodités comme des bancs, tables de picnic, point d'eau, échelle, cordes, etc."@fr ;
-                  rdfs:label "  "@en ,
+                  rdfs:label "Close to amenities"@en ,
                              "Proche d'une commodité"@fr .
 
 
@@ -5511,8 +5525,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 :proche_viewpoint rdf:type owl:NamedIndividual ,
                            :RouteContext ;
                   :locationRelation :nearProximity ;
-                  rdfs:comment "Des points de vue."@fr ;
-                  rdfs:label "Proche point de vue"@fr .
+                  rdfs:label "Nearby viewpoint"@fr ,
+                             "Proche point de vue"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#sapin
@@ -5524,8 +5538,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé"""@fr ;
 :traverser_foret rdf:type owl:NamedIndividual ,
                           :RouteContext ;
                  :locationRelation :crossing ;
-                 rdfs:comment "traverser une forêt"@fr ;
-                 rdfs:label "Traverser une forêt"@fr .
+                 rdfs:label "Traverser une forêt"@fr ,
+                            "Walking through a forest"@en .
 
 
 #################################################################

@@ -157,6 +157,13 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#altLabel"/>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
 
 
@@ -7797,8 +7804,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#atJonction">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
-        <rdfs:comment xml:lang="en">atJonction</rdfs:comment>
-        <rdfs:label xml:lang="fr">A la jonction</rdfs:label>
+        <rdfs:label xml:lang="en">at the jonction</rdfs:label>
+        <rdfs:label xml:lang="fr">à la jonction</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7826,7 +7833,6 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#crossing">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
-        <rdfs:comment xml:lang="fr">Crossing</rdfs:comment>
         <rdfs:label xml:lang="en">Crossing</rdfs:label>
         <rdfs:label xml:lang="fr">Traverser</rdfs:label>
     </owl:NamedIndividual>
@@ -7838,8 +7844,12 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_balcon">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
+        <rdfs:altLabel xml:lang="en">along a cliffside</rdfs:altLabel>
+        <rdfs:altLabel xml:lang="en">sidehill trail</rdfs:altLabel>
+        <rdfs:comment xml:lang="en">It is a relatively long and narrow trail, with limited elevation change allowing for easy walking, which follows the side of a mountain escarpment at the edge of a steep slope and offers unobstructed views of the landscape below (valley) or of a body of water (lake, river, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="fr">c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l&apos;abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.).</rdfs:comment>
         <rdfs:label xml:lang="fr">En balcon</rdfs:label>
+        <rdfs:label xml:lang="en">balcony trail</rdfs:label>
         <skos:altLabel xml:lang="fr">en corniche</skos:altLabel>
     </owl:NamedIndividual>
     
@@ -7850,7 +7860,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
+        <rdfs:comment xml:lang="en">Valley-bottom trails sometimes offer a beautiful discovery of the river or the surrounding valley landscape.</rdfs:comment>
         <rdfs:comment xml:lang="fr">les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée.</rdfs:comment>
+        <rdfs:label xml:lang="en">A path along the valley floor.</rdfs:label>
         <rdfs:label xml:lang="fr">En fond de vallée</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7861,8 +7873,10 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_ligne_crête">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
-        <rdfs:comment xml:lang="fr">c’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">C’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It is a relatively long and narrow trail, with a slightly more variable elevation profile than a balcony trail, that follows a ridgeline. It is different from a ridge-top road.</rdfs:comment>
         <rdfs:label xml:lang="fr">En ligne de crête</rdfs:label>
+        <rdfs:label xml:lang="en">Ridge-top trail</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7872,9 +7886,10 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_pente_escarpée">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
+        <rdfs:comment xml:lang="en">a road segment with steep slopes.</rdfs:comment>
         <rdfs:comment xml:lang="fr">une portion de route escarpée, à fortes pentes.</rdfs:comment>
         <rdfs:label xml:lang="fr">En pente escarpée</rdfs:label>
-        <rdfs:label xml:lang="en">Steep</rdfs:label>
+        <rdfs:label xml:lang="en">On a steep slope</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7885,7 +7900,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
         <rdfs:comment xml:lang="fr">désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête.</rdfs:comment>
+        <rdfs:comment xml:lang="en">refers to a mountain scenic road offering numerous viewpoints. Not to be confused with a ridge-top trail.</rdfs:comment>
         <rdfs:label xml:lang="fr">En route des crêtes</rdfs:label>
+        <rdfs:label xml:lang="en">Ridge-top road</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7895,7 +7912,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
+        <rdfs:comment xml:lang="en">on a trail or route, they can be defined as a series of turns extending along a slope in successive levels. Each hairpin turn is a turn where the path pivots and reverses in a direction roughly opposite to its initial direction, but generally at a slightly different altitude. If the turns have a very sharp angle and a small radius of curvature, they are called “Hairpin turns”</rdfs:comment>
         <rdfs:comment xml:lang="fr">sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s&apos;étalent le long d&apos;une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d&apos;angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux ».</rdfs:comment>
+        <rdfs:label xml:lang="en">Series of switchbacks</rdfs:label>
         <rdfs:label xml:lang="fr">Séries de virages en lacets</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7906,7 +7925,6 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#following">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
-        <rdfs:comment xml:lang="en">Following</rdfs:comment>
         <rdfs:label xml:lang="en">Following</rdfs:label>
         <rdfs:label xml:lang="fr">Longer</rdfs:label>
     </owl:NamedIndividual>
@@ -7929,8 +7947,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
         <rdfs:comment xml:lang="fr">Des panneaux, pancartes, des carrefours, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">  </rdfs:label>
         <rdfs:label xml:lang="fr">Information de navigation</rdfs:label>
+        <rdfs:label xml:lang="en">Navigation information</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -7941,7 +7959,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#longer_foret">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#following"/>
-        <rdfs:comment xml:lang="fr">longer une forêt</rdfs:comment>
+        <rdfs:label xml:lang="en">Along a forest</rdfs:label>
         <rdfs:label xml:lang="fr">Longer une forêt</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7953,7 +7971,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#longer_haie">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#following"/>
-        <rdfs:comment xml:lang="fr">longer une haie</rdfs:comment>
+        <rdfs:label xml:lang="en">Following a hedge</rdfs:label>
         <rdfs:label xml:lang="fr">Longer une haie</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7965,7 +7983,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#longer_lac">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#following"/>
-        <rdfs:comment xml:lang="fr">Longer un lac.</rdfs:comment>
+        <rdfs:label xml:lang="en">Along a lake</rdfs:label>
         <rdfs:label xml:lang="fr">Longer un lac</rdfs:label>
     </owl:NamedIndividual>
     
@@ -7997,7 +8015,6 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#nearProximity">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
-        <rdfs:comment xml:lang="en">Proximité immédiate</rdfs:comment>
         <rdfs:label xml:lang="fr">Proximité immédiate</rdfs:label>
         <rdfs:label xml:lang="en">near proximity</rdfs:label>
     </owl:NamedIndividual>
@@ -8024,7 +8041,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#prendre_pont">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#crossing"/>
-        <rdfs:comment xml:lang="fr">Prendre un pont</rdfs:comment>
+        <rdfs:label xml:lang="fr">Cross a bridge</rdfs:label>
         <rdfs:label xml:lang="fr">Prendre un pont</rdfs:label>
     </owl:NamedIndividual>
     
@@ -8050,7 +8067,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
         <rdfs:comment xml:lang="fr">Des accomodités comme des bancs, tables de picnic, point d&apos;eau, échelle, cordes, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">  </rdfs:label>
+        <rdfs:label xml:lang="en">Close to amenities</rdfs:label>
         <rdfs:label xml:lang="fr">Proche d&apos;une commodité</rdfs:label>
     </owl:NamedIndividual>
     
@@ -8062,7 +8079,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#proche_viewpoint">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
-        <rdfs:comment xml:lang="fr">Des points de vue.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Nearby viewpoint</rdfs:label>
         <rdfs:label xml:lang="fr">Proche point de vue</rdfs:label>
     </owl:NamedIndividual>
     
@@ -8083,8 +8100,8 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#traverser_foret">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
         <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#crossing"/>
-        <rdfs:comment xml:lang="fr">traverser une forêt</rdfs:comment>
         <rdfs:label xml:lang="fr">Traverser une forêt</rdfs:label>
+        <rdfs:label xml:lang="en">Walking through a forest</rdfs:label>
     </owl:NamedIndividual>
     
 
