@@ -484,6 +484,8 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A portion of route of interest is a route portion entirely covered by a semantic route annotation</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une portion d&apos;itinéraire d&apos;intérêt est une portion d&apos;itinéraire entièrement couverte par une annotation sémantique d&apos;itinéraire.</rdfs:comment>
         <skos:altLabel xml:lang="fr">Portion d&apos;itinéraire avec une annotation sémantique</skos:altLabel>
         <skos:altLabel xml:lang="en">Route portion with semantic route annotation</skos:altLabel>
         <skos:prefLabel xml:lang="fr">PII</skos:prefLabel>
@@ -497,9 +499,9 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"/>
-        <rdfs:comment xml:lang="fr">Regroupe l&apos;ensemble des caractéristiques des routes.</rdfs:comment>
-        <skos:altLabel xml:lang="fr">Caractéristiques de la portion de l&apos;itinéraire</skos:altLabel>
-        <skos:prefLabel xml:lang="fr">Caractéristiques de l&apos;itinéraire</skos:prefLabel>
+        <rdfs:comment xml:lang="en">A RouteCharacteristic is a relevant semantic route annotation related to terrain morphology (e.g., the path climbs, follows a ridge, runs along a balcony, etc.) or to directional changes (e.g., intersections, hairpin turns, series of switchbacks) and it is derived directly from the geometry of the route itself.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">C&apos;est une annotation sémantique pertinente liée à la morphologie du terrain (par exemple, le chemin escarpé, suit une crête, longe un balcon, etc.) ou aux changements de direction (par exemple, les intersections, les virages en épingle à cheveux, les séries de lacets). La caractéristique de la portion d&apos;itinéraire est dérivée directement de la géométrie de l&apos;itinéraire lui-même.</rdfs:comment>
+        <skos:prefLabel xml:lang="fr">Caractéristiques de la portion de l&apos;itinéraire</skos:prefLabel>
         <skos:prefLabel xml:lang="en">characteristics of the portion of route</skos:prefLabel>
     </owl:Class>
     
@@ -510,10 +512,10 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#RouteContext">
         <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"/>
-        <rdfs:comment>Contextual Route Section</rdfs:comment>
-        <skos:altLabel xml:lang="fr">Contexte de la portion de l&apos;itinéraire</skos:altLabel>
+        <rdfs:comment xml:lang="en">A RouteContext is a relevant semantic route annotation related to a RoutePortion that is semantically described in relation to landmarks. These relationships may include topological interactions such as following or crossing the landmark or adjacency such as near proximity in other words characterized by its ability to access to a nearby landmark without deviating from the route.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une annotation sémantique de type RouteContext est une annotation d&apos;itinéraire sémantique pertinente liée à une RoutePortion qui est sémantiquement décrite en relation avec des points de repère. Ces relations peuvent inclure des interactions topologiques telles que le fait de suivre ou de traverser le point de repère ou une contiguïté telle qu&apos;une proximité immédiate, en d&apos;autres termes, caractérisée par la capacité d&apos;accéder à un point de repère proche sans s&apos;écarter de l&apos;itinéraire.</rdfs:comment>
         <skos:prefLabel xml:lang="en">Context of the portion of route</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Contexte de l&apos;itinéraire</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Contexte de la portion de l&apos;itinéraire</skos:prefLabel>
     </owl:Class>
     
 
@@ -522,8 +524,9 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#RoutePortion">
-        <rdfs:comment xml:lang="fr">A portion of a route representing channels along which people move, potentially heterogeneous in its surface or structure. It may or may not be paved or vehicle-accessible.</rdfs:comment>
-        <skos:prefLabel xml:lang="fr">Portion de route</skos:prefLabel>
+        <rdfs:comment xml:lang="en">A portion of a route is a delimited section of a Route whose primary role is to serve as a structural basis for annotation with labeled information</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une portion d&apos;itinéraire est une section délimitée d&apos;un itinéraire dont le rôle principal est de servir de base structurelle pour l&apos;annotation d&apos;informations étiquetées.</rdfs:comment>
+        <skos:prefLabel xml:lang="fr">Portion d&apos;itinéraire</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Portion of route</skos:prefLabel>
     </owl:Class>
     
@@ -534,9 +537,10 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment>Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage. Les propriétés sémantiques des itinéraires ont une validité dans leur ensemble, c’est à dire que si on enlève des portions composant cette propriété on peut en perdre sa caractéristique. Si on cumule des portions qui ont cette caractéristique, on la conserve. Afin de les définir et de les construire on peut proposer une combinaison de critères sémantiques qualifiant chaque propriété ainsi qu’une méthode permettant de l’instancier automatiquement sur les objets concernés. Très peu de travaux dans la littérature présentent cela.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A SemanticRouteAnnotation is a relevant property used to characterize a segment of a route (point or linear) based on its own geometry or the spatial relationships it has with other geographic objects in its neighborhood.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage.</rdfs:comment>
         <skos:altLabel xml:lang="fr">Annotation sémantique d&apos;une portion d&apos;un itinéraire</skos:altLabel>
-        <skos:prefLabel xml:lang="fr">Annotation sémantique</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Annotation sémantique d&apos;itinéraire</skos:prefLabel>
         <skos:prefLabel xml:lang="en">Semantic annotation of a portion of route</skos:prefLabel>
     </owl:Class>
     

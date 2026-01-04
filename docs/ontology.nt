@@ -251,6 +251,8 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2000/01/rdf-schema#comment> "A portion of route of interest is a route portion entirely covered by a semantic route annotation"@en .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2000/01/rdf-schema#comment> "Une portion d'itinéraire d'intérêt est une portion d'itinéraire entièrement couverte par une annotation sémantique d'itinéraire."@fr .
 <http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#altLabel> "Portion d'itinéraire avec une annotation sémantique"@fr .
 <http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#altLabel> "Route portion with semantic route annotation"@en .
 <http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "PII"@fr .
@@ -259,31 +261,33 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/choucas.ign.fr/oor#RouteCharacteristic
 <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> .
-<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Regroupe l'ensemble des caractéristiques des routes."@fr .
-<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2004/02/skos/core#altLabel> "Caractéristiques de la portion de l'itinéraire"@fr .
-<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques de l'itinéraire"@fr .
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "A RouteCharacteristic is a relevant semantic route annotation related to terrain morphology (e.g., the path climbs, follows a ridge, runs along a balcony, etc.) or to directional changes (e.g., intersections, hairpin turns, series of switchbacks) and it is derived directly from the geometry of the route itself."@en .
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "C'est une annotation sémantique pertinente liée à la morphologie du terrain (par exemple, le chemin escarpé, suit une crête, longe un balcon, etc.) ou aux changements de direction (par exemple, les intersections, les virages en épingle à cheveux, les séries de lacets). La caractéristique de la portion d'itinéraire est dérivée directement de la géométrie de l'itinéraire lui-même."@fr .
+<http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques de la portion de l'itinéraire"@fr .
 <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/2004/02/skos/core#prefLabel> "characteristics of the portion of route"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#RouteContext
 <http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> .
-<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Contextual Route Section" .
-<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2004/02/skos/core#altLabel> "Contexte de la portion de l'itinéraire"@fr .
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A RouteContext is a relevant semantic route annotation related to a RoutePortion that is semantically described in relation to landmarks. These relationships may include topological interactions such as following or crossing the landmark or adjacency such as near proximity in other words characterized by its ability to access to a nearby landmark without deviating from the route."@en .
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Une annotation sémantique de type RouteContext est une annotation d'itinéraire sémantique pertinente liée à une RoutePortion qui est sémantiquement décrite en relation avec des points de repère. Ces relations peuvent inclure des interactions topologiques telles que le fait de suivre ou de traverser le point de repère ou une contiguïté telle qu'une proximité immédiate, en d'autres termes, caractérisée par la capacité d'accéder à un point de repère proche sans s'écarter de l'itinéraire."@fr .
 <http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2004/02/skos/core#prefLabel> "Context of the portion of route"@en .
-<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contexte de l'itinéraire"@fr .
+<http://purl.org/choucas.ign.fr/oor#RouteContext> <http://www.w3.org/2004/02/skos/core#prefLabel> "Contexte de la portion de l'itinéraire"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#RoutePortion
 <http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2000/01/rdf-schema#comment> "A portion of a route representing channels along which people move, potentially heterogeneous in its surface or structure. It may or may not be paved or vehicle-accessible."@fr .
-<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2004/02/skos/core#prefLabel> "Portion de route"@fr .
+<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2000/01/rdf-schema#comment> "A portion of a route is a delimited section of a Route whose primary role is to serve as a structural basis for annotation with labeled information"@en .
+<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2000/01/rdf-schema#comment> "Une portion d'itinéraire est une section délimitée d'un itinéraire dont le rôle principal est de servir de base structurelle pour l'annotation d'informations étiquetées."@fr .
+<http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2004/02/skos/core#prefLabel> "Portion d'itinéraire"@fr .
 <http://purl.org/choucas.ign.fr/oor#RoutePortion> <http://www.w3.org/2004/02/skos/core#prefLabel> "Portion of route"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation
 <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage. Les propriétés sémantiques des itinéraires ont une validité dans leur ensemble, c’est à dire que si on enlève des portions composant cette propriété on peut en perdre sa caractéristique. Si on cumule des portions qui ont cette caractéristique, on la conserve. Afin de les définir et de les construire on peut proposer une combinaison de critères sémantiques qualifiant chaque propriété ainsi qu’une méthode permettant de l’instancier automatiquement sur les objets concernés. Très peu de travaux dans la littérature présentent cela." .
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "A SemanticRouteAnnotation is a relevant property used to characterize a segment of a route (point or linear) based on its own geometry or the spatial relationships it has with other geographic objects in its neighborhood."@en .
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage."@fr .
 <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2004/02/skos/core#altLabel> "Annotation sémantique d'une portion d'un itinéraire"@fr .
-<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotation sémantique"@fr .
+<http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotation sémantique d'itinéraire"@fr .
 <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Semantic annotation of a portion of route"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#abattoir

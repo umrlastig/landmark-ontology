@@ -288,6 +288,8 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
                                                         )
                                           ]
                      ] ;
+     rdfs:comment "A portion of route of interest is a route portion entirely covered by a semantic route annotation"@en ,
+                  "Une portion d'itinéraire d'intérêt est une portion d'itinéraire entièrement couverte par une annotation sémantique d'itinéraire."@fr ;
      <http://www.w3.org/2004/02/skos/core#altLabel> "Portion d'itinéraire avec une annotation sémantique"@fr ,
                                                     "Route portion with semantic route annotation"@en ;
      <http://www.w3.org/2004/02/skos/core#prefLabel> "PII"@fr ,
@@ -297,34 +299,36 @@ owl:topObjectProperty rdfs:comment "Ces propriétés ne sont pas instanciées da
 ###  http://purl.org/choucas.ign.fr/oor#RouteCharacteristic
 :RouteCharacteristic rdf:type owl:Class ;
                      rdfs:subClassOf :SemanticRouteAnnotation ;
-                     rdfs:comment "Regroupe l'ensemble des caractéristiques des routes."@fr ;
-                     <http://www.w3.org/2004/02/skos/core#altLabel> "Caractéristiques de la portion de l'itinéraire"@fr ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques de l'itinéraire"@fr ,
+                     rdfs:comment "A RouteCharacteristic is a relevant semantic route annotation related to terrain morphology (e.g., the path climbs, follows a ridge, runs along a balcony, etc.) or to directional changes (e.g., intersections, hairpin turns, series of switchbacks) and it is derived directly from the geometry of the route itself."@en ,
+                                  "C'est une annotation sémantique pertinente liée à la morphologie du terrain (par exemple, le chemin escarpé, suit une crête, longe un balcon, etc.) ou aux changements de direction (par exemple, les intersections, les virages en épingle à cheveux, les séries de lacets). La caractéristique de la portion d'itinéraire est dérivée directement de la géométrie de l'itinéraire lui-même."@fr ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Caractéristiques de la portion de l'itinéraire"@fr ,
                                                                      "characteristics of the portion of route"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#RouteContext
 :RouteContext rdf:type owl:Class ;
               rdfs:subClassOf :SemanticRouteAnnotation ;
-              rdfs:comment "Contextual Route Section" ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "Contexte de la portion de l'itinéraire"@fr ;
+              rdfs:comment "A RouteContext is a relevant semantic route annotation related to a RoutePortion that is semantically described in relation to landmarks. These relationships may include topological interactions such as following or crossing the landmark or adjacency such as near proximity in other words characterized by its ability to access to a nearby landmark without deviating from the route."@en ,
+                           "Une annotation sémantique de type RouteContext est une annotation d'itinéraire sémantique pertinente liée à une RoutePortion qui est sémantiquement décrite en relation avec des points de repère. Ces relations peuvent inclure des interactions topologiques telles que le fait de suivre ou de traverser le point de repère ou une contiguïté telle qu'une proximité immédiate, en d'autres termes, caractérisée par la capacité d'accéder à un point de repère proche sans s'écarter de l'itinéraire."@fr ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Context of the portion of route"@en ,
-                                                              "Contexte de l'itinéraire"@fr .
+                                                              "Contexte de la portion de l'itinéraire"@fr .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#RoutePortion
 :RoutePortion rdf:type owl:Class ;
-              rdfs:comment "A portion of a route representing channels along which people move, potentially heterogeneous in its surface or structure. It may or may not be paved or vehicle-accessible."@fr ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "Portion de route"@fr ,
+              rdfs:comment "A portion of a route is a delimited section of a Route whose primary role is to serve as a structural basis for annotation with labeled information"@en ,
+                           "Une portion d'itinéraire est une section délimitée d'un itinéraire dont le rôle principal est de servir de base structurelle pour l'annotation d'informations étiquetées."@fr ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Portion d'itinéraire"@fr ,
                                                               "Portion of route"@en .
 
 
 ###  http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation
 :SemanticRouteAnnotation rdf:type owl:Class ;
                          rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-                         rdfs:comment "Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage. Les propriétés sémantiques des itinéraires ont une validité dans leur ensemble, c’est à dire que si on enlève des portions composant cette propriété on peut en perdre sa caractéristique. Si on cumule des portions qui ont cette caractéristique, on la conserve. Afin de les définir et de les construire on peut proposer une combinaison de critères sémantiques qualifiant chaque propriété ainsi qu’une méthode permettant de l’instancier automatiquement sur les objets concernés. Très peu de travaux dans la littérature présentent cela." ;
+                         rdfs:comment "A SemanticRouteAnnotation is a relevant property used to characterize a segment of a route (point or linear) based on its own geometry or the spatial relationships it has with other geographic objects in its neighborhood."@en ,
+                                      "Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage."@fr ;
                          <http://www.w3.org/2004/02/skos/core#altLabel> "Annotation sémantique d'une portion d'un itinéraire"@fr ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotation sémantique"@fr ,
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Annotation sémantique d'itinéraire"@fr ,
                                                                          "Semantic annotation of a portion of route"@en .
 
 
