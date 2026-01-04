@@ -10,7 +10,7 @@
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/creator> "Olivier Favre" .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/creator> "Sebastien Mustière" .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/creator> "Véronique Gendner" .
-<http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/description> "Ontologie des objets géographiques pouvant servir d objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. \n\nCette ontologie a été proposée dans le cadre du projet Choucas (ANR-16-CE23-0018). Elle est inspiré de l Ontologie GeOnto (Mustière et al., 2011) et LFRO (Sinha, Gaurav et al. 2018. )\n\nMustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180\n\nSinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."@fr .
+<http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/description> "Ontologie des objets géographiques pouvant servir d'objets de référence dans le cadre de la localisation de personnes dans un contexte de montagne. \n\nCette ontologie a été proposée dans le cadre du projet Choucas (ANR-16-CE23-0018). Elle est inspiré de l Ontologie GeOnto (Mustière et al., 2011) et LFRO (Sinha, Gaurav et al. 2018. )\n\nMustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al.. Analyses linguistiques et techniques d'alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180\n\nSinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."@fr .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/description> "Ontology of geographical objects used as reference objects in a mountain context.\n\nThis ontology is proposed during ANR Choucas project (ANR-16-CE23-0018). It is inspired from  GeOnto Ontology  (Mustière et al., 2011) et LFRO ontology (Sinha, Gaurav et al. 2018).\n\nMustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle Bessagnet, Mouna Kamel, et al Analyses linguistiques et techniques d alignement pour créer et enrichir une ontologie topographique. Revue Internationale de Géomatique, Lavoisier, 2011, 21 (2), pp.155-180\n\nSinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany."@en .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/issued> "2020-01-28" .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/modified> "2025-12-12" .
@@ -18,9 +18,11 @@
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/rights> "Copyright © 2025 LASTIG"@en .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/title> "Ontologie des Objets de Repères"@fr .
 <http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/elements/1.1/title> "Ontology Of landmaRks"@en .
-<http://purl.org/choucas.ign.fr/oor> <http://purl.org/vocab/vann/preferredNamespacePrefix> "OOR" .
-<http://purl.org/choucas.ign.fr/oor> <http://purl.org/vocab/vann/preferredNamespaceUri> "URI DU NAMESPACE" .
+<http://purl.org/choucas.ign.fr/oor> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> .
+<http://purl.org/choucas.ign.fr/oor> <http://purl.org/vocab/vann/preferredNamespacePrefix> "oor" .
+<http://purl.org/choucas.ign.fr/oor> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/choucas.ign.fr/oor#" .
 <http://purl.org/choucas.ign.fr/oor> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.0" .
+<http://purl.org/choucas.ign.fr/oor> <http://xmlns.com/foaf/0.1/homepage> <https://www.umr-lastig.fr/landmark-ontology/index.html> .
 # 
 # 
 # #################################################################
@@ -60,6 +62,9 @@
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -80,6 +85,9 @@
 # 
 # http://www.w3.org/2004/02/skos/core#prefLabel
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -108,6 +116,17 @@
 <http://purl.org/choucas.ign.fr/oor#aPourForme> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://purl.org/choucas.ign.fr/oor#aPourForme> <http://www.w3.org/2000/01/rdf-schema#comment> "pour modéliser la forme d un objet (ex. un lac rond)"@fr .
 # 
+# http://purl.org/choucas.ign.fr/oor#dataSource
+<http://purl.org/choucas.ign.fr/oor#dataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/choucas.ign.fr/oor#dataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#objet_de_repère> .
+<http://purl.org/choucas.ign.fr/oor#dataSource> <http://www.w3.org/2000/01/rdf-schema#range> <xsd:string> .
+<xsd:string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/choucas.ign.fr/oor#geographicalName
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#objet_de_repère> .
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#range> <xsd:string> .
+# 
 # http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark
 <http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#RoutePortion> .
@@ -119,6 +138,12 @@
 <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation> .
 <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Pour modéliser les annotations sémantiques des itinéraires." .
 <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "hasSemanticRouteAnnotation" .
+# 
+# http://purl.org/choucas.ign.fr/oor#idcc
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#PRI> .
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#range> <xsd:integer> .
+<xsd:integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://purl.org/choucas.ign.fr/oor#locationRelation
 <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -155,20 +180,12 @@
 # 
 # http://purl.org/choucas.ign.fr/oor#dataSource
 <http://purl.org/choucas.ign.fr/oor#dataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/choucas.ign.fr/oor#dataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#objet_de_repère> .
 # 
 # http://purl.org/choucas.ign.fr/oor#geographicalName
 <http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#objet_de_repère> .
-<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribut permettant de préciser le nom (graphie) principal de l'objet de repère"@fr .
-<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#label> "nom géographique"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#idcc
 <http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/choucas.ign.fr/oor#PRI> .
-<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribut permettant de préciser l'identifiant de la composante connexe"@fr .
-<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#label> "Identifiant de la cc"@fr .
 # 
 # 
 # 
@@ -236,8 +253,8 @@ _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/choucas.ign
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#altLabel> "Portion d'itinéraire avec une annotation sémantique"@fr .
 <http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#altLabel> "Route portion with semantic route annotation"@en .
+<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "PII"@fr .
 <http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "PRI"@en .
-<http://purl.org/choucas.ign.fr/oor#PRI> <http://www.w3.org/2004/02/skos/core#prefLabel> "PRI"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#RouteCharacteristic
 <http://purl.org/choucas.ign.fr/oor#RouteCharacteristic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -271,7 +288,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#abattoir
 <http://purl.org/choucas.ign.fr/oor#abattoir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#abattoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> .
+<http://purl.org/choucas.ign.fr/oor#abattoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d_élevage> .
 <http://purl.org/choucas.ign.fr/oor#abattoir> <http://www.w3.org/2004/02/skos/core#altLabel> "slaughter-house"@en .
 <http://purl.org/choucas.ign.fr/oor#abattoir> <http://www.w3.org/2004/02/skos/core#prefLabel> "abattoir"@en .
 <http://purl.org/choucas.ign.fr/oor#abattoir> <http://www.w3.org/2004/02/skos/core#prefLabel> "abattoir"@fr .
@@ -301,7 +318,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#agglomération
 <http://purl.org/choucas.ign.fr/oor#agglomération> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#agglomération> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> .
+<http://purl.org/choucas.ign.fr/oor#agglomération> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zone_d_habitation> .
 <http://purl.org/choucas.ign.fr/oor#agglomération> <http://www.w3.org/2004/02/skos/core#altLabel> "agglomeration"@en .
 <http://purl.org/choucas.ign.fr/oor#agglomération> <http://www.w3.org/2004/02/skos/core#altLabel> "bourg"@fr .
 <http://purl.org/choucas.ign.fr/oor#agglomération> <http://www.w3.org/2004/02/skos/core#altLabel> "bourgade"@en .
@@ -324,6 +341,16 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#aiguille> <http://www.w3.org/2004/02/skos/core#altLabel> "spine"@en .
 <http://purl.org/choucas.ign.fr/oor#aiguille> <http://www.w3.org/2004/02/skos/core#altLabel> "stack"@en .
 <http://purl.org/choucas.ign.fr/oor#aiguille> <http://www.w3.org/2004/02/skos/core#prefLabel> "aiguille"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#aire_d_autoroute
+<http://purl.org/choucas.ign.fr/oor#aire_d_autoroute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#aire_d_autoroute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier> .
+<http://purl.org/choucas.ign.fr/oor#aire_d_autoroute> <http://www.w3.org/2000/01/rdf-schema#comment> "Structure aménagée en bordure d autoroute prposant différentes services (repos, ravitaillement, etc.)"@fr .
+<http://purl.org/choucas.ign.fr/oor#aire_d_autoroute> <http://www.w3.org/2004/02/skos/core#altLabel> "aire de repos"@fr .
+<http://purl.org/choucas.ign.fr/oor#aire_d_autoroute> <http://www.w3.org/2004/02/skos/core#altLabel> "aire de service"@fr .
+<http://purl.org/choucas.ign.fr/oor#aire_d_autoroute> <http://www.w3.org/2004/02/skos/core#altLabel> "service area"@en .
+<http://purl.org/choucas.ign.fr/oor#aire_d_autoroute> <http://www.w3.org/2004/02/skos/core#prefLabel> "aire d autoroute"@fr .
+<http://purl.org/choucas.ign.fr/oor#aire_d_autoroute> <http://www.w3.org/2004/02/skos/core#prefLabel> "rest area"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#aire_de_pique-nique
 <http://purl.org/choucas.ign.fr/oor#aire_de_pique-nique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -395,7 +422,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#aqueduc
 <http://purl.org/choucas.ign.fr/oor#aqueduc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#aqueduc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#aqueduc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#aqueduc> <http://www.w3.org/2000/01/rdf-schema#comment> "Chenal artificiel conçu pour le transport de l eau (usage hydroéléctique, industriel,...)"@fr .
 <http://purl.org/choucas.ign.fr/oor#aqueduc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://id.eaufrance.fr/nsa/831"@fr .
 <http://purl.org/choucas.ign.fr/oor#aqueduc> <http://www.w3.org/2004/02/skos/core#prefLabel> "aqueduc"@fr .
@@ -564,7 +591,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#bief
 <http://purl.org/choucas.ign.fr/oor#bief> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#bief> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> .
+<http://purl.org/choucas.ign.fr/oor#bief> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel> .
 <http://purl.org/choucas.ign.fr/oor#bief> <http://www.w3.org/2004/02/skos/core#altLabel> "level"@en .
 <http://purl.org/choucas.ign.fr/oor#bief> <http://www.w3.org/2004/02/skos/core#altLabel> "reach"@en .
 <http://purl.org/choucas.ign.fr/oor#bief> <http://www.w3.org/2004/02/skos/core#prefLabel> "bay"@en .
@@ -599,6 +626,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#borne> <http://www.w3.org/2000/01/rdf-schema#comment> "Lieu géographique matérialisant à travers un bloc de pierre, un poteau une plaque, etc. et indique une information (frontière, altitude, etc.)."@fr .
 <http://purl.org/choucas.ign.fr/oor#borne> <http://www.w3.org/2004/02/skos/core#prefLabel> "borne"@fr .
 <http://purl.org/choucas.ign.fr/oor#borne> <http://www.w3.org/2004/02/skos/core#prefLabel> "marker"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#borne_d_incendie
+<http://purl.org/choucas.ign.fr/oor#borne_d_incendie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#borne_d_incendie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#borne> .
+<http://purl.org/choucas.ign.fr/oor#borne_d_incendie> <http://www.w3.org/2000/01/rdf-schema#comment> "Borne indiquant la bouche d incendie"@fr .
+<http://purl.org/choucas.ign.fr/oor#borne_d_incendie> <http://www.w3.org/2004/02/skos/core#prefLabel> "borne d incendie"@fr .
+<http://purl.org/choucas.ign.fr/oor#borne_d_incendie> <http://www.w3.org/2004/02/skos/core#prefLabel> "fire hydtrant"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#borne_frontière
 <http://purl.org/choucas.ign.fr/oor#borne_frontière> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -648,7 +682,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#bureau_de_guides
 <http://purl.org/choucas.ign.fr/oor#bureau_de_guides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#bureau_de_guides> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> .
+<http://purl.org/choucas.ign.fr/oor#bureau_de_guides> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d_information> .
 <http://purl.org/choucas.ign.fr/oor#bureau_de_guides> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment où se trouve des guides de montagne"@fr .
 <http://purl.org/choucas.ign.fr/oor#bureau_de_guides> <http://www.w3.org/2004/02/skos/core#prefLabel> "bureau de guides"@fr .
 <http://purl.org/choucas.ign.fr/oor#bureau_de_guides> <http://www.w3.org/2004/02/skos/core#prefLabel> "guide office"@en .
@@ -680,6 +714,27 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#bâtiment_culturel> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment ayant un usage culturel"@fr .
 <http://purl.org/choucas.ign.fr/oor#bâtiment_culturel> <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment culturel"@fr .
 <http://purl.org/choucas.ign.fr/oor#bâtiment_culturel> <http://www.w3.org/2004/02/skos/core#prefLabel> "cultural building"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Batiment ayant le rôle d héberger les humains. A le rôle de résidence prinicipale ou secondaire"@fr .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation> <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d habitation"@fr .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation> <http://www.w3.org/2004/02/skos/core#prefLabel> "residential feature"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment ayant le rôle d héberger ou d habriter des visiteurs pour une durée limitée. Il n a pas de rôle de résidence secondaire ou principale"@fr .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement> <http://www.w3.org/2004/02/skos/core#prefLabel> "accomodation building"@en .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement> <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d hébergement"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#bâtiment_d_information
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_information> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment ayant comme vocation d accueillir du public pour l information de la pratique des sports et des loisirs"@fr .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_information> <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d information"@fr .
+<http://purl.org/choucas.ign.fr/oor#bâtiment_d_information> <http://www.w3.org/2004/02/skos/core#prefLabel> "information building"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation
 <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -779,12 +834,24 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#canal
 <http://purl.org/choucas.ign.fr/oor#canal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#canal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> .
+<http://purl.org/choucas.ign.fr/oor#canal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel> .
 <http://purl.org/choucas.ign.fr/oor#canal> <http://www.w3.org/2000/01/rdf-schema#comment> "Voie d eau artificielle à surface libre"@fr .
 <http://purl.org/choucas.ign.fr/oor#canal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://id.eaufrance.fr/nsa/831"@fr .
 <http://purl.org/choucas.ign.fr/oor#canal> <http://www.w3.org/2004/02/skos/core#altLabel> "channel"@en .
 <http://purl.org/choucas.ign.fr/oor#canal> <http://www.w3.org/2004/02/skos/core#prefLabel> "canal"@en .
 <http://purl.org/choucas.ign.fr/oor#canal> <http://www.w3.org/2004/02/skos/core#prefLabel> "canal"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#canal_d_irrigation
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel> .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "bief"@fr .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "bisse"@en .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "bisse"@fr .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "béal"@fr .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "rigole"@fr .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "roubine"@fr .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2004/02/skos/core#prefLabel> "canal d irrigation"@fr .
+<http://purl.org/choucas.ign.fr/oor#canal_d_irrigation> <http://www.w3.org/2004/02/skos/core#prefLabel> "irrigation channel"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#canal_de_navigation
 <http://purl.org/choucas.ign.fr/oor#canal_de_navigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -794,7 +861,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#canalisation
 <http://purl.org/choucas.ign.fr/oor#canalisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#canalisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#canalisation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#canalisation> <http://www.w3.org/2004/02/skos/core#altLabel> "galerie d amenée d eau"@fr .
 <http://purl.org/choucas.ign.fr/oor#canalisation> <http://www.w3.org/2004/02/skos/core#altLabel> "main"@en .
 <http://purl.org/choucas.ign.fr/oor#canalisation> <http://www.w3.org/2004/02/skos/core#altLabel> "pipe"@en .
@@ -809,7 +876,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#canyon
 <http://purl.org/choucas.ign.fr/oor#canyon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#canyon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#canyon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#canyon> <http://www.w3.org/2000/01/rdf-schema#comment> "Une portion de rivière permettant la descente de canyons ou la randonnée nautique"@fr .
 <http://purl.org/choucas.ign.fr/oor#canyon> <http://www.w3.org/2004/02/skos/core#prefLabel> "canyon"@en .
 <http://purl.org/choucas.ign.fr/oor#canyon> <http://www.w3.org/2004/02/skos/core#prefLabel> "canyon"@fr .
@@ -826,7 +893,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#cascade
 <http://purl.org/choucas.ign.fr/oor#cascade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#cascade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#cascade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#cascade> <http://www.w3.org/2000/01/rdf-schema#comment> "Site où l eau dévalet un relief vertical pour provoquer une cascade. Une chute d eau."@fr .
 <http://purl.org/choucas.ign.fr/oor#cascade> <http://www.w3.org/2004/02/skos/core#altLabel> "cascade"@en .
 <http://purl.org/choucas.ign.fr/oor#cascade> <http://www.w3.org/2004/02/skos/core#altLabel> "chute d eau"@fr .
@@ -906,6 +973,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#centre_SAMU> <http://www.w3.org/2004/02/skos/core#prefLabel> "SAMU center"@en .
 <http://purl.org/choucas.ign.fr/oor#centre_SAMU> <http://www.w3.org/2004/02/skos/core#prefLabel> "centre SAMU"@fr .
 # 
+# http://purl.org/choucas.ign.fr/oor#centre_d_interprétation
+<http://purl.org/choucas.ign.fr/oor#centre_d_interprétation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#centre_d_interprétation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#musée> .
+<http://purl.org/choucas.ign.fr/oor#centre_d_interprétation> <http://www.w3.org/2000/01/rdf-schema#comment> "Un type de musée dont le projet muséal ne se fonde pas sur l existence d une collection mais qui a le rôle de présenter un patrimoine, que ce soit un paysage, un territoire, un site, des vestiges ou encore un monument, ou même une histoire."@fr .
+<http://purl.org/choucas.ign.fr/oor#centre_d_interprétation> <http://www.w3.org/2004/02/skos/core#prefLabel> "centre d interprétation"@fr .
+<http://purl.org/choucas.ign.fr/oor#centre_d_interprétation> <http://www.w3.org/2004/02/skos/core#prefLabel> "interpretation center"@en .
+# 
 # http://purl.org/choucas.ign.fr/oor#centre_de_soin
 <http://purl.org/choucas.ign.fr/oor#centre_de_soin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#centre_de_soin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_de_santé> .
@@ -939,6 +1013,22 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#centre_équestre> <http://www.w3.org/2000/01/rdf-schema#comment> "Un établissement contenant un équipement ayant pour vocation la pratique de l équitation"@fr .
 <http://purl.org/choucas.ign.fr/oor#centre_équestre> <http://www.w3.org/2004/02/skos/core#prefLabel> "centre équestre"@fr .
 <http://purl.org/choucas.ign.fr/oor#centre_équestre> <http://www.w3.org/2004/02/skos/core#prefLabel> "equestrian centre"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#chalet_d_alpage
+<http://purl.org/choucas.ign.fr/oor#chalet_d_alpage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#chalet_d_alpage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#hébergement_isolé> .
+<http://purl.org/choucas.ign.fr/oor#chalet_d_alpage> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment isolé, situé en montagne, utilisé traditionnellement de façon saisonnière  pour abriter l’homme et le bétail"@fr .
+<http://purl.org/choucas.ign.fr/oor#chalet_d_alpage> <http://www.w3.org/2004/02/skos/core#prefLabel> "alpine chalet"@en .
+<http://purl.org/choucas.ign.fr/oor#chalet_d_alpage> <http://www.w3.org/2004/02/skos/core#prefLabel> "chalet d alpage"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes
+<http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#hébergement_accessible> .
+<http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes> <http://www.w3.org/2000/01/rdf-schema#comment> "Un type d hébergement meublé (chambre) aménagé avec une salle de bain privative loué et loué par des visiteurs. Sa location se fait à la nuit."@fr .
+<http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes> <http://www.w3.org/2004/02/skos/core#altLabel> "bed and breakfast"@en .
+<http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes> <http://www.w3.org/2004/02/skos/core#altLabel> "maison d hôtes"@fr .
+<http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes> <http://www.w3.org/2004/02/skos/core#prefLabel> "chambre d hôtes"@fr .
+<http://purl.org/choucas.ign.fr/oor#chambre_d_hôtes> <http://www.w3.org/2004/02/skos/core#prefLabel> "guest rooms"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#champ
 <http://purl.org/choucas.ign.fr/oor#champ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1029,6 +1119,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#château> <http://www.w3.org/2004/02/skos/core#prefLabel> "castle"@en .
 <http://purl.org/choucas.ign.fr/oor#château> <http://www.w3.org/2004/02/skos/core#prefLabel> "château"@fr .
 # 
+# http://purl.org/choucas.ign.fr/oor#château_d_eau
+<http://purl.org/choucas.ign.fr/oor#château_d_eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#château_d_eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_remarquable> .
+<http://purl.org/choucas.ign.fr/oor#château_d_eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> .
+<http://purl.org/choucas.ign.fr/oor#château_d_eau> <http://www.w3.org/2000/01/rdf-schema#comment> "Réservoir d’eau construit en hauteur pour surélever le niveau de l’eau par rapport aux constructions environnantes et destiné à l alimentation en eau d une collectivité."@fr .
+<http://purl.org/choucas.ign.fr/oor#château_d_eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "château d eau"@fr .
+<http://purl.org/choucas.ign.fr/oor#château_d_eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "water tower"@en .
+# 
 # http://purl.org/choucas.ign.fr/oor#chèvrerie
 <http://purl.org/choucas.ign.fr/oor#chèvrerie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#chèvrerie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#hébergement_isolé> .
@@ -1069,7 +1167,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#citerne
 <http://purl.org/choucas.ign.fr/oor#citerne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#citerne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> .
+<http://purl.org/choucas.ign.fr/oor#citerne> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#citerne> <http://www.w3.org/2000/01/rdf-schema#comment> "Réservoir d eau alimenté par de l eau de pluie. A se différentier du réservoir qui est réservoir est alimenté par un réseau"@fr .
 <http://purl.org/choucas.ign.fr/oor#citerne> <http://www.w3.org/2004/02/skos/core#altLabel> "cistern"@en .
 <http://purl.org/choucas.ign.fr/oor#citerne> <http://www.w3.org/2004/02/skos/core#prefLabel> "citerne"@fr .
@@ -1132,7 +1230,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#collège
 <http://purl.org/choucas.ign.fr/oor#collège> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#collège> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> .
+<http://purl.org/choucas.ign.fr/oor#collège> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> .
 <http://purl.org/choucas.ign.fr/oor#collège> <http://www.w3.org/2004/02/skos/core#altLabel> "middle school"@en .
 <http://purl.org/choucas.ign.fr/oor#collège> <http://www.w3.org/2004/02/skos/core#altLabel> "school"@en .
 <http://purl.org/choucas.ign.fr/oor#collège> <http://www.w3.org/2004/02/skos/core#prefLabel> "collège"@fr .
@@ -1181,7 +1279,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#conduit_buse
 <http://purl.org/choucas.ign.fr/oor#conduit_buse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#conduit_buse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#conduit_buse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#conduit_buse> <http://www.w3.org/2000/01/rdf-schema#comment> "Ouvrage constitué d au moins un conduit transversal, généralement fait de béton ou de métal, laissant circuler l eau sous une route, une voie ferrée ou une autre structure"@fr .
 <http://purl.org/choucas.ign.fr/oor#conduit_buse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://id.eaufrance.fr/nsa/831"@fr .
 <http://purl.org/choucas.ign.fr/oor#conduit_buse> <http://www.w3.org/2004/02/skos/core#prefLabel> "conduit buse"@fr .
@@ -1189,7 +1287,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#conduit_forcé
 <http://purl.org/choucas.ign.fr/oor#conduit_forcé> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#conduit_forcé> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#conduit_forcé> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#conduit_forcé> <http://www.w3.org/2000/01/rdf-schema#comment> "Tuyau artificiel conçu pour le transport de l eau (usage hydroéléctique, industriel,...)"@fr .
 <http://purl.org/choucas.ign.fr/oor#conduit_forcé> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://id.eaufrance.fr/nsa/831"@fr .
 <http://purl.org/choucas.ign.fr/oor#conduit_forcé> <http://www.w3.org/2004/02/skos/core#prefLabel> "conduit forcé"@fr .
@@ -1229,8 +1327,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#coopérative
 <http://purl.org/choucas.ign.fr/oor#coopérative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#coopérative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d_élevage> .
 <http://purl.org/choucas.ign.fr/oor#coopérative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_de_culture> .
-<http://purl.org/choucas.ign.fr/oor#coopérative> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> .
 <http://purl.org/choucas.ign.fr/oor#coopérative> <http://www.w3.org/2004/02/skos/core#prefLabel> "co-operative stores"@en .
 <http://purl.org/choucas.ign.fr/oor#coopérative> <http://www.w3.org/2004/02/skos/core#prefLabel> "coopérative"@fr .
 # 
@@ -1256,6 +1354,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://purl.org/choucas.ign.fr/oor#coulée_de_lave> <http://www.w3.org/2000/01/rdf-schema#comment> "Formation volcanique constituée d un épanchement de lave issue d un volcan"@fr .
 <http://purl.org/choucas.ign.fr/oor#coulée_de_lave> <http://www.w3.org/2004/02/skos/core#prefLabel> "coulée de lave"@fr .
 <http://purl.org/choucas.ign.fr/oor#coulée_de_lave> <http://www.w3.org/2004/02/skos/core#prefLabel> "lava flow"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#cours_d_eau
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#hydrographie> .
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau> <http://www.w3.org/2000/01/rdf-schema#comment> "Un écoulement d’eaux courantes dans un lit naturel à l’origine, alimenté par une source et présentant un débit suffisant la majeure partie de l’année » (CE. SSR. 21 octobre 2011, Ministre de l’écologie c. EARL Cintrat, n° 334322, publiée au Recueil)."@fr .
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "cours d eau"@fr .
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "watercourse"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> .
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel> <http://www.w3.org/2004/02/skos/core#prefLabel> "artificial waterway"@en .
+<http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel> <http://www.w3.org/2004/02/skos/core#prefLabel> "cours d eau artificiel"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#court_de_tennis
 <http://purl.org/choucas.ign.fr/oor#court_de_tennis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1338,7 +1449,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#crèche
 <http://purl.org/choucas.ign.fr/oor#crèche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#crèche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> .
+<http://purl.org/choucas.ign.fr/oor#crèche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> .
 <http://purl.org/choucas.ign.fr/oor#crèche> <http://www.w3.org/2004/02/skos/core#prefLabel> "crèche"@fr .
 <http://purl.org/choucas.ign.fr/oor#crèche> <http://www.w3.org/2004/02/skos/core#prefLabel> "nursery"@en .
 # 
@@ -1599,8 +1710,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#ferme
 <http://purl.org/choucas.ign.fr/oor#ferme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#ferme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d_élevage> .
 <http://purl.org/choucas.ign.fr/oor#ferme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_de_culture> .
-<http://purl.org/choucas.ign.fr/oor#ferme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> .
 <http://purl.org/choucas.ign.fr/oor#ferme> <http://www.w3.org/2004/02/skos/core#altLabel> "exploitation agricole"@fr .
 <http://purl.org/choucas.ign.fr/oor#ferme> <http://www.w3.org/2004/02/skos/core#prefLabel> "farm"@en .
 <http://purl.org/choucas.ign.fr/oor#ferme> <http://www.w3.org/2004/02/skos/core#prefLabel> "ferme"@fr .
@@ -1622,7 +1733,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#fleuve
 <http://purl.org/choucas.ign.fr/oor#fleuve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#fleuve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#fleuve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#fleuve> <http://www.w3.org/2000/01/rdf-schema#comment> "Cours d eau important, généralement caractérisé par une très grande longueur et largeur, un débit abondant, des affluents nombreux, et qui se jette le plus souvent dans la mer"@fr .
 <http://purl.org/choucas.ign.fr/oor#fleuve> <http://www.w3.org/2004/02/skos/core#prefLabel> "fleuve"@fr .
 <http://purl.org/choucas.ign.fr/oor#fleuve> <http://www.w3.org/2004/02/skos/core#prefLabel> "major river"@en .
@@ -1636,7 +1747,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/choucas.ign.fr/oor#fontaine
 <http://purl.org/choucas.ign.fr/oor#fontaine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#fontaine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> .
+<http://purl.org/choucas.ign.fr/oor#fontaine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#fontaine> <http://www.w3.org/2000/01/rdf-schema#comment> "Construction comportant une alimentation en eau et, généralement, un bassin"@fr .
 <http://purl.org/choucas.ign.fr/oor#fontaine> <http://www.w3.org/2004/02/skos/core#prefLabel> "fontaine"@fr .
 <http://purl.org/choucas.ign.fr/oor#fontaine> <http://www.w3.org/2004/02/skos/core#prefLabel> "fountain"@en .
@@ -1792,7 +1903,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#gave
 <http://purl.org/choucas.ign.fr/oor#gave> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#gave> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#gave> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#gave> <http://www.w3.org/2004/02/skos/core#prefLabel> "gave"@en .
 <http://purl.org/choucas.ign.fr/oor#gave> <http://www.w3.org/2004/02/skos/core#prefLabel> "gave"@fr .
 # 
@@ -1911,7 +2022,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#hameau
 <http://purl.org/choucas.ign.fr/oor#hameau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#hameau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> .
+<http://purl.org/choucas.ign.fr/oor#hameau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zone_d_habitation> .
 <http://purl.org/choucas.ign.fr/oor#hameau> <http://www.w3.org/2004/02/skos/core#altLabel> "local placename"@en .
 <http://purl.org/choucas.ign.fr/oor#hameau> <http://www.w3.org/2004/02/skos/core#altLabel> "écart"@fr .
 <http://purl.org/choucas.ign.fr/oor#hameau> <http://www.w3.org/2004/02/skos/core#prefLabel> "hameau"@fr .
@@ -1948,14 +2059,14 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#hébergement_accessible
 <http://purl.org/choucas.ign.fr/oor#hébergement_accessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#hébergement_accessible> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> .
+<http://purl.org/choucas.ign.fr/oor#hébergement_accessible> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement> .
 <http://purl.org/choucas.ign.fr/oor#hébergement_accessible> <http://www.w3.org/2000/01/rdf-schema#comment> "Un bâtiment ayant le rôle d héberger des visiteurs pendant une durée limitée. Il est facilement accessible via le réseau routier principal. Il n a pas de rôle de résidence secondaire ou principale"@fr .
 <http://purl.org/choucas.ign.fr/oor#hébergement_accessible> <http://www.w3.org/2004/02/skos/core#prefLabel> "accessible accomodation"@en .
 <http://purl.org/choucas.ign.fr/oor#hébergement_accessible> <http://www.w3.org/2004/02/skos/core#prefLabel> "hébergement accessible"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#hébergement_isolé
 <http://purl.org/choucas.ign.fr/oor#hébergement_isolé> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#hébergement_isolé> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> .
+<http://purl.org/choucas.ign.fr/oor#hébergement_isolé> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d_hébergement> .
 <http://purl.org/choucas.ign.fr/oor#hébergement_isolé> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment ayant le rôle d habriter des personnes ou des animaux pour une durée courte. Il est accessible généralement via des sentiers et des chemin ou par voie aérienne. Il structure l espace de haute montagne; il peut servir à s abriter"@fr .
 <http://purl.org/choucas.ign.fr/oor#hébergement_isolé> <http://www.w3.org/2004/02/skos/core#prefLabel> "hébergement isolé"@fr .
 <http://purl.org/choucas.ign.fr/oor#hébergement_isolé> <http://www.w3.org/2004/02/skos/core#prefLabel> "isolated accomodation"@en .
@@ -2000,7 +2111,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#immeuble_collectif
 <http://purl.org/choucas.ign.fr/oor#immeuble_collectif> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#immeuble_collectif> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> .
+<http://purl.org/choucas.ign.fr/oor#immeuble_collectif> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation> .
 <http://purl.org/choucas.ign.fr/oor#immeuble_collectif> <http://www.w3.org/2000/01/rdf-schema#comment> "Un bâtiment à plusieurs étages destiné à assurer un  usage d habitation. Il est divisé en différentes parties privatives (ex appartements) et communes. Ils possèdent un ou plusieurs propriétaires  ."@fr .
 <http://purl.org/choucas.ign.fr/oor#immeuble_collectif> <http://www.w3.org/2004/02/skos/core#altLabel> "immeuble d habitation"@fr .
 <http://purl.org/choucas.ign.fr/oor#immeuble_collectif> <http://www.w3.org/2004/02/skos/core#altLabel> "residential building"@en .
@@ -2034,11 +2145,23 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_terrestre> <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de déplacement terrestre"@fr .
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_terrestre> <http://www.w3.org/2004/02/skos/core#prefLabel> "transport infrastructure on earth surface"@en .
 # 
+# http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_eau> .
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> <http://www.w3.org/2004/02/skos/core#prefLabel> "fresh water catchment infrastructure"@en .
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de gestion d eau douce"@fr .
+# 
 # http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_eau> .
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux> <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de traitement des eaux"@fr .
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux> <http://www.w3.org/2004/02/skos/core#prefLabel> "sewage treatment plant"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_eau> .
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de transport d eau"@fr .
+<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d_eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "water transport"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_ferré
 <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_ferré> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -2111,6 +2234,24 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#infrastructure_électricité> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_eau_énergie_télécom> .
 <http://purl.org/choucas.ign.fr/oor#infrastructure_électricité> <http://www.w3.org/2004/02/skos/core#prefLabel> "electricity transport infrastructure"@en .
 <http://purl.org/choucas.ign.fr/oor#infrastructure_électricité> <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure électricité"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture
+<http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d_élevage> .
+<http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture> <http://www.w3.org/2004/02/skos/core#prefLabel> "aquaculture"@en .
+<http://purl.org/choucas.ign.fr/oor#installation_d_aquaculture> <http://www.w3.org/2004/02/skos/core#prefLabel> "installation d aquaculture"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#installation_d_élevage
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation_agricole> .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "cattle ranch"@en .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "livestock building"@en .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "livestock facility"@en .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "poultry farm"@en .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "ranch"@en .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "stable"@en .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2004/02/skos/core#prefLabel> "animal farm"@en .
+<http://purl.org/choucas.ign.fr/oor#installation_d_élevage> <http://www.w3.org/2004/02/skos/core#prefLabel> "installation d élevage"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#installation_de_culture
 <http://purl.org/choucas.ign.fr/oor#installation_de_culture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -2296,7 +2437,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#lycée
 <http://purl.org/choucas.ign.fr/oor#lycée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#lycée> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> .
+<http://purl.org/choucas.ign.fr/oor#lycée> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> .
 <http://purl.org/choucas.ign.fr/oor#lycée> <http://www.w3.org/2004/02/skos/core#altLabel> "grammar-school"@en .
 <http://purl.org/choucas.ign.fr/oor#lycée> <http://www.w3.org/2004/02/skos/core#altLabel> "secondary school"@en .
 <http://purl.org/choucas.ign.fr/oor#lycée> <http://www.w3.org/2004/02/skos/core#prefLabel> "high school"@en .
@@ -2323,7 +2464,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#maison
 <http://purl.org/choucas.ign.fr/oor#maison> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#maison> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> .
+<http://purl.org/choucas.ign.fr/oor#maison> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d_habitation> .
 <http://purl.org/choucas.ign.fr/oor#maison> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment ayant le rôle d hébergements de personnes. Il peut être destiné à des usages tels que résidentiel, touristique ou de loisirs."@fr .
 <http://purl.org/choucas.ign.fr/oor#maison> <http://www.w3.org/2004/02/skos/core#altLabel> "chalet"@en .
 <http://purl.org/choucas.ign.fr/oor#maison> <http://www.w3.org/2004/02/skos/core#altLabel> "chaumière"@fr .
@@ -2338,7 +2479,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/choucas.ign.fr/oor#maison_du_parc
 <http://purl.org/choucas.ign.fr/oor#maison_du_parc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#maison_du_parc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_culturel> .
-<http://purl.org/choucas.ign.fr/oor#maison_du_parc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> .
+<http://purl.org/choucas.ign.fr/oor#maison_du_parc> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d_information> .
 <http://purl.org/choucas.ign.fr/oor#maison_du_parc> <http://www.w3.org/2000/01/rdf-schema#comment> "A definir"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#maison_forestière
@@ -2515,6 +2656,17 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#musée> <http://www.w3.org/2004/02/skos/core#prefLabel> "museum"@en .
 <http://purl.org/choucas.ign.fr/oor#musée> <http://www.w3.org/2004/02/skos/core#prefLabel> "musée"@fr .
 # 
+# http://purl.org/choucas.ign.fr/oor#nappe_d_eau
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#plan_d_eau> .
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation. http://id.eaufrance.fr/nsa/831"@fr .
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/2004/02/skos/core#altLabel> "basin"@en .
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin"@fr .
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/2004/02/skos/core#altLabel> "gour"@fr .
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/2004/02/skos/core#altLabel> "plan d eau de gravière"@fr .
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "body of water"@en .
+<http://purl.org/choucas.ign.fr/oor#nappe_d_eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "nappe d eau"@fr .
+# 
 # http://purl.org/choucas.ign.fr/oor#noeud_hydrographique
 <http://purl.org/choucas.ign.fr/oor#noeud_hydrographique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#noeud_hydrographique> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#hydrographie> .
@@ -2566,7 +2718,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#office_de_tourisme
 <http://purl.org/choucas.ign.fr/oor#office_de_tourisme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#office_de_tourisme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> .
+<http://purl.org/choucas.ign.fr/oor#office_de_tourisme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_d_information> .
 <http://purl.org/choucas.ign.fr/oor#office_de_tourisme> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment qui accueille du public et dont la principale mission est l information et la promotion du tourisme et des activités touristiques"@fr .
 <http://purl.org/choucas.ign.fr/oor#office_de_tourisme> <http://www.w3.org/2004/02/skos/core#altLabel> "point d information touristique"@fr .
 <http://purl.org/choucas.ign.fr/oor#office_de_tourisme> <http://www.w3.org/2004/02/skos/core#altLabel> "syndicat d initiative"@fr .
@@ -2614,6 +2766,14 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#parc_aquatique> <http://www.w3.org/2000/01/rdf-schema#comment> "Infrastructure permettant  la pratique de loisirs aquatiques"@fr .
 <http://purl.org/choucas.ign.fr/oor#parc_aquatique> <http://www.w3.org/2004/02/skos/core#prefLabel> "parc aquatique"@fr .
 <http://purl.org/choucas.ign.fr/oor#parc_aquatique> <http://www.w3.org/2004/02/skos/core#prefLabel> "water park"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#parc_d_attraction
+<http://purl.org/choucas.ign.fr/oor#parc_d_attraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#parc_d_attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#parc_de_loisir> .
+<http://purl.org/choucas.ign.fr/oor#parc_d_attraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Infrastructure permettant  la pratique de loisirs de formes diverses (montagnes russes, toboggans, terrain de jeux, etc.)"@fr .
+<http://purl.org/choucas.ign.fr/oor#parc_d_attraction> <http://www.w3.org/2004/02/skos/core#altLabel> "amusement grounds"@en .
+<http://purl.org/choucas.ign.fr/oor#parc_d_attraction> <http://www.w3.org/2004/02/skos/core#prefLabel> "amusement park"@en .
+<http://purl.org/choucas.ign.fr/oor#parc_d_attraction> <http://www.w3.org/2004/02/skos/core#prefLabel> "parc d attraction"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#parc_de_loisir
 <http://purl.org/choucas.ign.fr/oor#parc_de_loisir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -2672,7 +2832,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/choucas.ign.fr/oor#parking_touristique_isole
 <http://purl.org/choucas.ign.fr/oor#parking_touristique_isole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#parking_touristique_isole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#parking> .
-<http://purl.org/choucas.ign.fr/oor#parking_touristique_isole> <http://www.w3.org/2000/01/rdf-schema#comment> " Parc à voitures aménagé, servant de support à une activité touristique. Seuls les parkings isolés à\nproximité d un point d intérêt touristique sont sélectionnés."@fr .
+<http://purl.org/choucas.ign.fr/oor#parking_touristique_isole> <http://www.w3.org/2000/01/rdf-schema#comment> " Parc à voitures aménagé, servant de support à une activité touristique. Seuls les parkings isolés à proximité d un point d intérêt touristique sont sélectionnés."@fr .
 <http://purl.org/choucas.ign.fr/oor#parking_touristique_isole> <http://www.w3.org/2004/02/skos/core#prefLabel> "isolated car park"@en .
 <http://purl.org/choucas.ign.fr/oor#parking_touristique_isole> <http://www.w3.org/2004/02/skos/core#prefLabel> "parking touristique isolé"@fr .
 # 
@@ -2760,7 +2920,7 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://purl.org/choucas.ign.fr/oor#pente
 <http://purl.org/choucas.ign.fr/oor#pente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#pente> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#verticale> .
-<http://purl.org/choucas.ign.fr/oor#pente> <http://www.w3.org/2000/01/rdf-schema#comment> "Surface, terrain en pente\n\n\nDes éléments qui ne sont pas toujours vus  comme de la très haute montagne"@fr .
+<http://purl.org/choucas.ign.fr/oor#pente> <http://www.w3.org/2000/01/rdf-schema#comment> "Surface, terrain en pente. Des éléments qui ne sont pas toujours vus  comme de la très haute montagne"@fr .
 <http://purl.org/choucas.ign.fr/oor#pente> <http://www.w3.org/2004/02/skos/core#altLabel> "déclivité"@fr .
 <http://purl.org/choucas.ign.fr/oor#pente> <http://www.w3.org/2004/02/skos/core#altLabel> "rampe"@fr .
 <http://purl.org/choucas.ign.fr/oor#pente> <http://www.w3.org/2004/02/skos/core#prefLabel> "pente"@fr .
@@ -2828,6 +2988,22 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/2000/01/rdf-schema#comment> "Portion de la voirie aménagée pour la circulation des cycles non motorisés"@fr .
 <http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/2004/02/skos/core#prefLabel> "bicycle path"@en .
 <http://purl.org/choucas.ign.fr/oor#piste_cyclable> <http://www.w3.org/2004/02/skos/core#prefLabel> "piste cyclable"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme
+<http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#piste_de_sport> .
+<http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme> <http://www.w3.org/2004/02/skos/core#altLabel> "bridle path"@en .
+<http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme> <http://www.w3.org/2004/02/skos/core#altLabel> "track"@en .
+<http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme> <http://www.w3.org/2004/02/skos/core#prefLabel> "piste d athlétisme"@fr .
+<http://purl.org/choucas.ign.fr/oor#piste_d_athlétisme> <http://www.w3.org/2004/02/skos/core#prefLabel> "running track"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#piste_d_aviation
+<http://purl.org/choucas.ign.fr/oor#piste_d_aviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#piste_d_aviation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_aérien> .
+<http://purl.org/choucas.ign.fr/oor#piste_d_aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "taxiway"@en .
+<http://purl.org/choucas.ign.fr/oor#piste_d_aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "altisurface"@fr .
+<http://purl.org/choucas.ign.fr/oor#piste_d_aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "piste d aviation"@fr .
+<http://purl.org/choucas.ign.fr/oor#piste_d_aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "runway"@en .
 # 
 # http://purl.org/choucas.ign.fr/oor#piste_de_VTT
 <http://purl.org/choucas.ign.fr/oor#piste_de_VTT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3074,8 +3250,8 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#puits
 <http://purl.org/choucas.ign.fr/oor#puits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#puits> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#puits> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#rupture_naturelle_du_relief_concave_non_linéaire> .
-<http://purl.org/choucas.ign.fr/oor#puits> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#puits> <http://www.w3.org/2000/01/rdf-schema#comment> "Puits à eau est une installation de captage d eau souterraine"@fr .
 <http://purl.org/choucas.ign.fr/oor#puits> <http://www.w3.org/2004/02/skos/core#altLabel> "well"@en .
 <http://purl.org/choucas.ign.fr/oor#puits> <http://www.w3.org/2004/02/skos/core#prefLabel> "puits"@fr .
@@ -3121,7 +3297,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#quartier
 <http://purl.org/choucas.ign.fr/oor#quartier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#quartier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> .
+<http://purl.org/choucas.ign.fr/oor#quartier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zone_d_habitation> .
 <http://purl.org/choucas.ign.fr/oor#quartier> <http://www.w3.org/2004/02/skos/core#prefLabel> "quarter"@en .
 <http://purl.org/choucas.ign.fr/oor#quartier> <http://www.w3.org/2004/02/skos/core#prefLabel> "quartier"@fr .
 # 
@@ -3250,7 +3426,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#rivière
 <http://purl.org/choucas.ign.fr/oor#rivière> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#rivière> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#rivière> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#rivière> <http://www.w3.org/2000/01/rdf-schema#comment> "Cours d eau moyennement abondant qui se jette dans un fleuve, dans la mer ou parfois dans un lac."@fr .
 <http://purl.org/choucas.ign.fr/oor#rivière> <http://www.w3.org/2004/02/skos/core#prefLabel> "river"@en .
 <http://purl.org/choucas.ign.fr/oor#rivière> <http://www.w3.org/2004/02/skos/core#prefLabel> "rivière"@fr .
@@ -3295,7 +3471,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#ruisseau
 <http://purl.org/choucas.ign.fr/oor#ruisseau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#ruisseau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#ruisseau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#ruisseau> <http://www.w3.org/2000/01/rdf-schema#comment> "Un ruisseau est un petit cours d eau peu profond"@fr .
 <http://purl.org/choucas.ign.fr/oor#ruisseau> <http://www.w3.org/2004/02/skos/core#altLabel> "brook"@en .
 <http://purl.org/choucas.ign.fr/oor#ruisseau> <http://www.w3.org/2004/02/skos/core#altLabel> "burn"@en .
@@ -3397,8 +3573,8 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#réservoir
 <http://purl.org/choucas.ign.fr/oor#réservoir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#réservoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#réservoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#plan_d_eau> .
-<http://purl.org/choucas.ign.fr/oor#réservoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#réservoir> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation; http://id.eaufrance.fr/nsa/831"@fr .
 <http://purl.org/choucas.ign.fr/oor#réservoir> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin"@fr .
 <http://purl.org/choucas.ign.fr/oor#réservoir> <http://www.w3.org/2004/02/skos/core#altLabel> "forebay"@en .
@@ -3460,6 +3636,20 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#secteur_couvert> <http://www.w3.org/2000/01/rdf-schema#comment> "Zone couverte par un couvert végétal"@fr .
 <http://purl.org/choucas.ign.fr/oor#secteur_couvert> <http://www.w3.org/2004/02/skos/core#prefLabel> "cover area"@en .
 <http://purl.org/choucas.ign.fr/oor#secteur_couvert> <http://www.w3.org/2004/02/skos/core#prefLabel> "secteur couvert"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente
+<http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#équipement_sport_de_nature> .
+<http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente> <http://www.w3.org/2000/01/rdf-schema#comment> "Zone délimitée pour l atterissage de parapente"@fr .
+<http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente> <http://www.w3.org/2004/02/skos/core#prefLabel> "paragliding landing area"@en .
+<http://purl.org/choucas.ign.fr/oor#secteur_d_atterrissage_parapente> <http://www.w3.org/2004/02/skos/core#prefLabel> "site d atterrissage parapente"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche
+<http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#secteur> .
+<http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche> <http://www.w3.org/2000/01/rdf-schema#comment> "Zone où des avalanches se sont produites ou zone où le risque d avalanche est important"@fr .
+<http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche> <http://www.w3.org/2004/02/skos/core#prefLabel> "avalanche area"@en .
+<http://purl.org/choucas.ign.fr/oor#secteur_d_avalanche> <http://www.w3.org/2004/02/skos/core#prefLabel> "secteur d avalanche"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#secteur_de_décollage_parapente
 <http://purl.org/choucas.ign.fr/oor#secteur_de_décollage_parapente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3557,11 +3747,23 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#siphon
 <http://purl.org/choucas.ign.fr/oor#siphon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#siphon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#siphon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#siphon> <http://www.w3.org/2000/01/rdf-schema#comment> "Conduit naturel noyé ou rempli d eau"@fr .
 <http://purl.org/choucas.ign.fr/oor#siphon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://www.cnrtl.fr/definition/siphon" .
 <http://purl.org/choucas.ign.fr/oor#siphon> <http://www.w3.org/2004/02/skos/core#prefLabel> "siphon"@en .
 <http://purl.org/choucas.ign.fr/oor#siphon> <http://www.w3.org/2004/02/skos/core#prefLabel> "siphon"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#site_d_escalade
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#équipement_sport_de_nature> .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2000/01/rdf-schema#comment> "Site équipé pour la pratique de l escalade"@fr .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "artificial climbing wall"@en .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "climbing outdoor"@en .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "climbing rock"@en .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "mur d escalade artificiel"@fr .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "rocher d escalade"@fr .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2004/02/skos/core#prefLabel> "rock climbing place"@en .
+<http://purl.org/choucas.ign.fr/oor#site_d_escalade> <http://www.w3.org/2004/02/skos/core#prefLabel> "site d escalade"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#site_de_canyoning
 <http://purl.org/choucas.ign.fr/oor#site_de_canyoning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3656,14 +3858,34 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#spot_de_slackline> <http://www.w3.org/2004/02/skos/core#prefLabel> "slackline_spot"@en .
 <http://purl.org/choucas.ign.fr/oor#spot_de_slackline> <http://www.w3.org/2004/02/skos/core#prefLabel> "spot de slackline"@fr .
 # 
+# http://purl.org/choucas.ign.fr/oor#station_d_épuration
+<http://purl.org/choucas.ign.fr/oor#station_d_épuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#station_d_épuration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux> .
+<http://purl.org/choucas.ign.fr/oor#station_d_épuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Installation destinée à épurer les eaux usées domestiques ou industrielles et les eaux pluviales avant le rejet dans le milieu nature. L eau n est pas potable (réf Hygiene-publique.gov.fr)"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_d_épuration> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin de décantation"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_d_épuration> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin de filtrage"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_d_épuration> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin de lagunage"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_d_épuration> <http://www.w3.org/2004/02/skos/core#prefLabel> "station d épuration"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_d_épuration> <http://www.w3.org/2004/02/skos/core#prefLabel> "water treatment plant"@en .
+# 
 # http://purl.org/choucas.ign.fr/oor#station_de_pompage
 <http://purl.org/choucas.ign.fr/oor#station_de_pompage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#station_de_pompage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> .
+<http://purl.org/choucas.ign.fr/oor#station_de_pompage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#station_de_pompage> <http://www.w3.org/2004/02/skos/core#altLabel> "captage"@fr .
 <http://purl.org/choucas.ign.fr/oor#station_de_pompage> <http://www.w3.org/2004/02/skos/core#altLabel> "prise d eau"@fr .
 <http://purl.org/choucas.ign.fr/oor#station_de_pompage> <http://www.w3.org/2004/02/skos/core#altLabel> "water catchment"@en .
 <http://purl.org/choucas.ign.fr/oor#station_de_pompage> <http://www.w3.org/2004/02/skos/core#prefLabel> "pumping station"@en .
 <http://purl.org/choucas.ign.fr/oor#station_de_pompage> <http://www.w3.org/2004/02/skos/core#prefLabel> "station de pompage"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver
+<http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#quartier> .
+<http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver> <http://www.w3.org/2004/02/skos/core#altLabel> "domaine skiable"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver> <http://www.w3.org/2004/02/skos/core#altLabel> "station"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver> <http://www.w3.org/2004/02/skos/core#altLabel> "station de ski"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver> <http://www.w3.org/2004/02/skos/core#altLabel> "winter sport resort"@en .
+<http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver> <http://www.w3.org/2004/02/skos/core#prefLabel> "resort"@en .
+<http://purl.org/choucas.ign.fr/oor#station_de_sports_d_hiver> <http://www.w3.org/2004/02/skos/core#prefLabel> "station de sports d hiver"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#station_de_taxi
 <http://purl.org/choucas.ign.fr/oor#station_de_taxi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3671,6 +3893,13 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#station_de_taxi> <http://www.w3.org/2000/01/rdf-schema#comment> "Lieu aménagé pour recevoir les taxis"@fr .
 <http://purl.org/choucas.ign.fr/oor#station_de_taxi> <http://www.w3.org/2004/02/skos/core#prefLabel> "station de taxi"@fr .
 <http://purl.org/choucas.ign.fr/oor#station_de_taxi> <http://www.w3.org/2004/02/skos/core#prefLabel> "taxi station"@en .
+# 
+# http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable
+<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux> .
+<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable> <http://www.w3.org/2000/01/rdf-schema#comment> "Station de traitement de l eau dont le but est de rendre l eau potable conforme aux normes de potabilité (Réf. Hygiene-publique.gov.fr)"@fr .
+<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable> <http://www.w3.org/2004/02/skos/core#prefLabel> "drinking water treatment plant"@en .
+<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d_eau_potable> <http://www.w3.org/2004/02/skos/core#prefLabel> "station de traitement d eau potable"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#station_météorologique
 <http://purl.org/choucas.ign.fr/oor#station_météorologique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3748,6 +3977,13 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#sérac> <http://www.w3.org/2004/02/skos/core#prefLabel> "serac"@en .
 <http://purl.org/choucas.ign.fr/oor#sérac> <http://www.w3.org/2004/02/skos/core#prefLabel> "sérac"@fr .
 # 
+# http://purl.org/choucas.ign.fr/oor#table_d_orientation
+<http://purl.org/choucas.ign.fr/oor#table_d_orientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#table_d_orientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_sport_et_loisirs> .
+<http://purl.org/choucas.ign.fr/oor#table_d_orientation> <http://www.w3.org/2000/01/rdf-schema#comment> "Construction à vocation touristique située dans un point culminant et indiquant les éléments vus depuis le point de vue panoramique"@fr .
+<http://purl.org/choucas.ign.fr/oor#table_d_orientation> <http://www.w3.org/2004/02/skos/core#prefLabel> "orientation table"@en .
+<http://purl.org/choucas.ign.fr/oor#table_d_orientation> <http://www.w3.org/2004/02/skos/core#prefLabel> "table d orientation"@fr .
+# 
 # http://purl.org/choucas.ign.fr/oor#talus
 <http://purl.org/choucas.ign.fr/oor#talus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#talus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#AD> .
@@ -3791,6 +4027,16 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#temple_protestant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#temple> .
 <http://purl.org/choucas.ign.fr/oor#temple_protestant> <http://www.w3.org/2004/02/skos/core#prefLabel> "protestant temple"@en .
 <http://purl.org/choucas.ign.fr/oor#temple_protestant> <http://www.w3.org/2004/02/skos/core#prefLabel> "temple protestant"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#terrain_d_aviation
+<http://purl.org/choucas.ign.fr/oor#terrain_d_aviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#terrain_d_aviation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_aérien> .
+<http://purl.org/choucas.ign.fr/oor#terrain_d_aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "aerodrome"@en .
+<http://purl.org/choucas.ign.fr/oor#terrain_d_aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "altiport"@en .
+<http://purl.org/choucas.ign.fr/oor#terrain_d_aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "aérodrome"@fr .
+<http://purl.org/choucas.ign.fr/oor#terrain_d_aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "hélistation"@fr .
+<http://purl.org/choucas.ign.fr/oor#terrain_d_aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "airfield"@en .
+<http://purl.org/choucas.ign.fr/oor#terrain_d_aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "terrain d aviation"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#terrain_de_football
 <http://purl.org/choucas.ign.fr/oor#terrain_de_football> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3855,7 +4101,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#torrent
 <http://purl.org/choucas.ign.fr/oor#torrent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#torrent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#torrent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#torrent> <http://www.w3.org/2004/02/skos/core#prefLabel> "torrent"@en .
 <http://purl.org/choucas.ign.fr/oor#torrent> <http://www.w3.org/2004/02/skos/core#prefLabel> "torrent"@fr .
 # 
@@ -3886,6 +4132,12 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#tourbière> <http://www.w3.org/2004/02/skos/core#altLabel> "peat bog"@en .
 <http://purl.org/choucas.ign.fr/oor#tourbière> <http://www.w3.org/2004/02/skos/core#prefLabel> "bog"@en .
 <http://purl.org/choucas.ign.fr/oor#tourbière> <http://www.w3.org/2004/02/skos/core#prefLabel> "tourbière"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche
+<http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#pare-avalanche> .
+<http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche> <http://www.w3.org/2004/02/skos/core#prefLabel> "avanlanche turn"@en .
+<http://purl.org/choucas.ign.fr/oor#tourne_d_avalanche> <http://www.w3.org/2004/02/skos/core#prefLabel> "tourne d avalanche"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#tranchée
 <http://purl.org/choucas.ign.fr/oor#tranchée> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3962,7 +4214,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#université
 <http://purl.org/choucas.ign.fr/oor#université> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#université> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> .
+<http://purl.org/choucas.ign.fr/oor#université> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> .
 <http://purl.org/choucas.ign.fr/oor#université> <http://www.w3.org/2004/02/skos/core#altLabel> "college"@en .
 <http://purl.org/choucas.ign.fr/oor#université> <http://www.w3.org/2004/02/skos/core#altLabel> "grande école"@fr .
 <http://purl.org/choucas.ign.fr/oor#université> <http://www.w3.org/2004/02/skos/core#prefLabel> "university"@en .
@@ -4015,7 +4267,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#vasque
 <http://purl.org/choucas.ign.fr/oor#vasque> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#vasque> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau> .
+<http://purl.org/choucas.ign.fr/oor#vasque> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau> .
 <http://purl.org/choucas.ign.fr/oor#vasque> <http://www.w3.org/2000/01/rdf-schema#comment> "Lieu d origine naturelle circulaire ou élliptique remplit de l eau. Il se situe dans un ruisseau, torrent, etc."@fr .
 <http://purl.org/choucas.ign.fr/oor#vasque> <http://www.w3.org/2004/02/skos/core#prefLabel> "bowl"@en .
 <http://purl.org/choucas.ign.fr/oor#vasque> <http://www.w3.org/2004/02/skos/core#prefLabel> "vasque"@fr .
@@ -4187,6 +4439,26 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#zonage> <http://www.w3.org/2004/02/skos/core#prefLabel> "land subdivision"@en .
 <http://purl.org/choucas.ign.fr/oor#zonage> <http://www.w3.org/2004/02/skos/core#prefLabel> "zonage"@fr .
 # 
+# http://purl.org/choucas.ign.fr/oor#zone_d_activité
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zonage> .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2000/01/rdf-schema#comment> "Délimitation de fait ou légale d une zone contenant principalement des activités éconnomiques"@fr .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2004/02/skos/core#altLabel> "industrial estate"@en .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2004/02/skos/core#altLabel> "industrial park"@en .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2004/02/skos/core#altLabel> "parc d activité"@fr .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2004/02/skos/core#altLabel> "zone artisanale"@fr .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2004/02/skos/core#altLabel> "zone commerciale"@fr .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2004/02/skos/core#altLabel> "zone industrielle"@fr .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2004/02/skos/core#prefLabel> "business area"@en .
+<http://purl.org/choucas.ign.fr/oor#zone_d_activité> <http://www.w3.org/2004/02/skos/core#prefLabel> "zone d activité"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#zone_d_habitation
+<http://purl.org/choucas.ign.fr/oor#zone_d_habitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#zone_d_habitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zonage> .
+<http://purl.org/choucas.ign.fr/oor#zone_d_habitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Délimitation de fait d une zone contenant un ou plusieurs batiments d habitation"@fr .
+<http://purl.org/choucas.ign.fr/oor#zone_d_habitation> <http://www.w3.org/2004/02/skos/core#prefLabel> "built-up area"@en .
+<http://purl.org/choucas.ign.fr/oor#zone_d_habitation> <http://www.w3.org/2004/02/skos/core#prefLabel> "zone d habitation"@fr .
+# 
 # http://purl.org/choucas.ign.fr/oor#zone_militaire
 <http://purl.org/choucas.ign.fr/oor#zone_militaire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/choucas.ign.fr/oor#zone_militaire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zonage> .
@@ -4232,7 +4504,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#écurie
 <http://purl.org/choucas.ign.fr/oor#écurie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#écurie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> .
+<http://purl.org/choucas.ign.fr/oor#écurie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d_élevage> .
 <http://purl.org/choucas.ign.fr/oor#écurie> <http://www.w3.org/2000/01/rdf-schema#comment> "L écurie est le bâtiment, et éventuellement l enclos réservé aux chevaux"@fr .
 <http://purl.org/choucas.ign.fr/oor#écurie> <http://www.w3.org/2004/02/skos/core#altLabel> "haras"@fr .
 <http://purl.org/choucas.ign.fr/oor#écurie> <http://www.w3.org/2004/02/skos/core#altLabel> "ranch"@en .
@@ -4253,7 +4525,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#égout
 <http://purl.org/choucas.ign.fr/oor#égout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#égout> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> .
+<http://purl.org/choucas.ign.fr/oor#égout> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d_eau_artificiel> .
 <http://purl.org/choucas.ign.fr/oor#égout> <http://www.w3.org/2004/02/skos/core#altLabel> "waste water disposal"@en .
 <http://purl.org/choucas.ign.fr/oor#égout> <http://www.w3.org/2004/02/skos/core#prefLabel> "sewer"@en .
 <http://purl.org/choucas.ign.fr/oor#égout> <http://www.w3.org/2004/02/skos/core#prefLabel> "égout"@fr .
@@ -4357,9 +4629,24 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.org/choucas.ign.fr/oor#étable
 <http://purl.org/choucas.ign.fr/oor#étable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#étable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> .
+<http://purl.org/choucas.ign.fr/oor#étable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d_élevage> .
 <http://purl.org/choucas.ign.fr/oor#étable> <http://www.w3.org/2004/02/skos/core#prefLabel> "barn"@en .
 <http://purl.org/choucas.ign.fr/oor#étable> <http://www.w3.org/2004/02/skos/core#prefLabel> "étable"@fr .
+# 
+# http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "elemetnary school"@en .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "kindergarten"@en .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "maternelle"@fr .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "nursery school"@en .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "primary education school"@en .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "primary school"@en .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "school"@en .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "école"@fr .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "école primaire"@fr .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#prefLabel> "elementary school"@en .
+<http://purl.org/choucas.ign.fr/oor#établissement_d_enseignement> <http://www.w3.org/2004/02/skos/core#prefLabel> "établissement d enseignement"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#établissement_de_santé
 <http://purl.org/choucas.ign.fr/oor#établissement_de_santé> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -4383,288 +4670,22 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#île> <http://www.w3.org/2004/02/skos/core#prefLabel> "island"@en .
 <http://purl.org/choucas.ign.fr/oor#île> <http://www.w3.org/2004/02/skos/core#prefLabel> "île"@fr .
 # 
-# http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier> .
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> <http://www.w3.org/2000/01/rdf-schema#comment> "Structure aménagée en bordure d autoroute prposant différentes services (repos, ravitaillement, etc.)"@fr .
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> <http://www.w3.org/2004/02/skos/core#altLabel> "aire de repos"@fr .
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> <http://www.w3.org/2004/02/skos/core#altLabel> "aire de service"@fr .
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> <http://www.w3.org/2004/02/skos/core#altLabel> "service area"@en .
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> <http://www.w3.org/2004/02/skos/core#prefLabel> "aire d autoroute"@fr .
-<http://purl.org/choucas.ign.fr/oor#aire_d%20autoroute> <http://www.w3.org/2004/02/skos/core#prefLabel> "rest area"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#borne_d%20incendie
-<http://purl.org/choucas.ign.fr/oor#borne_d%20incendie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#borne_d%20incendie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#borne> .
-<http://purl.org/choucas.ign.fr/oor#borne_d%20incendie> <http://www.w3.org/2000/01/rdf-schema#comment> "Borne indiquant la bouche d incendie"@fr .
-<http://purl.org/choucas.ign.fr/oor#borne_d%20incendie> <http://www.w3.org/2004/02/skos/core#prefLabel> "borne d incendie"@fr .
-<http://purl.org/choucas.ign.fr/oor#borne_d%20incendie> <http://www.w3.org/2004/02/skos/core#prefLabel> "fire hydtrant"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Batiment ayant le rôle d héberger les humains. A le rôle de résidence prinicipale ou secondaire"@fr .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d habitation"@fr .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20habitation> <http://www.w3.org/2004/02/skos/core#prefLabel> "residential feature"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment ayant le rôle d héberger ou d habriter des visiteurs pour une durée limitée. Il n a pas de rôle de résidence secondaire ou principale"@fr .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> <http://www.w3.org/2004/02/skos/core#prefLabel> "accomodation building"@en .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20hébergement> <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d hébergement"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment ayant comme vocation d accueillir du public pour l information de la pratique des sports et des loisirs"@fr .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> <http://www.w3.org/2004/02/skos/core#prefLabel> "bâtiment d information"@fr .
-<http://purl.org/choucas.ign.fr/oor#bâtiment_d%20information> <http://www.w3.org/2004/02/skos/core#prefLabel> "information building"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "bief"@fr .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "bisse"@en .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "bisse"@fr .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "béal"@fr .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "rigole"@fr .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2004/02/skos/core#altLabel> "roubine"@fr .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2004/02/skos/core#prefLabel> "canal d irrigation"@fr .
-<http://purl.org/choucas.ign.fr/oor#canal_d%20irrigation> <http://www.w3.org/2004/02/skos/core#prefLabel> "irrigation channel"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation
-<http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#musée> .
-<http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation> <http://www.w3.org/2000/01/rdf-schema#comment> "Un type de musée dont le projet muséal ne se fonde pas sur l existence d une collection mais qui a le rôle de présenter un patrimoine, que ce soit un paysage, un territoire, un site, des vestiges ou encore un monument, ou même une histoire."@fr .
-<http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation> <http://www.w3.org/2004/02/skos/core#prefLabel> "centre d interprétation"@fr .
-<http://purl.org/choucas.ign.fr/oor#centre_d%20interprétation> <http://www.w3.org/2004/02/skos/core#prefLabel> "interpretation center"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage
-<http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#hébergement_isolé> .
-<http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage> <http://www.w3.org/2000/01/rdf-schema#comment> "Bâtiment isolé, situé en montagne, utilisé traditionnellement de façon saisonnière  pour abriter l’homme et le bétail"@fr .
-<http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage> <http://www.w3.org/2004/02/skos/core#prefLabel> "alpine chalet"@en .
-<http://purl.org/choucas.ign.fr/oor#chalet_d%20alpage> <http://www.w3.org/2004/02/skos/core#prefLabel> "chalet d alpage"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes
-<http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#hébergement_accessible> .
-<http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes> <http://www.w3.org/2000/01/rdf-schema#comment> "Un type d hébergement meublé (chambre) aménagé avec une salle de bain privative loué et loué par des visiteurs. Sa location se fait à la nuit."@fr .
-<http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes> <http://www.w3.org/2004/02/skos/core#altLabel> "bed and breakfast"@en .
-<http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes> <http://www.w3.org/2004/02/skos/core#altLabel> "maison d hôtes"@fr .
-<http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes> <http://www.w3.org/2004/02/skos/core#prefLabel> "chambre d hôtes"@fr .
-<http://purl.org/choucas.ign.fr/oor#chambre_d%20hôtes> <http://www.w3.org/2004/02/skos/core#prefLabel> "guest rooms"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#château_d%20eau
-<http://purl.org/choucas.ign.fr/oor#château_d%20eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#château_d%20eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_remarquable> .
-<http://purl.org/choucas.ign.fr/oor#château_d%20eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> .
-<http://purl.org/choucas.ign.fr/oor#château_d%20eau> <http://www.w3.org/2000/01/rdf-schema#comment> "Réservoir d’eau construit en hauteur pour surélever le niveau de l’eau par rapport aux constructions environnantes et destiné à l alimentation en eau d une collectivité."@fr .
-<http://purl.org/choucas.ign.fr/oor#château_d%20eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "château d eau"@fr .
-<http://purl.org/choucas.ign.fr/oor#château_d%20eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "water tower"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#cours_d%20eau
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#hydrographie> .
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau> <http://www.w3.org/2000/01/rdf-schema#comment> "Un écoulement d’eaux courantes dans un lit naturel à l’origine, alimenté par une source et présentant un débit suffisant la majeure partie de l’année » (CE. SSR. 21 octobre 2011, Ministre de l’écologie c. EARL Cintrat, n° 334322, publiée au Recueil)."@fr .
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "cours d eau"@fr .
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "watercourse"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> .
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> <http://www.w3.org/2004/02/skos/core#prefLabel> "artificial waterway"@en .
-<http://purl.org/choucas.ign.fr/oor#cours_d%20eau_artificiel> <http://www.w3.org/2004/02/skos/core#prefLabel> "cours d eau artificiel"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_eau> .
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> <http://www.w3.org/2004/02/skos/core#prefLabel> "fresh water catchment infrastructure"@en .
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de gestion d eau douce"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_eau> .
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "infrastructure de transport d eau"@fr .
-<http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_d%20eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "water transport"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#installation_d%20aquaculture
-<http://purl.org/choucas.ign.fr/oor#installation_d%20aquaculture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20aquaculture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20aquaculture> <http://www.w3.org/2004/02/skos/core#prefLabel> "aquaculture"@en .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20aquaculture> <http://www.w3.org/2004/02/skos/core#prefLabel> "installation d aquaculture"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#installation_d%20élevage
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation_agricole> .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "cattle ranch"@en .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "livestock building"@en .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "livestock facility"@en .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "poultry farm"@en .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "ranch"@en .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2004/02/skos/core#altLabel> "stable"@en .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2004/02/skos/core#prefLabel> "animal farm"@en .
-<http://purl.org/choucas.ign.fr/oor#installation_d%20élevage> <http://www.w3.org/2004/02/skos/core#prefLabel> "installation d élevage"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#nappe_d%20eau
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#plan_d_eau> .
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Plan d’eau artificiel possédant le plus souvent un usage spécifique. Il comprend les bassins d’élevage piscicole, bassins d’épurations, bassins de décantation, bassins de filtrage, bassins de lagunage, bassins de rétention, bassins ostréicole, cressonnières, excréteurs de crues, réservoirs d’eau à ciel ouvert. Il comprend également les bassins d orage, bassins de stockage incendie. Ces réservoirs ne possèdent pas d’usage irrigation. http://id.eaufrance.fr/nsa/831"@fr .
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/2004/02/skos/core#altLabel> "basin"@en .
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin"@fr .
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/2004/02/skos/core#altLabel> "gour"@fr .
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/2004/02/skos/core#altLabel> "plan d eau de gravière"@fr .
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "body of water"@en .
-<http://purl.org/choucas.ign.fr/oor#nappe_d%20eau> <http://www.w3.org/2004/02/skos/core#prefLabel> "nappe d eau"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#parc_d%20attraction
-<http://purl.org/choucas.ign.fr/oor#parc_d%20attraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#parc_d%20attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#parc_de_loisir> .
-<http://purl.org/choucas.ign.fr/oor#parc_d%20attraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Infrastructure permettant  la pratique de loisirs de formes diverses (montagnes russes, toboggans, terrain de jeux, etc.)"@fr .
-<http://purl.org/choucas.ign.fr/oor#parc_d%20attraction> <http://www.w3.org/2004/02/skos/core#altLabel> "amusement grounds"@en .
-<http://purl.org/choucas.ign.fr/oor#parc_d%20attraction> <http://www.w3.org/2004/02/skos/core#prefLabel> "amusement park"@en .
-<http://purl.org/choucas.ign.fr/oor#parc_d%20attraction> <http://www.w3.org/2004/02/skos/core#prefLabel> "parc d attraction"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme
-<http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#piste_de_sport> .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme> <http://www.w3.org/2004/02/skos/core#altLabel> "bridle path"@en .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme> <http://www.w3.org/2004/02/skos/core#altLabel> "track"@en .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme> <http://www.w3.org/2004/02/skos/core#prefLabel> "piste d athlétisme"@fr .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20athlétisme> <http://www.w3.org/2004/02/skos/core#prefLabel> "running track"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#piste_d%20aviation
-<http://purl.org/choucas.ign.fr/oor#piste_d%20aviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20aviation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_aérien> .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "taxiway"@en .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "altisurface"@fr .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "piste d aviation"@fr .
-<http://purl.org/choucas.ign.fr/oor#piste_d%20aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "runway"@en .
-# 
 # http://purl.org/choucas.ign.fr/oor#point_d'eau_potable
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d%20eau_douce> .
+<http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_gestion_d_eau_douce> .
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique un accès à de l'eau potable"@fr .
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2004/02/skos/core#prefLabel> "drinking water"@en .
 <http://purl.org/choucas.ign.fr/oor#point_d'eau_potable> <http://www.w3.org/2004/02/skos/core#prefLabel> "point d'eau potable"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#équipement_sport_de_nature> .
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente> <http://www.w3.org/2000/01/rdf-schema#comment> "Zone délimitée pour l atterissage de parapente"@fr .
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente> <http://www.w3.org/2004/02/skos/core#prefLabel> "paragliding landing area"@en .
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20atterrissage_parapente> <http://www.w3.org/2004/02/skos/core#prefLabel> "site d atterrissage parapente"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#secteur> .
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche> <http://www.w3.org/2000/01/rdf-schema#comment> "Zone où des avalanches se sont produites ou zone où le risque d avalanche est important"@fr .
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche> <http://www.w3.org/2004/02/skos/core#prefLabel> "avalanche area"@en .
-<http://purl.org/choucas.ign.fr/oor#secteur_d%20avalanche> <http://www.w3.org/2004/02/skos/core#prefLabel> "secteur d avalanche"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#site_d%20escalade
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#équipement_sport_de_nature> .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2000/01/rdf-schema#comment> "Site équipé pour la pratique de l escalade"@fr .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "artificial climbing wall"@en .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "climbing outdoor"@en .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "climbing rock"@en .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "mur d escalade artificiel"@fr .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2004/02/skos/core#altLabel> "rocher d escalade"@fr .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2004/02/skos/core#prefLabel> "rock climbing place"@en .
-<http://purl.org/choucas.ign.fr/oor#site_d%20escalade> <http://www.w3.org/2004/02/skos/core#prefLabel> "site d escalade"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#station_d%20épuration
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux> .
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Installation destinée à épurer les eaux usées domestiques ou industrielles et les eaux pluviales avant le rejet dans le milieu nature. L eau n est pas potable (réf Hygiene-publique.gov.fr)"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin de décantation"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin de filtrage"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> <http://www.w3.org/2004/02/skos/core#altLabel> "bassin de lagunage"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> <http://www.w3.org/2004/02/skos/core#prefLabel> "station d épuration"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_d%20épuration> <http://www.w3.org/2004/02/skos/core#prefLabel> "water treatment plant"@en .
-# 
-# http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#quartier> .
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> <http://www.w3.org/2004/02/skos/core#altLabel> "domaine skiable"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> <http://www.w3.org/2004/02/skos/core#altLabel> "station"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> <http://www.w3.org/2004/02/skos/core#altLabel> "station de ski"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> <http://www.w3.org/2004/02/skos/core#altLabel> "winter sport resort"@en .
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> <http://www.w3.org/2004/02/skos/core#prefLabel> "resort"@en .
-<http://purl.org/choucas.ign.fr/oor#station_de_sports_d%20hiver> <http://www.w3.org/2004/02/skos/core#prefLabel> "station de sports d hiver"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable
-<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_traitement_des_eaux> .
-<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable> <http://www.w3.org/2000/01/rdf-schema#comment> "Station de traitement de l eau dont le but est de rendre l eau potable conforme aux normes de potabilité (Réf. Hygiene-publique.gov.fr)"@fr .
-<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable> <http://www.w3.org/2004/02/skos/core#prefLabel> "drinking water treatment plant"@en .
-<http://purl.org/choucas.ign.fr/oor#station_de_traitement_d%20eau_potable> <http://www.w3.org/2004/02/skos/core#prefLabel> "station de traitement d eau potable"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#table_d%20orientation
-<http://purl.org/choucas.ign.fr/oor#table_d%20orientation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#table_d%20orientation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_sport_et_loisirs> .
-<http://purl.org/choucas.ign.fr/oor#table_d%20orientation> <http://www.w3.org/2000/01/rdf-schema#comment> "Construction à vocation touristique située dans un point culminant et indiquant les éléments vus depuis le point de vue panoramique"@fr .
-<http://purl.org/choucas.ign.fr/oor#table_d%20orientation> <http://www.w3.org/2004/02/skos/core#prefLabel> "orientation table"@en .
-<http://purl.org/choucas.ign.fr/oor#table_d%20orientation> <http://www.w3.org/2004/02/skos/core#prefLabel> "table d orientation"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#infrastructure_de_déplacement_aérien> .
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "aerodrome"@en .
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "altiport"@en .
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "aérodrome"@fr .
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> <http://www.w3.org/2004/02/skos/core#altLabel> "hélistation"@fr .
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "airfield"@en .
-<http://purl.org/choucas.ign.fr/oor#terrain_d%20aviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "terrain d aviation"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#tourne_d%20avalanche
-<http://purl.org/choucas.ign.fr/oor#tourne_d%20avalanche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#tourne_d%20avalanche> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#pare-avalanche> .
-<http://purl.org/choucas.ign.fr/oor#tourne_d%20avalanche> <http://www.w3.org/2004/02/skos/core#prefLabel> "avanlanche turn"@en .
-<http://purl.org/choucas.ign.fr/oor#tourne_d%20avalanche> <http://www.w3.org/2004/02/skos/core#prefLabel> "tourne d avalanche"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#zone_d%20activité
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zonage> .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2000/01/rdf-schema#comment> "Délimitation de fait ou légale d une zone contenant principalement des activités éconnomiques"@fr .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2004/02/skos/core#altLabel> "industrial estate"@en .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2004/02/skos/core#altLabel> "industrial park"@en .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2004/02/skos/core#altLabel> "parc d activité"@fr .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2004/02/skos/core#altLabel> "zone artisanale"@fr .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2004/02/skos/core#altLabel> "zone commerciale"@fr .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2004/02/skos/core#altLabel> "zone industrielle"@fr .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2004/02/skos/core#prefLabel> "business area"@en .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20activité> <http://www.w3.org/2004/02/skos/core#prefLabel> "zone d activité"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#zone_d%20habitation
-<http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#zonage> .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Délimitation de fait d une zone contenant un ou plusieurs batiments d habitation"@fr .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> <http://www.w3.org/2004/02/skos/core#prefLabel> "built-up area"@en .
-<http://purl.org/choucas.ign.fr/oor#zone_d%20habitation> <http://www.w3.org/2004/02/skos/core#prefLabel> "zone d habitation"@fr .
-# 
-# http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/choucas.ign.fr/oor#bâtiment_et_installation> .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "elemetnary school"@en .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "kindergarten"@en .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "maternelle"@fr .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "nursery school"@en .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "primary education school"@en .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "primary school"@en .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "school"@en .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "école"@fr .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#altLabel> "école primaire"@fr .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#prefLabel> "elementary school"@en .
-<http://purl.org/choucas.ign.fr/oor#établissement_d%20enseignement> <http://www.w3.org/2004/02/skos/core#prefLabel> "établissement d enseignement"@fr .
 # 
 # http://www.geonames.org/ontology#Feature
 <http://www.geonames.org/ontology#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# xsd:integer
+# 
+# xsd:string
 # 
 # 
 # 
@@ -4715,8 +4736,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#PRI> .
 <http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark> <http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086> .
-<http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://purl.org/choucas.ign.fr/oor#access_parking> .
-<http://purl.org/choucas.ign.fr/oor#access_parking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/choucas.ign.fr/oor#SPRI_P1> <http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation> <http://purl.org/choucas.ign.fr/oor#proche_access_routier> .
 # 
 # http://purl.org/choucas.ign.fr/oor#SPRI_V16
 <http://purl.org/choucas.ign.fr/oor#SPRI_V16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4733,8 +4753,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus> .
 <http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421> <http://purl.org/choucas.ign.fr/oor#dataSource> "BDTOPO" .
-# 
-# http://purl.org/choucas.ign.fr/oor#access_parking
 # 
 # http://purl.org/choucas.ign.fr/oor#atJonction
 <http://purl.org/choucas.ign.fr/oor#atJonction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4875,7 +4893,7 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#nearProximity> .
 <http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/2000/01/rdf-schema#comment> "Accès à un parking ou à un arrêt desservi par transport commun. Ne pas mettre les remontées mécaniques."@fr .
 <http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/2000/01/rdf-schema#label> "Close to road access"@en .
-<http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/2000/01/rdf-schema#label> "Proche d'un accès routier"@fr .
+<http://purl.org/choucas.ign.fr/oor#proche_access_routier> <http://www.w3.org/2000/01/rdf-schema#label> "Proche accès routier"@fr .
 # 
 # http://purl.org/choucas.ign.fr/oor#proche_commodité
 <http://purl.org/choucas.ign.fr/oor#proche_commodité> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -4902,5 +4920,20 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://purl.org/choucas.ign.fr/oor#locationRelation> <http://purl.org/choucas.ign.fr/oor#crossing> .
 <http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/2000/01/rdf-schema#comment> "traverser une forêt"@fr .
 <http://purl.org/choucas.ign.fr/oor#traverser_foret> <http://www.w3.org/2000/01/rdf-schema#label> "Traverser une forêt"@fr .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribut permettant de préciser le nom (graphie) principal de l'objet de repère"@fr .
+<http://purl.org/choucas.ign.fr/oor#geographicalName> <http://www.w3.org/2000/01/rdf-schema#label> "nom géographique"@fr .
+# 
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribut permettant de préciser l'identifiant de la composante connexe"@fr .
+<http://purl.org/choucas.ign.fr/oor#idcc> <http://www.w3.org/2000/01/rdf-schema#label> "Identifiant de la cc"@fr .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
