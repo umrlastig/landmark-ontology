@@ -3,7 +3,7 @@ This repository contains the documentation of the Ontology Of LandmaRks (OOR). I
 
 Documentation site: **[landmark-ontology](https://www.umr-lastig.fr/landmark-ontology/index.html)**
 
-Version in progress: **v2.0.0**
+Version in progress: **v1.0.3**
 
 
 ## Abstract
