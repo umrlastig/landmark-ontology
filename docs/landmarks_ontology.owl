@@ -9,12 +9,14 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#">
     <owl:Ontology rdf:about="http://purl.org/choucas.ign.fr/oor">
-        <owl:versionIRI rdf:resource="http://purl.org/choucas.ign.fr/oor/1.0.0"/>
+        <owl:versionIRI rdf:resource="http://purl.org/choucas.ign.fr/oor/1.0.3"/>
         <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dc:creator>Ana-Maria Raimond</dc:creator>
         <dc:creator>Catherine Dominguès</dc:creator>
@@ -40,15 +42,15 @@ Mustière Sébastien, Nathalie Abadie, Nathalie Aussenac- Gilles, Marie-Noelle B
 
 Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundation for Exploring Linguistic and Geospatial Conceptualization of Landforms (Short Paper)’. Schloss Dagstuhl - Leibniz-Zentrum fuer Informatik GmbH, Wadern/Saarbruecken, Germany.</dc:description>
         <dc:issued>2020-01-28</dc:issued>
-        <dc:modified>2025-12-12</dc:modified>
+        <dc:modified>2026-08-10</dc:modified>
         <dc:publisher>LASTIG/IGN</dc:publisher>
-        <dc:rights xml:lang="en">Copyright © 2025 LASTIG</dc:rights>
+        <dc:rights xml:lang="en">Copyright © 2026 LASTIG</dc:rights>
         <dc:title xml:lang="fr">Ontologie des Objets de Repères</dc:title>
         <dc:title xml:lang="en">Ontology Of landmaRks</dc:title>
         <terms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
         <vann:preferredNamespacePrefix>oor</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://purl.org/choucas.ign.fr/oor#</vann:preferredNamespaceUri>
-        <owl:versionInfo>2.0.0</owl:versionInfo>
+        <owl:versionInfo>1.0.3</owl:versionInfo>
         <foaf:homepage rdf:resource="https://www.umr-lastig.fr/landmark-ontology/index.html"/>
     </owl:Ontology>
     
@@ -157,10 +159,24 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     
 
 
-    <!-- http://www.w3.org/2000/01/rdf-schema#altLabel -->
+    <!-- http://www.opengis.net/ont/geosparql#asWKT -->
 
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#altLabel"/>
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasDefaultGeometry -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparql#hasDefaultGeometry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry"/>
     
 
 
@@ -196,6 +212,13 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
     
 
 
@@ -251,16 +274,6 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#dataSource -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#dataSource">
-        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
-        <rdfs:range rdf:resource="xsd:string"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/choucas.ign.fr/oor#geographicalName -->
 
 
@@ -271,44 +284,46 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark -->
+    <!-- http://purl.org/choucas.ign.fr/oor#hasDataSource -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark">
-        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#RoutePortion"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#hasDataSource">
+        <owl:inverseOf rdf:resource="http://purl.org/choucas.ign.fr/oor#sourcedLandmark"/>
+        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
+        <rdfs:range rdf:resource="http://purl.org/choucas.ign.fr/oor#DataPlatform"/>
+        <rdfs:comment xml:lang="fr">Pour spécifer la plateforme dont les données proviennent. Elle peut-être d&apos;autorité, collaborative ou privé</rdfs:comment>
+        <rdfs:comment xml:lang="en">To specify the platform from which the data comes. It can be an official, collaborative, or private platform.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a comme source de données</rdfs:label>
+        <rdfs:label xml:lang="en">uses as its data source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/choucas.ign.fr/oor#hasReferenceLandmarkMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#hasReferenceLandmarkMatch">
+        <owl:inverseOf rdf:resource="http://purl.org/choucas.ign.fr/oor#isReferenceLandmarkMatchOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
         <rdfs:range rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
+        <rdfs:comment xml:lang="fr">Ce landmark possède comme correspondance ce landmark de la base de référence</rdfs:comment>
+        <rdfs:comment xml:lang="en">This landmark has a corresponding landmark in the reference database.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Landmark de référence correspondant</rdfs:label>
+        <rdfs:label xml:lang="en">Matching reference landmark</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation -->
+    <!-- http://purl.org/choucas.ign.fr/oor#isReferenceLandmarkMatchOf -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation">
-        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#RoutePortion"/>
-        <rdfs:range rdf:resource="http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"/>
-        <rdfs:comment>Pour modéliser les annotations sémantiques des itinéraires.</rdfs:comment>
-        <rdfs:label>hasSemanticRouteAnnotation</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#idcc -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#idcc">
-        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#PRI"/>
-        <rdfs:range rdf:resource="xsd:integer"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#locationRelation -->
-
-
-    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#locationRelation">
-        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <rdfs:range rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#isReferenceLandmarkMatchOf">
+        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
+        <rdfs:range rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
+        <rdfs:comment xml:lang="fr">Ce landmark de référence a été identifié comme correspondant à un landmark externe.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This landmark has been identified as matching an external landmark</rdfs:comment>
+        <rdfs:label xml:lang="fr">Correspondance avec un landmark externe</rdfs:label>
+        <rdfs:label xml:lang="en">Match with an external landmark</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -340,11 +355,15 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#referencedLandmark -->
+    <!-- http://purl.org/choucas.ign.fr/oor#sourcedLandmark -->
 
 
-    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#referencedLandmark">
-        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/choucas.ign.fr/oor#sourcedLandmark">
+        <rdfs:domain rdf:resource="http://purl.org/choucas.ign.fr/oor#DataPlatform"/>
+        <rdfs:range rdf:resource="http://purl.org/choucas.ign.fr/oor#objet_de_repère"/>
+        <rdfs:comment xml:lang="fr">Pour spécifer le landmark qu&apos;a fournit la plateforme</rdfs:comment>
+        <rdfs:label xml:lang="fr">est la source de données pour</rdfs:label>
+        <rdfs:label xml:lang="en">is the data source for</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -370,24 +389,10 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#dataSource -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/choucas.ign.fr/oor#dataSource"/>
-    
-
-
     <!-- http://purl.org/choucas.ign.fr/oor#geographicalName -->
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/choucas.ign.fr/oor#geographicalName"/>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#idcc -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/choucas.ign.fr/oor#idcc"/>
     
 
 
@@ -450,14 +455,15 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#LocationRelationship -->
+    <!-- http://purl.org/choucas.ign.fr/oor#DataPlatform -->
 
 
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#LocationRelationship">
+    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#DataPlatform">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment>Represent the type of the relationships such as adjacency, following or crossing</rdfs:comment>
-        <skos:prefLabel xml:lang="en">Location relationship</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Relations de localisation</skos:prefLabel>
+        <rdfs:comment xml:lang="en">A data platform is a technology solution that enables the collection, storage, cleaning, transformation, analysis and governance of data.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une Data Platform (plateforme de données) est une infrastructure technologique qui centralise la collecte, le stockage, le traitement et la gouvernance des données d&apos;une organisation. </rdfs:comment>
+        <skos:prefLabel xml:lang="en">data platform</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">plateforme de données</skos:prefLabel>
     </owl:Class>
     
 
@@ -469,86 +475,6 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:comment>Nomenclature de la couche forestière thématique nationale et hiérarchique à quatre niveaux : couverture du sol, densité du couvert, composition d’ensemble et essences</rdfs:comment>
         <skos:prefLabel xml:lang="fr">Nomenclature de la couche forestière</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#PRI -->
-
-
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#PRI">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#RoutePortion"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
-                            <rdf:Description rdf:about="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A portion of route of interest is a route portion entirely covered by a semantic route annotation</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Une portion d&apos;itinéraire d&apos;intérêt est une portion d&apos;itinéraire entièrement couverte par une annotation sémantique d&apos;itinéraire.</rdfs:comment>
-        <skos:altLabel xml:lang="fr">Portion d&apos;itinéraire avec une annotation sémantique</skos:altLabel>
-        <skos:altLabel xml:lang="en">Route portion with semantic route annotation</skos:altLabel>
-        <skos:prefLabel xml:lang="fr">PII</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">PRI</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#RouteCharacteristic -->
-
-
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"/>
-        <rdfs:comment xml:lang="en">A RouteCharacteristic is a relevant semantic route annotation related to terrain morphology (e.g., the path climbs, follows a ridge, runs along a balcony, etc.) or to directional changes (e.g., intersections, hairpin turns, series of switchbacks) and it is derived directly from the geometry of the route itself.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">C&apos;est une annotation sémantique pertinente liée à la morphologie du terrain (par exemple, le chemin escarpé, suit une crête, longe un balcon, etc.) ou aux changements de direction (par exemple, les intersections, les virages en épingle à cheveux, les séries de lacets). La caractéristique de la portion d&apos;itinéraire est dérivée directement de la géométrie de l&apos;itinéraire lui-même.</rdfs:comment>
-        <skos:prefLabel xml:lang="fr">Caractéristiques de la portion de l&apos;itinéraire</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">characteristics of the portion of route</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#RouteContext -->
-
-
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#RouteContext">
-        <rdfs:subClassOf rdf:resource="http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"/>
-        <rdfs:comment xml:lang="en">A RouteContext is a relevant semantic route annotation related to a RoutePortion that is semantically described in relation to landmarks. These relationships may include topological interactions such as following or crossing the landmark or adjacency such as near proximity in other words characterized by its ability to access to a nearby landmark without deviating from the route.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Une annotation sémantique de type RouteContext est une annotation d&apos;itinéraire sémantique pertinente liée à une RoutePortion qui est sémantiquement décrite en relation avec des points de repère. Ces relations peuvent inclure des interactions topologiques telles que le fait de suivre ou de traverser le point de repère ou une contiguïté telle qu&apos;une proximité immédiate, en d&apos;autres termes, caractérisée par la capacité d&apos;accéder à un point de repère proche sans s&apos;écarter de l&apos;itinéraire.</rdfs:comment>
-        <skos:prefLabel xml:lang="en">Context of the portion of route</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Contexte de la portion de l&apos;itinéraire</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#RoutePortion -->
-
-
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#RoutePortion">
-        <rdfs:comment xml:lang="en">A portion of a route is a delimited section of a Route whose primary role is to serve as a structural basis for annotation with labeled information</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Une portion d&apos;itinéraire est une section délimitée d&apos;un itinéraire dont le rôle principal est de servir de base structurelle pour l&apos;annotation d&apos;informations étiquetées.</rdfs:comment>
-        <skos:prefLabel xml:lang="fr">Portion d&apos;itinéraire</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Portion of route</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation -->
-
-
-    <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdfs:comment xml:lang="en">A SemanticRouteAnnotation is a relevant property used to characterize a segment of a route (point or linear) based on its own geometry or the spatial relationships it has with other geographic objects in its neighborhood.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage.</rdfs:comment>
-        <skos:altLabel xml:lang="fr">Annotation sémantique d&apos;une portion d&apos;un itinéraire</skos:altLabel>
-        <skos:prefLabel xml:lang="fr">Annotation sémantique d&apos;itinéraire</skos:prefLabel>
-        <skos:prefLabel xml:lang="en">Semantic annotation of a portion of route</skos:prefLabel>
     </owl:Class>
     
 
@@ -4438,7 +4364,7 @@ au terrain naturel et destiné à s’opposer au passage de l’eau ou à la can
     <owl:Class rdf:about="http://purl.org/choucas.ign.fr/oor#objet_de_repère">
         <owl:equivalentClass rdf:resource="http://www.geonames.org/ontology#Feature"/>
         <rdfs:comment xml:lang="en">A landmark is defined as a geographic object that serves as a reference object for locating people in a mountainous context. It is a materialized place, artificial or natural.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Un landmark est défini comme un objet géographique servant d’objet de référence pour localiser des personnes en contexte montagneux. Il s’agit d’un lieu matérialisé, artificiel ou naturel.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un objet de repère (landmark) est défini comme un objet géographique servant d’objet de référence pour localiser des personnes en contexte montagneux. Il s’agit d’un lieu matérialisé, artificiel ou naturel.</rdfs:comment>
         <skos:prefLabel xml:lang="en">landmark</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">objet de repère</skos:prefLabel>
     </owl:Class>
@@ -7663,17 +7589,17 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
-    
-
-
-    <!-- xsd:integer -->
-
-
-    <owl:Class rdf:about="xsd:integer"/>
     
 
 
@@ -7696,6 +7622,45 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
+    <!-- http://purl.org/choucas.ign.fr/oor#BDTOPO -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#BDTOPO">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#DataPlatform"/>
+        <rdfs:comment xml:lang="en">BD TOPO is a detailed 2D and 3D vector database created by the IGN (Institut National de l&apos;Information Géographique et Forestière) that digitally describes the geographic elements and infrastructures of France with metric precision. It is available as open data.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">La BD Topo est la seconde composante du Référentiel à grande échelle produit par l&apos;Institut national de l&apos;information géographique et forestière français. La BD Topo est une base de données vectorielles 2D et 3D disponible depuis 2007 sur l&apos;ensemble du territoire français.</rdfs:comment>
+        <skos:prefLabel xml:lang="fr">BD TOPO</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">BDTOPO</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/choucas.ign.fr/oor#C2C176568 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#C2C176568">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#hébergement_isolé"/>
+        <hasDataSource rdf:resource="http://purl.org/choucas.ign.fr/oor#Camptocamp"/>
+        <hasReferenceLandmarkMatch rdf:resource="http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096"/>
+        <geographicalName>Abri de la Peyrouse</geographicalName>
+        <geosparql:hasGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseC2C"/>
+        <prov:wasDerivedFrom rdf:resource="https://api.camptocamp.org/waypoints/176568"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/choucas.ign.fr/oor#Camptocamp -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#Camptocamp">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#DataPlatform"/>
+        <skos:altLabel xml:lang="en">C2C</skos:altLabel>
+        <skos:prefLabel xml:lang="en">Camptocamp</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Camptocamp</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/choucas.ign.fr/oor#Conifères -->
 
 
@@ -7715,7 +7680,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#parking_touristique_isole"/>
-        <dataSource>BDTOPO</dataSource>
+        <hasDataSource rdf:resource="http://purl.org/choucas.ign.fr/oor#BDTOPO"/>
     </owl:NamedIndividual>
     
 
@@ -7746,34 +7711,52 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#SPRI_FF21 -->
+    <!-- http://purl.org/choucas.ign.fr/oor#OSM137892747 -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#SPRI_FF21">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#PRI"/>
-        <hasReferencedLandmark rdf:resource="http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421"/>
-        <hasSemanticRouteAnnotation rdf:resource="http://purl.org/choucas.ign.fr/oor#traverser_foret"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#OSM137892747">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#abri"/>
+        <hasDataSource rdf:resource="http://purl.org/choucas.ign.fr/oor#OpenStreetMap"/>
+        <hasReferenceLandmarkMatch rdf:resource="http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096"/>
+        <geographicalName>Cabane de la Peyrouse</geographicalName>
+        <geosparql:hasGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseOSM"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.openstreetmap.org/way/137892747"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#SPRI_P1 -->
+    <!-- http://purl.org/choucas.ign.fr/oor#OpenStreetMap -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#SPRI_P1">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#PRI"/>
-        <hasReferencedLandmark rdf:resource="http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086"/>
-        <hasSemanticRouteAnnotation rdf:resource="http://purl.org/choucas.ign.fr/oor#proche_access_routier"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#OpenStreetMap">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#DataPlatform"/>
+        <skos:altLabel xml:lang="en">OSM</skos:altLabel>
+        <skos:prefLabel xml:lang="en">OpenStreetMap</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">OpenStreetMap</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#SPRI_V16 -->
+    <!-- http://purl.org/choucas.ign.fr/oor#RI142 -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#SPRI_V16">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#PRI"/>
-        <hasSemanticRouteAnnotation rdf:resource="http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets"/>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#RI142">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#abri"/>
+        <hasDataSource rdf:resource="http://purl.org/choucas.ign.fr/oor#Refugesinfo"/>
+        <hasReferenceLandmarkMatch rdf:resource="http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096"/>
+        <geographicalName>Cabane de la Peyrouse</geographicalName>
+        <geosparql:hasGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRI"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/choucas.ign.fr/oor#Refugesinfo -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#Refugesinfo">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#DataPlatform"/>
+        <skos:prefLabel xml:lang="en">Refuges.info</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Refuges.info</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -7783,8 +7766,36 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#abri"/>
-        <dataSource>BDTOPO</dataSource>
+        <hasDataSource rdf:resource="http://purl.org/choucas.ign.fr/oor#BDTOPO"/>
         <geographicalName>Abri de la Peyrouse</geographicalName>
+        <geosparql:hasDefaultGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint"/>
+        <geosparql:hasGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint"/>
+        <geosparql:hasGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPolygon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/choucas.ign.fr/oor#VR27615 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#VR27615">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#abri"/>
+        <hasDataSource rdf:resource="http://purl.org/choucas.ign.fr/oor#VercorsRando"/>
+        <hasReferenceLandmarkMatch rdf:resource="http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096"/>
+        <geographicalName>Abri de la Peyrouse</geographicalName>
+        <geosparql:hasGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRV"/>
+        <prov:wasDerivedFrom rdf:resource="https://geo.pnr-vercors.fr/api/v2/poi/27615"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/choucas.ign.fr/oor#VercorsRando -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#VercorsRando">
+        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#DataPlatform"/>
+        <skos:prefLabel xml:lang="en">rando vercors</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">vercors outdoor</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -7794,18 +7805,7 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421">
         <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus"/>
-        <dataSource>BDTOPO</dataSource>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#atJonction -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#atJonction">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
-        <rdfs:label xml:lang="en">at the jonction</rdfs:label>
-        <rdfs:label xml:lang="fr">à la jonction</rdfs:label>
+        <hasDataSource rdf:resource="http://purl.org/choucas.ign.fr/oor#BDTOPO"/>
     </owl:NamedIndividual>
     
 
@@ -7828,105 +7828,62 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#crossing -->
+    <!-- http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#crossing">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
-        <rdfs:label xml:lang="en">Crossing</rdfs:label>
-        <rdfs:label xml:lang="fr">Traverser</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint">
+        <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <geosparql:asWKT>&lt;http://opengis.net&gt;POINT (899281 6430628.9)</geosparql:asWKT>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#en_balcon -->
+    <!-- http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPolygon -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_balcon">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
-        <rdfs:altLabel xml:lang="en">along a cliffside</rdfs:altLabel>
-        <rdfs:altLabel xml:lang="en">sidehill trail</rdfs:altLabel>
-        <rdfs:comment xml:lang="en">It is a relatively long and narrow trail, with limited elevation change allowing for easy walking, which follows the side of a mountain escarpment at the edge of a steep slope and offers unobstructed views of the landscape below (valley) or of a body of water (lake, river, etc.).</rdfs:comment>
-        <rdfs:comment xml:lang="fr">c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l&apos;abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.).</rdfs:comment>
-        <rdfs:label xml:lang="fr">En balcon</rdfs:label>
-        <rdfs:label xml:lang="en">balcony trail</rdfs:label>
-        <skos:altLabel xml:lang="fr">en corniche</skos:altLabel>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPolygon">
+        <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <geosparql:asWKT>&lt;http://opengis.net&gt;POLYGON((899278.60 6430629.22, 899284.91 6430629.43, 899285.05 6430624.99, 899278.74 6430624.78, 899278.60 6430629.22))</geosparql:asWKT>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée -->
+    <!-- http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseC2C -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
-        <rdfs:comment xml:lang="en">Valley-bottom trails sometimes offer a beautiful discovery of the river or the surrounding valley landscape.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée.</rdfs:comment>
-        <rdfs:label xml:lang="en">A path along the valley floor.</rdfs:label>
-        <rdfs:label xml:lang="fr">En fond de vallée</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseC2C">
+        <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <geosparql:asWKT>&lt;http://opengis.net&gt;POINT (899257.28972313 6430621.99094256)</geosparql:asWKT>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#en_ligne_crête -->
+    <!-- http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseOSM -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_ligne_crête">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
-        <rdfs:comment xml:lang="fr">C’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête.</rdfs:comment>
-        <rdfs:comment xml:lang="en">It is a relatively long and narrow trail, with a slightly more variable elevation profile than a balcony trail, that follows a ridgeline. It is different from a ridge-top road.</rdfs:comment>
-        <rdfs:label xml:lang="fr">En ligne de crête</rdfs:label>
-        <rdfs:label xml:lang="en">Ridge-top trail</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseOSM">
+        <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <geosparql:asWKT>&lt;http://opengis.net&gt;POINT (899280.606732018 6430628.23320103)</geosparql:asWKT>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#en_pente_escarpée -->
+    <!-- http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRI -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_pente_escarpée">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
-        <rdfs:comment xml:lang="en">a road segment with steep slopes.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">une portion de route escarpée, à fortes pentes.</rdfs:comment>
-        <rdfs:label xml:lang="fr">En pente escarpée</rdfs:label>
-        <rdfs:label xml:lang="en">On a steep slope</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRI">
+        <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <geosparql:asWKT>&lt;http://opengis.net&gt;POINT (899285.76815206 6430627.23639766)</geosparql:asWKT>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes -->
+    <!-- http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRV -->
 
 
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
-        <rdfs:comment xml:lang="fr">désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête.</rdfs:comment>
-        <rdfs:comment xml:lang="en">refers to a mountain scenic road offering numerous viewpoints. Not to be confused with a ridge-top trail.</rdfs:comment>
-        <rdfs:label xml:lang="fr">En route des crêtes</rdfs:label>
-        <rdfs:label xml:lang="en">Ridge-top road</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"/>
-        <rdfs:comment xml:lang="en">on a trail or route, they can be defined as a series of turns extending along a slope in successive levels. Each hairpin turn is a turn where the path pivots and reverses in a direction roughly opposite to its initial direction, but generally at a slightly different altitude. If the turns have a very sharp angle and a small radius of curvature, they are called “Hairpin turns”</rdfs:comment>
-        <rdfs:comment xml:lang="fr">sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s&apos;étalent le long d&apos;une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d&apos;angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux ».</rdfs:comment>
-        <rdfs:label xml:lang="en">Series of switchbacks</rdfs:label>
-        <rdfs:label xml:lang="fr">Séries de virages en lacets</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#following -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#following">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
-        <rdfs:label xml:lang="en">Following</rdfs:label>
-        <rdfs:label xml:lang="fr">Longer</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRV">
+        <rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <geosparql:asWKT>&lt;http://opengis.net&gt;POINT (899283.628736532 6430650.92611096)</geosparql:asWKT>
     </owl:NamedIndividual>
     
 
@@ -7940,55 +7897,6 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#information -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#information">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
-        <rdfs:comment xml:lang="fr">Des panneaux, pancartes, des carrefours, etc.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Information de navigation</rdfs:label>
-        <rdfs:label xml:lang="en">Navigation information</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#longer_foret -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#longer_foret">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#following"/>
-        <rdfs:label xml:lang="en">Along a forest</rdfs:label>
-        <rdfs:label xml:lang="fr">Longer une forêt</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#longer_haie -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#longer_haie">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#following"/>
-        <rdfs:label xml:lang="en">Following a hedge</rdfs:label>
-        <rdfs:label xml:lang="fr">Longer une haie</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#longer_lac -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#longer_lac">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#following"/>
-        <rdfs:label xml:lang="en">Along a lake</rdfs:label>
-        <rdfs:label xml:lang="fr">Longer un lac</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.org/choucas.ign.fr/oor#mélezin -->
 
 
@@ -7998,110 +7906,11 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
     
 
 
-    <!-- http://purl.org/choucas.ign.fr/oor#nature_route -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#nature_route">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#crossing"/>
-        <rdfs:comment xml:lang="fr">Prendre une route, un chemin ou un sentier</rdfs:comment>
-        <rdfs:label xml:lang="fr">Nature route</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#nearProximity -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#nearProximity">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#LocationRelationship"/>
-        <rdfs:label xml:lang="fr">Proximité immédiate</rdfs:label>
-        <rdfs:label xml:lang="en">near proximity</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#point_de_cheminement -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#point_de_cheminement">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
-        <rdfs:comment xml:lang="en">A waypoint is a reference point that helps us know where we are and where we&apos;re going. Whether we’re driving, sailing, or flying, waypoints help us find our way. Landmarks used as waypoints can be natural, such as a tree. They can also be artificial, such as a billboard.</rdfs:comment>
-        <rdfs:comment xml:lang="fr">Un point de cheminement est un point de référence qui nous permet de savoir où nous sommes et où nous allons. Que nous soyons en voiture, en bateau ou en avion. Ces points de repère peuvent être naturels, comme un arbre, ou artificiels, comme un panneau d&apos;affichage.</rdfs:comment>
-        <rdfs:label xml:lang="fr">Point de cheminement</rdfs:label>
-        <rdfs:label xml:lang="en">Route point proximity</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#prendre_pont -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#prendre_pont">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#crossing"/>
-        <rdfs:label xml:lang="fr">Cross a bridge</rdfs:label>
-        <rdfs:label xml:lang="fr">Prendre un pont</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#proche_access_routier -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#proche_access_routier">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
-        <rdfs:comment xml:lang="fr">Accès à un parking ou à un arrêt desservi par transport commun. Ne pas mettre les remontées mécaniques.</rdfs:comment>
-        <rdfs:label xml:lang="en">Close to road access</rdfs:label>
-        <rdfs:label xml:lang="fr">Proche accès routier</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#proche_commodité -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#proche_commodité">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
-        <rdfs:comment xml:lang="fr">Des accomodités comme des bancs, tables de picnic, point d&apos;eau, échelle, cordes, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">Close to amenities</rdfs:label>
-        <rdfs:label xml:lang="fr">Proche d&apos;une commodité</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#proche_viewpoint -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#proche_viewpoint">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#nearProximity"/>
-        <rdfs:label xml:lang="fr">Nearby viewpoint</rdfs:label>
-        <rdfs:label xml:lang="fr">Proche point de vue</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://purl.org/choucas.ign.fr/oor#sapin -->
 
 
     <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#sapin">
         <rdfs:label xml:lang="fr">sapin</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/choucas.ign.fr/oor#traverser_foret -->
-
-
-    <owl:NamedIndividual rdf:about="http://purl.org/choucas.ign.fr/oor#traverser_foret">
-        <rdf:type rdf:resource="http://purl.org/choucas.ign.fr/oor#RouteContext"/>
-        <locationRelation rdf:resource="http://purl.org/choucas.ign.fr/oor#crossing"/>
-        <rdfs:label xml:lang="fr">Traverser une forêt</rdfs:label>
-        <rdfs:label xml:lang="en">Walking through a forest</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -8117,11 +7926,9 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.org/choucas.ign.fr/oor#geographicalName">
         <rdfs:comment xml:lang="fr">Attribut permettant de préciser le nom (graphie) principal de l&apos;objet de repère</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/choucas.ign.fr/oor"/>
+        <rdfs:label xml:lang="en">geographical name</rdfs:label>
         <rdfs:label xml:lang="fr">nom géographique</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.org/choucas.ign.fr/oor#idcc">
-        <rdfs:comment xml:lang="fr">Attribut permettant de préciser l&apos;identifiant de la composante connexe</rdfs:comment>
-        <rdfs:label xml:lang="fr">Identifiant de la cc</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

@@ -1,46 +1,17 @@
 [ {
   "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid2"
-  } ]
-}, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#Feuillus"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble"
-  } ]
-}, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#Mixtes"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble"
-  } ]
-}, {
-  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#chemin"
+      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_conifères"
     }, {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#escalier"
+      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus"
     }, {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#piste_cyclable"
-    }, {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#sentier"
+      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_mixtes"
     } ]
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -54,35 +25,45 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
-    }, {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_conifères"
-    }, {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus"
-    }, {
-      "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_mixtes"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#Conifères"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#Feuillus"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#Mixtes"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#aCommeCompositionEnsemble"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#chemin"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#escalier"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#piste_cyclable"
+    }, {
+      "@id" : "http://purl.org/choucas.ign.fr/oor#sentier"
+    } ]
   } ]
 }, {
   "@id" : "http://creativecommons.org/ns#licence",
@@ -126,14 +107,14 @@
     "@value" : "2020-01-28"
   } ],
   "http://purl.org/dc/elements/1.1/modified" : [ {
-    "@value" : "2025-12-12"
+    "@value" : "2026-08-10"
   } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
     "@value" : "LASTIG/IGN"
   } ],
   "http://purl.org/dc/elements/1.1/rights" : [ {
     "@language" : "en",
-    "@value" : "Copyright © 2025 LASTIG"
+    "@value" : "Copyright © 2026 LASTIG"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@language" : "fr",
@@ -152,10 +133,10 @@
     "@value" : "http://purl.org/choucas.ign.fr/oor#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor/1.0.0"
+    "@id" : "http://purl.org/choucas.ign.fr/oor/1.0.3"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "2.0.0"
+    "@value" : "1.0.3"
   } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://www.umr-lastig.fr/landmark-ontology/index.html"
@@ -212,6 +193,64 @@
     "@value" : "plateau adouci de forme compacte"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#BDTOPO",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#DataPlatform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "BD TOPO is a detailed 2D and 3D vector database created by the IGN (Institut National de l'Information Géographique et Forestière) that digitally describes the geographic elements and infrastructures of France with metric precision. It is available as open data."
+  }, {
+    "@language" : "fr",
+    "@value" : "La BD Topo est la seconde composante du Référentiel à grande échelle produit par l'Institut national de l'information géographique et forestière français. La BD Topo est une base de données vectorielles 2D et 3D disponible depuis 2007 sur l'ensemble du territoire français."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "BD TOPO"
+  }, {
+    "@language" : "en",
+    "@value" : "BDTOPO"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#C2C176568",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#geographicalName" : [ {
+    "@value" : "Abri de la Peyrouse"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasDataSource" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#Camptocamp"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasReferenceLandmarkMatch" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096"
+  } ],
+  "http://www.opengis.net/ont/geosparql#hasGeometry" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseC2C"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#hébergement_isolé"
+  } ],
+  "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
+    "@id" : "https://api.camptocamp.org/waypoints/176568"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#Camptocamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#DataPlatform"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "C2C"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Camptocamp"
+  }, {
+    "@language" : "fr",
+    "@value" : "Camptocamp"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#CompositionEnsemble",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -249,10 +288,30 @@
     "@value" : "Conifères"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#DataPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A data platform is a technology solution that enables the collection, storage, cleaning, transformation, analysis and governance of data."
+  }, {
+    "@language" : "fr",
+    "@value" : "Une Data Platform (plateforme de données) est une infrastructure technologique qui centralise la collecte, le stockage, le traitement et la gouvernance des données d'une organisation. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "data platform"
+  }, {
+    "@language" : "fr",
+    "@value" : "plateforme de données"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#dataSource" : [ {
-    "@value" : "BDTOPO"
+  "http://purl.org/choucas.ign.fr/oor#hasDataSource" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#BDTOPO"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#parking_touristique_isole"
@@ -276,22 +335,6 @@
   }, {
     "@language" : "fr",
     "@value" : "Feuillus"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Represent the type of the relationships such as adjacency, following or crossing"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Location relationship"
-  }, {
-    "@language" : "fr",
-    "@value" : "Relations de localisation"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#Mixtes",
@@ -327,165 +370,133 @@
     "@value" : "Nomenclature de la couche forestière"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#PRI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A portion of route of interest is a route portion entirely covered by a semantic route annotation"
-  }, {
-    "@language" : "fr",
-    "@value" : "Une portion d'itinéraire d'intérêt est une portion d'itinéraire entièrement couverte par une annotation sémantique d'itinéraire."
+  "@id" : "http://purl.org/choucas.ign.fr/oor#OSM137892747",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#geographicalName" : [ {
+    "@value" : "Cabane de la Peyrouse"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RoutePortion"
-  }, {
-    "@id" : "_:genid1"
+  "http://purl.org/choucas.ign.fr/oor#hasDataSource" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#OpenStreetMap"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasReferenceLandmarkMatch" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096"
+  } ],
+  "http://www.opengis.net/ont/geosparql#hasGeometry" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseOSM"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#abri"
+  } ],
+  "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
+    "@id" : "https://www.openstreetmap.org/way/137892747"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#OpenStreetMap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#DataPlatform"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Portion d'itinéraire avec une annotation sémantique"
-  }, {
     "@language" : "en",
-    "@value" : "Route portion with semantic route annotation"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "PII"
-  }, {
-    "@language" : "en",
-    "@value" : "PRI"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A RouteCharacteristic is a relevant semantic route annotation related to terrain morphology (e.g., the path climbs, follows a ridge, runs along a balcony, etc.) or to directional changes (e.g., intersections, hairpin turns, series of switchbacks) and it is derived directly from the geometry of the route itself."
-  }, {
-    "@language" : "fr",
-    "@value" : "C'est une annotation sémantique pertinente liée à la morphologie du terrain (par exemple, le chemin escarpé, suit une crête, longe un balcon, etc.) ou aux changements de direction (par exemple, les intersections, les virages en épingle à cheveux, les séries de lacets). La caractéristique de la portion d'itinéraire est dérivée directement de la géométrie de l'itinéraire lui-même."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Caractéristiques de la portion de l'itinéraire"
-  }, {
-    "@language" : "en",
-    "@value" : "characteristics of the portion of route"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A RouteContext is a relevant semantic route annotation related to a RoutePortion that is semantically described in relation to landmarks. These relationships may include topological interactions such as following or crossing the landmark or adjacency such as near proximity in other words characterized by its ability to access to a nearby landmark without deviating from the route."
-  }, {
-    "@language" : "fr",
-    "@value" : "Une annotation sémantique de type RouteContext est une annotation d'itinéraire sémantique pertinente liée à une RoutePortion qui est sémantiquement décrite en relation avec des points de repère. Ces relations peuvent inclure des interactions topologiques telles que le fait de suivre ou de traverser le point de repère ou une contiguïté telle qu'une proximité immédiate, en d'autres termes, caractérisée par la capacité d'accéder à un point de repère proche sans s'écarter de l'itinéraire."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"
+    "@value" : "OSM"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Context of the portion of route"
+    "@value" : "OpenStreetMap"
   }, {
     "@language" : "fr",
-    "@value" : "Contexte de la portion de l'itinéraire"
+    "@value" : "OpenStreetMap"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#RoutePortion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A portion of a route is a delimited section of a Route whose primary role is to serve as a structural basis for annotation with labeled information"
-  }, {
-    "@language" : "fr",
-    "@value" : "Une portion d'itinéraire est une section délimitée d'un itinéraire dont le rôle principal est de servir de base structurelle pour l'annotation d'informations étiquetées."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Portion d'itinéraire"
-  }, {
-    "@language" : "en",
-    "@value" : "Portion of route"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#SPRI_FF21",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#RI142",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421"
-  } ],
-  "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#traverser_foret"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#SPRI_P1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#EQ_RESEA0000000230065086"
-  } ],
-  "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#proche_access_routier"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#SPRI_V16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#dataSource" : [ {
-    "@value" : "BDTOPO"
-  } ],
   "http://purl.org/choucas.ign.fr/oor#geographicalName" : [ {
-    "@value" : "Abri de la Peyrouse"
+    "@value" : "Cabane de la Peyrouse"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasDataSource" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#Refugesinfo"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasReferenceLandmarkMatch" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096"
+  } ],
+  "http://www.opengis.net/ont/geosparql#hasGeometry" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRI"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#abri"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A SemanticRouteAnnotation is a relevant property used to characterize a segment of a route (point or linear) based on its own geometry or the spatial relationships it has with other geographic objects in its neighborhood."
-  }, {
-    "@language" : "fr",
-    "@value" : "Une propriété sémantique est une propriété pertinente permettant de caractériser une portion d’itinéraire à partir de sa géométrie ou des relations topologiques qu’elle a avec les autres objets spatiaux de son voisinage."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Annotation sémantique d'une portion d'un itinéraire"
+  "@id" : "http://purl.org/choucas.ign.fr/oor#Refugesinfo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#DataPlatform"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "fr",
-    "@value" : "Annotation sémantique d'itinéraire"
-  }, {
     "@language" : "en",
-    "@value" : "Semantic annotation of a portion of route"
+    "@value" : "Refuges.info"
+  }, {
+    "@language" : "fr",
+    "@value" : "Refuges.info"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#geographicalName" : [ {
+    "@value" : "Abri de la Peyrouse"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasDataSource" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#BDTOPO"
+  } ],
+  "http://www.opengis.net/ont/geosparql#hasDefaultGeometry" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint"
+  } ],
+  "http://www.opengis.net/ont/geosparql#hasGeometry" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint"
+  }, {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPolygon"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#abri"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#VR27615",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/choucas.ign.fr/oor#geographicalName" : [ {
+    "@value" : "Abri de la Peyrouse"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasDataSource" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#VercorsRando"
+  } ],
+  "http://purl.org/choucas.ign.fr/oor#hasReferenceLandmarkMatch" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096"
+  } ],
+  "http://www.opengis.net/ont/geosparql#hasGeometry" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRV"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#abri"
+  } ],
+  "http://www.w3.org/ns/prov#wasDerivedFrom" : [ {
+    "@id" : "https://geo.pnr-vercors.fr/api/v2/poi/27615"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#VercorsRando",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#DataPlatform"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "rando vercors"
+  }, {
+    "@language" : "fr",
+    "@value" : "vercors outdoor"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#ZONEVEGE0000000341083421",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#dataSource" : [ {
-    "@value" : "BDTOPO"
+  "http://purl.org/choucas.ign.fr/oor#hasDataSource" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#BDTOPO"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#forêt_de_feuillus"
@@ -992,19 +1003,6 @@
   }, {
     "@language" : "en",
     "@value" : "edge"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#atJonction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "at the jonction"
-  }, {
-    "@language" : "fr",
-    "@value" : "à la jonction"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#autoroute",
@@ -3473,19 +3471,6 @@
     "@value" : "cross"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#crossing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Crossing"
-  }, {
-    "@language" : "fr",
-    "@value" : "Traverser"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#croupe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3637,15 +3622,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#pente_abrupte"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#dataSource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "xsd:string"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#decrochement_le_long_d_un_axe",
@@ -3929,137 +3905,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#sommet_de_forme_arrondie"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#en_balcon",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#altLabel" : [ {
-    "@language" : "en",
-    "@value" : "along a cliffside"
-  }, {
-    "@language" : "en",
-    "@value" : "sidehill trail"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "It is a relatively long and narrow trail, with limited elevation change allowing for easy walking, which follows the side of a mountain escarpment at the edge of a steep slope and offers unobstructed views of the landscape below (valley) or of a body of water (lake, river, etc.)."
-  }, {
-    "@language" : "fr",
-    "@value" : "c’est un sentier relativement long et étroit, de nivellement limité permettant une marche facile, qui suit le flanc d’un escarpement montagneux à l'abord d’une forte pente, et qui offre une vue dégagée sur le paysage en contrebas (vallée) ou sur une étendue d’eau (lac, rivière, etc.)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "En balcon"
-  }, {
-    "@language" : "en",
-    "@value" : "balcony trail"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
-    "@language" : "fr",
-    "@value" : "en corniche"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#en_fond_de_vallée",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Valley-bottom trails sometimes offer a beautiful discovery of the river or the surrounding valley landscape."
-  }, {
-    "@language" : "fr",
-    "@value" : "les sentiers de fond de vallée permettent parfois une belle découverte de la rivière ou du paysage de la vallée."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "A path along the valley floor."
-  }, {
-    "@language" : "fr",
-    "@value" : "En fond de vallée"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#en_ligne_crête",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "C’est un sentier relativement long et étroit, de nivellement un peu plus variable qu’un chemin en balcon et qui suit une ligne de crête. Différent de la Route en crête."
-  }, {
-    "@language" : "en",
-    "@value" : "It is a relatively long and narrow trail, with a slightly more variable elevation profile than a balcony trail, that follows a ridgeline. It is different from a ridge-top road."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "En ligne de crête"
-  }, {
-    "@language" : "en",
-    "@value" : "Ridge-top trail"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#en_pente_escarpée",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "a road segment with steep slopes."
-  }, {
-    "@language" : "fr",
-    "@value" : "une portion de route escarpée, à fortes pentes."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "En pente escarpée"
-  }, {
-    "@language" : "en",
-    "@value" : "On a steep slope"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#en_route_des_crêtes",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "désigne une route touristique de montagne offrant de nombreux points de vue. A ne pas confondre avec un sentier en crête."
-  }, {
-    "@language" : "en",
-    "@value" : "refers to a mountain scenic road offering numerous viewpoints. Not to be confused with a ridge-top trail."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "En route des crêtes"
-  }, {
-    "@language" : "en",
-    "@value" : "Ridge-top road"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#en_séries_de_virages_en_lacets",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteCharacteristic"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "on a trail or route, they can be defined as a series of turns extending along a slope in successive levels. Each hairpin turn is a turn where the path pivots and reverses in a direction roughly opposite to its initial direction, but generally at a slightly different altitude. If the turns have a very sharp angle and a small radius of curvature, they are called “Hairpin turns”"
-  }, {
-    "@language" : "fr",
-    "@value" : "sur un sentier ou un itinéraire ils peuvent être définis comme une succession de virages qui s'étalent le long d'une pente par étages successifs. Chaque virage en lacet est un virage où la voie pivote et revient dans une direction sensiblement opposée à sa direction initiale, mais généralement à une altitude un peu différente. Si les virages sont d'angle très grand et de rayon de courbure faible, on parle de virages en « épingle à cheveux »."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Series of switchbacks"
-  }, {
-    "@language" : "fr",
-    "@value" : "Séries de virages en lacets"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#enceinte",
@@ -4356,19 +4201,6 @@
     "@value" : "major river"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#following",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Following"
-  }, {
-    "@language" : "fr",
-    "@value" : "Longer"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#fond_de_vallée",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -4441,7 +4273,7 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#massif_boisé"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -4463,7 +4295,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
   }, {
-    "@id" : "_:genid9"
+    "@id" : "_:genid5"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -4488,7 +4320,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
   }, {
-    "@id" : "_:genid10"
+    "@id" : "_:genid6"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "fr",
@@ -4524,7 +4356,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#forêt"
   }, {
-    "@id" : "_:genid11"
+    "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -4772,12 +4604,72 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "geographical name"
+  }, {
     "@language" : "fr",
     "@value" : "nom géographique"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "xsd:string"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@value" : "<http://opengis.net>POINT (899281 6430628.9)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPolygon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@value" : "<http://opengis.net>POLYGON((899278.60 6430629.22, 899284.91 6430629.43, 899285.05 6430624.99, 899278.74 6430624.78, 899278.60 6430629.22))"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseC2C",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@value" : "<http://opengis.net>POINT (899257.28972313 6430621.99094256)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseOSM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@value" : "<http://opengis.net>POINT (899280.606732018 6430628.23320103)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@value" : "<http://opengis.net>POINT (899285.76815206 6430627.23639766)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseRV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.opengis.net/ont/geosparql#asWKT" : [ {
+    "@value" : "<http://opengis.net>POINT (899283.628736532 6430650.92611096)"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#glacier",
@@ -5086,28 +4978,56 @@
     "@value" : "industrial hangar"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#hasReferencedLandmark",
+  "@id" : "http://purl.org/choucas.ign.fr/oor#hasDataSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Pour spécifer la plateforme dont les données proviennent. Elle peut-être d'autorité, collaborative ou privé"
+  }, {
+    "@language" : "en",
+    "@value" : "To specify the platform from which the data comes. It can be an official, collaborative, or private platform."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RoutePortion"
+    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "a comme source de données"
+  }, {
+    "@language" : "en",
+    "@value" : "uses as its data source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#DataPlatform"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#sourcedLandmark"
+  } ]
+}, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#hasReferenceLandmarkMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Ce landmark possède comme correspondance ce landmark de la base de référence"
+  }, {
+    "@language" : "en",
+    "@value" : "This landmark has a corresponding landmark in the reference database."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Landmark de référence correspondant"
+  }, {
+    "@language" : "en",
+    "@value" : "Matching reference landmark"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#hasSemanticRouteAnnotation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Pour modéliser les annotations sémantiques des itinéraires."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RoutePortion"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasSemanticRouteAnnotation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#SemanticRouteAnnotation"
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#isReferenceLandmarkMatchOf"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#hippodrome",
@@ -5290,23 +5210,6 @@
     "@value" : "hôtel"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#idcc",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Attribut permettant de préciser l'identifiant de la composante connexe"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#PRI"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Identifiant de la cc"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "xsd:integer"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#igue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -5346,26 +5249,6 @@
   }, {
     "@language" : "fr",
     "@value" : "immeuble collectif"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#information",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Des panneaux, pancartes, des carrefours, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Information de navigation"
-  }, {
-    "@language" : "en",
-    "@value" : "Navigation information"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure",
@@ -5760,6 +5643,29 @@
     "@value" : "mine"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#isReferenceLandmarkMatchOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Ce landmark de référence a été identifié comme correspondant à un landmark externe."
+  }, {
+    "@language" : "en",
+    "@value" : "This landmark has been identified as matching an external landmark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Correspondance avec un landmark externe"
+  }, {
+    "@language" : "en",
+    "@value" : "Match with an external landmark"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#itinéraire_de_raquette",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6115,63 +6021,6 @@
   }, {
     "@language" : "en",
     "@value" : "materialized border"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#locationRelation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#longer_foret",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#following"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Along a forest"
-  }, {
-    "@language" : "fr",
-    "@value" : "Longer une forêt"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#longer_haie",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#following"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Following a hedge"
-  }, {
-    "@language" : "fr",
-    "@value" : "Longer une haie"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#longer_lac",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#following"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Along a lake"
-  }, {
-    "@language" : "fr",
-    "@value" : "Longer un lac"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#lotissement",
@@ -6790,36 +6639,6 @@
     "@value" : "nappe d eau"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#nature_route",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#crossing"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Prendre une route, un chemin ou un sentier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Nature route"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#LocationRelationship"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Proximité immédiate"
-  }, {
-    "@language" : "en",
-    "@value" : "near proximity"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#noeud_hydrographique",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6861,7 +6680,7 @@
     "@value" : "A landmark is defined as a geographic object that serves as a reference object for locating people in a mountainous context. It is a materialized place, artificial or natural."
   }, {
     "@language" : "fr",
-    "@value" : "Un landmark est défini comme un objet géographique servant d’objet de référence pour localiser des personnes en contexte montagneux. Il s’agit d’un lieu matérialisé, artificiel ou naturel."
+    "@value" : "Un objet de repère (landmark) est défini comme un objet géographique servant d’objet de référence pour localiser des personnes en contexte montagneux. Il s’agit d’un lieu matérialisé, artificiel ou naturel."
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "http://www.geonames.org/ontology#Feature"
@@ -8007,29 +7826,6 @@
     "@value" : "point d'eau potable"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#point_de_cheminement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A waypoint is a reference point that helps us know where we are and where we're going. Whether we’re driving, sailing, or flying, waypoints help us find our way. Landmarks used as waypoints can be natural, such as a tree. They can also be artificial, such as a billboard."
-  }, {
-    "@language" : "fr",
-    "@value" : "Un point de cheminement est un point de référence qui nous permet de savoir où nous sommes et où nous allons. Que nous soyons en voiture, en bateau ou en avion. Ces points de repère peuvent être naturels, comme un arbre, ou artificiels, comme un panneau d'affichage."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Point de cheminement"
-  }, {
-    "@language" : "en",
-    "@value" : "Route point proximity"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#pont",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -8098,7 +7894,7 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#voie_de_communication_non_carrossable"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid12"
+    "@id" : "_:genid8"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -8114,7 +7910,7 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#infrastructure_de_transport_routier"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid17"
+    "@id" : "_:genid13"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "fr",
@@ -8228,22 +8024,6 @@
     "@value" : "prairie"
   } ]
 }, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#prendre_pont",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#crossing"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Cross a bridge"
-  }, {
-    "@language" : "fr",
-    "@value" : "Prendre un pont"
-  } ]
-}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#prison",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -8269,62 +8049,6 @@
   }, {
     "@language" : "fr",
     "@value" : "prison"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#proche_access_routier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Accès à un parking ou à un arrêt desservi par transport commun. Ne pas mettre les remontées mécaniques."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Close to road access"
-  }, {
-    "@language" : "fr",
-    "@value" : "Proche accès routier"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#proche_commodité",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "fr",
-    "@value" : "Des accomodités comme des bancs, tables de picnic, point d'eau, échelle, cordes, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Close to amenities"
-  }, {
-    "@language" : "fr",
-    "@value" : "Proche d'une commodité"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#proche_viewpoint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#nearProximity"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Nearby viewpoint"
-  }, {
-    "@language" : "fr",
-    "@value" : "Proche point de vue"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#promontoire",
@@ -8539,12 +8263,6 @@
   }, {
     "@language" : "en",
     "@value" : "recycling"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#referencedLandmark",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#refuge",
@@ -9871,6 +9589,26 @@
     "@value" : "source"
   } ]
 }, {
+  "@id" : "http://purl.org/choucas.ign.fr/oor#sourcedLandmark",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "fr",
+    "@value" : "Pour spécifer le landmark qu'a fournit la plateforme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#DataPlatform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "est la source de données pour"
+  }, {
+    "@language" : "en",
+    "@value" : "is the data source for"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/choucas.ign.fr/oor#objet_de_repère"
+  } ]
+}, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#sports_en_eaux_vives",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -10624,22 +10362,6 @@
   }, {
     "@language" : "fr",
     "@value" : "transition terre"
-  } ]
-}, {
-  "@id" : "http://purl.org/choucas.ign.fr/oor#traverser_foret",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://purl.org/choucas.ign.fr/oor#locationRelation" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#crossing"
-  } ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#RouteContext"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "fr",
-    "@value" : "Traverser une forêt"
-  }, {
-    "@language" : "en",
-    "@value" : "Walking through a forest"
   } ]
 }, {
   "@id" : "http://purl.org/choucas.ign.fr/oor#trouée",
@@ -11967,7 +11689,16 @@
   "@id" : "http://www.geonames.org/ontology#Feature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "http://www.w3.org/2000/01/rdf-schema#altLabel",
+  "@id" : "http://www.opengis.net/ont/geosparql#Geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#asWKT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasDefaultGeometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#comment",
@@ -11994,11 +11725,11 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "xsd:integer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "xsd:string",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]

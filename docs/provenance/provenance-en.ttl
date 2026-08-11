@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<http://purl.org/choucas.ign.fr/oor/1.0.0> a prov:Entity;
+<http://purl.org/choucas.ign.fr/oor/1.0.3> a prov:Entity;
 	 dc:title "Ontology Of landmaRks";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
