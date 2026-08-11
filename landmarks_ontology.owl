@@ -53,7 +53,6 @@ Sinha, Gaurav et al. 2018. ‘The Landform Reference Ontology (LFRO): A Foundati
         <owl:versionInfo>1.0.3</owl:versionInfo>
         <foaf:homepage rdf:resource="https://www.umr-lastig.fr/landmark-ontology/index.html"/>
     </owl:Ontology>
-    
 
 
     <!-- 
