@@ -451,8 +451,6 @@
     "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint"
   } ],
   "http://www.opengis.net/ont/geosparql#hasGeometry" : [ {
-    "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint"
-  }, {
     "@id" : "http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPolygon"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {

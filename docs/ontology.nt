@@ -4749,7 +4749,6 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://purl.org/choucas.ign.fr/oor#hasDataSource> <http://purl.org/choucas.ign.fr/oor#BDTOPO> .
 <http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://purl.org/choucas.ign.fr/oor#geographicalName> "Abri de la Peyrouse" .
 <http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://www.opengis.net/ont/geosparql#hasDefaultGeometry> <http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint> .
-<http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint> .
 <http://purl.org/choucas.ign.fr/oor#SURFACTI0000000007463096> <http://www.opengis.net/ont/geosparql#hasGeometry> <http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPolygon> .
 # 
 # http://purl.org/choucas.ign.fr/oor#VR27615

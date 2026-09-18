@@ -7769,7 +7769,6 @@ Ce lieu d intersection peut être de pente douce ou bien effilé</rdfs:comment>
         <hasDataSource rdf:resource="http://purl.org/choucas.ign.fr/oor#BDTOPO"/>
         <geographicalName>Abri de la Peyrouse</geographicalName>
         <geosparql:hasDefaultGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint"/>
-        <geosparql:hasGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPoint"/>
         <geosparql:hasGeometry rdf:resource="http://purl.org/choucas.ign.fr/oor#geomRefugePeyrouseBDTOPOPolygon"/>
     </owl:NamedIndividual>
     
